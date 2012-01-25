@@ -1,3 +1,9 @@
+/*
+c++.
+accepted.
+runtime: 0.024
+*/
+
 using namespace std;
 #include<iostream>
 #include<string>
