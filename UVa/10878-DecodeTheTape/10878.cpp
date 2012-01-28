@@ -1,5 +1,5 @@
 /*
-c++.
+Problem: http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=96&page=show_problem&problem=1819 
 accepted.
 runtime: 0.024
 */
