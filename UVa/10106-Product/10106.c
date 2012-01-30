@@ -1,6 +1,8 @@
 /**
 Acepted.
 runtime: 0.008
+
+this code has been based in annex of art of programming contest pages 212-220
 */
 
 #include<stdio.h>
