@@ -46,8 +46,7 @@ pdd center(pdd a, pdd b,pdd c){
 	d.second=(SUM1(a,b))/2.0;
 	e.first=(SUM(b,c))/2.0;
 	e.second=(SUM1(b,c))/2.0;
-	return intersection(d, ort(d,a,b),
-						e, ort(e, b,c));
+	return intersection(d, ort(d,a,b),e, ort(e, b,c));
 }
 
 // Angulo entre dos lineas ab,ac.
