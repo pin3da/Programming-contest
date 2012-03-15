@@ -162,4 +162,5 @@ int main() {
         double ans = ((double)x)/maxmf;
         printf("%d %.3f\n",tcid,ans);
     }
+	return 0;
 }

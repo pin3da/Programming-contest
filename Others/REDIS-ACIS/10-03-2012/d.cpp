@@ -84,4 +84,5 @@ int main() {
         remceros(buf);
         printf("%d %s\n",tcid, buf);
     }
+	return 0;
 }

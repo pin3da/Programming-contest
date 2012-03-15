@@ -27,6 +27,7 @@ int main() {
         scanf("%d %d %d", &tcid, &n, &m);
         printf("%d %lld\n", tcid, funcion(n,m));
     }
+	return 0;
 }
 
 
