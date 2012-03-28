@@ -1,3 +1,7 @@
+/*
+Manuel Pineda
+accepted
+*/
 #include<stdio.h>
 #include<ctype.h>
 
