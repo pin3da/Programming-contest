@@ -8,7 +8,7 @@ using namespace std;
 #include<string>
 #include<cctype>
 #include<cmath>
-#define Mdouble 1e+7
+#define Mdouble 1.79769e+308
 
 const double EPS = 1e-6;
 char buf[20];
@@ -35,16 +35,16 @@ void remceros(char *cad) {
 int main (){
 	int i;
 	double si,un,f,e,mid,ans;
-    while(cin>>a>>b>>c>>d>>m>>t){
-        p=(t/m)-d;
+	while(cin>>a>>b>>c>>d>>m>>t){
+		p=(t/m)-d;
 		si=0.0;
 		un= Mdouble;
-        while(cmp(si,un)==-1){
+		while(cmp(si,un)==-1){
 			f=fun(si);
 			e=fun(un);
 			mid=fun((si+un)/2.0);
 			if(cmp(mid,p)==-1)
-				si=(si+un)/2.0;
+			si=(si+un)/2.0;
 			else if(cmp(mid,p)==1)
 				un=(si+un)/2.0;
 			else{
@@ -52,10 +52,11 @@ int main (){
 				break;
 			}			
 		}
-		ans=((int)(ans*100.0))/100.0;
+		//ans=(floor(ans*100.0 + 0.5))/100.0;
+		ans=(floor(ans*100.0))/100.0;
 		sprintf(buf,"%lf",ans);
-        remceros(buf);
-        printf("%s\n",buf);
-    }
-    return 0;    
+		remceros(buf);
+		printf("%s\n",buf);
+	}
+	return 0;    
 }
