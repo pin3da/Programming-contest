@@ -23,14 +23,6 @@ double fun(double v){
     return v*v*v*a + v*v*b + c*v;
 }
 
-void remceros(char *cad) {
-    int n=0 ;while(cad[n]!='\0')n++;
-    int i=n-1;
-    while (cad[i]=='0' && cad[i-1]!='.') {
-        cad[i] = '\0';
-        i--;
-    }    
-}
 
 int main (){
 	int i;
@@ -54,9 +46,7 @@ int main (){
 		}
 		//ans=(floor(ans*100.0 + 0.5))/100.0;
 		ans=(floor(ans*100.0))/100.0;
-		sprintf(buf,"%lf",ans);
-		remceros(buf);
-		printf("%s\n",buf);
+		printf("%.2lf\n",ans);
 	}
 	return 0;    
 }
