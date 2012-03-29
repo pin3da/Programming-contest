@@ -1,6 +1,6 @@
 /*
 Manuel Pineda
-No accepted yet
+Accepted
 */
 using namespace std;
 #include<iostream>
@@ -10,7 +10,7 @@ using namespace std;
 #include<cmath>
 #define Mdouble 1.79769e+308
 
-const double EPS = 1e-6;
+const double EPS = 1e-7;
 char buf[20];
 
 int cmp(double x, double y = 0, double tol = EPS) {
