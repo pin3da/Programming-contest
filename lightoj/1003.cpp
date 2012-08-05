@@ -39,13 +39,16 @@ void printGraph(graph g){
 	}
 }
 
+map<string, int> cod;
+graph g;
+
 int main(){
 	int numcas;cin>>numcas;
 	int cid=0;
 	while(numcas--){
 		int edges,id=0;cin>>edges;
-		map<string, int> cod;
-		graph g;
+		cod.clear();		
+		g.clear();
 		memset(color,0,sizeof(color));
 		while(edges--){
 		    string cad;cin>>cad;

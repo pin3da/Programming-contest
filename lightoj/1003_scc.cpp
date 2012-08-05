@@ -9,6 +9,8 @@ using namespace std;
 #include <cstring>
 #define MAXN 20005
 #define D(x) cout<< #x " = "<<(x)<<endl
+#define For(i,a) for(int i=0;i<a;++i)
+#define DB if(1)
 
 vector<int> g[MAXN];
 int d[MAXN], low[MAXN], scc[MAXN];
@@ -70,11 +72,11 @@ int main(){
 		tarjan(0);
 		char check[id];
 		char pin=0;
+		DB For(i,id) D(scc[i]);
 		memset(check,0,sizeof(check));
 		for(int i=0;i<id;++i){
 			if(check[scc[i]]!=0){
 				pin=1;
-				//break;
 			}
 			check[scc[i]]++;
 		}

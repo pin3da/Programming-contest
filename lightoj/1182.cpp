@@ -13,19 +13,16 @@ using namespace std;
 #define D(x) cout<< #x " = "<<(x)<<endl
 #define Dbg if(1)
 #define MAXNODES 1000
-#define s(x) x*x
 
-const double p2 = acos(0);
 
 int main(){
 	int numcas;cin>>numcas;
-	int cid=0;
-	int a,b,c;
+	int cid=0,n;
 	while(numcas--){
-		cin>>a>>b>>c;
+		cin>>n;
 		cout<<"Case "<<++cid<<": ";
-		if( (s(a)+s(b))==s(c) or (s(a)+s(c))==s(b) or (s(c)+s(b))==s(a)) cout<<"yes"<<endl;
-		else cout<<"no"<<endl;
+		if(__builtin_popcount(n)%2==0)cout<<"even"<<endl;
+		else cout<<"odd"<<endl;
 	}
 	return 0;
 }
