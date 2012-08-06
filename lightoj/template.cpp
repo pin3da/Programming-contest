@@ -1,12 +1,17 @@
 using namespace std;
+#include<algorithm>
 #include<iostream>
+#include<sstream>
+#include<string>
+#include<vector>
+#include<queue>
+#include<stack>
+#include<map>
+
 #include<climits>
 #include<cstring>
 #include<cstdio>
-#include<vector>
 #include<cmath>
-#include<queue>
-#include<map>
 
 #define For(i,a) for(int i=0;i<a;++i)
 #define foreach(x,v) for(typeof (v).begin() x = (v).begin(); x!= (v).end(); x++)

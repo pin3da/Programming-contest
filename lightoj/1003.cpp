@@ -18,7 +18,7 @@ typedef map<int, ad> graph;
 
 int color[20005];
 
-int dfs(int n,graph g){
+int dfs(int n,graph &g){
 	if(color[n]==1)return true;
 	if(color[n]==2)return false;
 	color[n]=1;
