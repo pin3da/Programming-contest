@@ -1,3 +1,5 @@
+// No accepted yet.
+
 using namespace std;
 #include<algorithm>
 #include<iostream>
@@ -18,22 +20,19 @@ using namespace std;
 #define D(x) cout<< #x " = "<<(x)<<endl
 #define Dbg if(1)
 #define MAXNODES 1000
+#define MP 31622770
 
 const double pi=acos(-1);
 
-struct point{
-	int x,y;
-	point() {}
-	point(int X, int Y) : x(X), y(Y) {}
-};
-
-
 int main(){
+
 	int numcas;cin>>numcas;
 	int cid=0;
+	
 	while(numcas--){
-
-		cout<<"Case "<<++cid<<": "<<<<endl;
+		int a,b,ans=0;cin>>a>>b;
+			ans= ( ((b-1)/3)*2 + (b-1)%3) - (((a-2)/3)*2 + (a-2)%3);
+		cout<<"Case "<<++cid<<": "<<ans<<endl;
 	}
 	return 0;
 }

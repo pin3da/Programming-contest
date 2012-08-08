@@ -5,6 +5,7 @@ using namespace std;
 #include<string>
 #include<vector>
 #include<queue>
+#include<limits>
 #include<stack>
 #include<map>
 
@@ -21,19 +22,23 @@ using namespace std;
 
 const double pi=acos(-1);
 
-struct point{
-	int x,y;
-	point() {}
-	point(int X, int Y) : x(X), y(Y) {}
-};
-
+typedef unsigned long long ull;
 
 int main(){
 	int numcas;cin>>numcas;
 	int cid=0;
+	ull a,b,tmp;
 	while(numcas--){
-
-		cout<<"Case "<<++cid<<": "<<<<endl;
+		ull num;cin>>num;
+		cout<<"Case "<<++cid<<": ";
+		if(num&1)
+			cout<<"Impossible"<<endl;
+		else{
+			ull i=1;
+			for(i=2;(num%i!=0) or (num/i)%2==0;i<<=1);
+			cout<<num/i<<" "<<i<<endl;
+		}
+		
 	}
 	return 0;
 }

@@ -21,19 +21,13 @@ using namespace std;
 
 const double pi=acos(-1);
 
-struct point{
-	int x,y;
-	point() {}
-	point(int X, int Y) : x(X), y(Y) {}
-};
-
-
 int main(){
 	int numcas;cin>>numcas;
 	int cid=0;
+	cout<< fixed;cout.precision(10);
 	while(numcas--){
-
-		cout<<"Case "<<++cid<<": "<<<<endl;
+		double R,n;cin>>R>>n;
+		cout<<"Case "<<++cid<<": "<<sin(pi/n)*R/(sin(pi/n) + 1)<<endl;
 	}
 	return 0;
 }
