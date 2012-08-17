@@ -18,24 +18,25 @@ using namespace std;
 #define all(x) x.begin(),x.end()
 #define rall(x) x.rbegin(),x.rend()
 #define D(x) cout<< #x " = "<<(x)<<endl
-#define Dbg if(1)
+#define Dbg if(0)
 #define MAXNODES 1000
 
 const double pi=acos(-1);
 
-struct point{
-	int x,y;
-	point() {}
-	point(int X, int Y) : x(X), y(Y) {}
-};
 
 
 int main(){
 	int numcas;cin>>numcas;
-	int cid=0;
+	int cid=0,days;
 	while(numcas--){
-
-		cout<<"Case "<<++cid<<": "<<<<endl;
+		cin>>days;
+		int ans=1;
+		double acum=1;
+		for(ans;(1.0-acum)<0.5;++ans){
+			acum*=(days-ans)/(double)days;
+			Dbg D(acum);
+		}
+		cout<<"Case "<<++cid<<": "<<--ans<<endl;
 	}
 	return 0;
 }

@@ -5,6 +5,7 @@ using namespace std;
 #include<string>
 #include<vector>
 #include<queue>
+#include<regex>
 #include<stack>
 #include<map>
 
@@ -23,19 +24,16 @@ using namespace std;
 
 const double pi=acos(-1);
 
-struct point{
-	int x,y;
-	point() {}
-	point(int X, int Y) : x(X), y(Y) {}
-};
 
 
 int main(){
 	int numcas;cin>>numcas;
 	int cid=0;
+	regex r1("[aeiou][a-z][aiou]");
+	regex r2("[aeiou][a-z][a-z](?:[a-z])[aiou]");
 	while(numcas--){
-
-		cout<<"Case "<<++cid<<": "<<<<endl;
+		string cad;cin>>cad;
+		cout<<"Case "<<++cid<<": "<<regex_replace(r1,cad,"-")<<endl;
 	}
 	return 0;
 }
