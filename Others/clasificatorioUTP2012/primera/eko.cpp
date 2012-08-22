@@ -30,12 +30,11 @@ int trees[MAXP];
 
 
 int main(){
-    int n, m;
-    scanf("%d%d", &n, &m);
+	int n, m;
+	scanf("%d%d", &n, &m);
 	for(int i=0; i<n; ++i){
-        scanf("%d", trees+i);
-    }
-	
+		scanf("%d", trees+i);
+	}
 	sort(trees,trees+n);
 	int un = trees[n-1];
 	int si = trees[0];
