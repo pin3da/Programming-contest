@@ -28,7 +28,7 @@ int main(){
 	pdd o,a,b;
 	while(numcas--){
 		scanf("%lf %lf %lf %lf %lf %lf",&o.first,&o.second,&a.first,&a.second,&b.first,&b.second);
-		printf("Case %d: %lf\n",++cas, dist(b,o)*angle(a,o,b));
+		printf("Case %d: %lf\n",++cas, dist(o,b)*angle(o,a,b));
 
 	}
 	return 0;
