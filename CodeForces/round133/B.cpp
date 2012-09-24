@@ -34,15 +34,23 @@ using namespace std;
 typedef vector<int> vi;
 typedef vector<vi> vvi;
 
-int N; // number of vertices 
-vi W[MAXNODES]; // graph 
-vi V; // V is a visited flag 
+int N;
+vvi W;
+vi V; 
+vi C; 
  
-void dfs(int i) { 
+bool dfs(int i,int col) {
 	if(!V[i]) { 
-            V[i] = true;
-            for_each(all(W[i]), dfs); 
-    } 
+		V[i] = true;
+        C[i] = col;
+		foreach(it,W[i]){
+			if( !dfs((*it),(col+1)%2) )
+				return false;
+        }
+		return true;
+    }else{
+    	return col==C[i];
+    }
  } 
 
 
@@ -51,51 +59,23 @@ void dfs(int i) {
 int main(){
 	int n,m;cin>>n>>m;
 	int ori,des;
+	W = vvi(n);
+	V = vi(n,0);
+	C = vi(n);
 	For(i,m){
 		cin>>ori>>des;
 		W[--ori].push_back(--des);
+		W[des].push_back(ori);
 	}
 	
-	int ans=0,sz=n/2;
-	vi asig(n, false);
-	set<int> g1,g2;
-	for(int i=0;i<n && g1.size()< sz;++i){
-		int pin=0;
-		if(asig[i])continue;
-		if(g1.count(i)>0)continue;
-		V = vi(n, false);dfs(i);
-		foreach(it,g1)
-			if(V[(*it)]){
-				pin=1;
-				break;
-			}
-			
-		if(pin)continue;
-		g1.insert(i);
-		asig[i]=true;
-	}
-	
-	for(int i=0;i<n && g2.size()< sz;++i){
-		int pin=0;
-		if(asig[i])continue;
-		if(g2.count(i)>0)continue;
-		V = vi(n, false);dfs(i);
-		foreach(it,g2)
-			if(V[(*it)]){
-				pin=1;
-				break;
-			}
-		if(pin)continue;
-		g2.insert(i);
-		asig[i]=true;
-	}
-	
-	
+	int ans=0;
 	For(i,n){
-		if(!asig[i])ans++;
-		//else 		D(i);
+		if(V[i])continue;
+		if( !dfs(i,0))ans++;
 	}
-		
+
+	if ((n - ans)%2!=0)
+        ans++;
 	cout<<ans<<endl;
 	return 0;
 }

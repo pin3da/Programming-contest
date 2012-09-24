@@ -61,7 +61,7 @@ void tarjanOLCA(int u){
 	for(int i = 0;i < G[u].q.size(); ++i){
 		if(u == Q[G[u].q[i]].A)v=Q[G[u].q[i]].B;
 		else if(u == Q[G[u].q[i]].B)v=Q[G[u].q[i]].A;
-		else continue;// throw "Paila "+ toStr(u);
+		else  throw "Paila "+ toStr(u);
 		if(G[v].color == black)
 				Q[G[u].q[i]].ans = G[u].dist_root + G[v].dist_root - 2*G[G[find_set(v)].ancestor].dist_root;
 	}
@@ -74,10 +74,11 @@ int main(){
 	while(1){
 		cin>>nodes;
 		if(!nodes)break;
-		For(i,nodes){
-			G[i+1].childrens = vector<int> ();
-			G[i+1].q = vector<int> ();
+		For(i,nodes+2){
+			G[i].childrens = vector<int> ();
+			G[i].q = vector<int> ();
 		}
+		G[0].dist_root=0;
 		For(i,nodes-1){
 			cin>>to>>we;
 			G[i+1].color = 0;
