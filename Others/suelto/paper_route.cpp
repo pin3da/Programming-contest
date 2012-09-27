@@ -46,13 +46,8 @@ int main(){
         
         queue<int> Q;
         Q.push(0);
-        vector<int> leafs;
         while(!Q.empty()){
             int act = Q.front();Q.pop();
-            if(g[act].al.empty()){
-                leafs.push_back(act);
-                continue;
-            }
             foreach(it,g[act].al){
                 g[it->to].to_root = g[act].to_root + it->weight;
                 Q.push(it->to);
@@ -60,8 +55,8 @@ int main(){
         }
         
         long long ans = (1LL<<62);
-        foreach(it,leafs){
-            ans = ((total - g[*it].to_root + cd[(*it)])<ans)?(total - g[*it].to_root + cd[(*it)]):ans;
+        foreach(it,g){
+            ans = ((total - it->second.to_root + cd[it->first])<ans)?(total - it->second.to_root + cd[it->first]):ans;
         }
         ans = ((total + cd[0])<ans)?(total + cd[0]):ans;
         cout<<ans<<endl;
