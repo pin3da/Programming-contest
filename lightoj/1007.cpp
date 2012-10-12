@@ -44,8 +44,7 @@ namespace Num {
 }
 
 ull phi[MP];
-void
-phiSieve () {
+void phiSieve () {
 		using Num::primes;
 		for (int i = 0; i < MP; ++i)
 				phi[i] = i;
@@ -63,8 +62,7 @@ phiSieve () {
 		}
 }
 
-int
-main () {
+int main () {
 		Num::primeSieve ();
 		phiSieve ();
 
