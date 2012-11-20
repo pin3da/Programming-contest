@@ -112,6 +112,9 @@ struct Bigint {
     }
 };
 
+template <class T> string toStr(const T &x)
+{ stringstream s; s << x; return s.str(); }
+
 int main(){
 	int n;cin>>n;
 	int nums[n];
