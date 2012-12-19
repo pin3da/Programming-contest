@@ -32,9 +32,9 @@ struct point{
 
 int main(){
 	int numcas;cin>>numcas;
-	for(int i=1;i<=numcas;++i){
+	for(int cid=1;cid<=numcas;++cid){
 
-		cout<<"Case "<<i<<": "<<endl;
+		cout<<"Case "<<cid<<": "<<endl;
 	}
 	return 0;
 }
