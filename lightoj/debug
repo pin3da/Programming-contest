@@ -1,26 +1,100 @@
-  i t n x j e z q p l t r l n d h u
-z 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 
-c 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 
-h 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 2 2 
-e 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 2 2 
-l 0 0 0 0 0 1 1 1 1 2 2 2 2 2 2 2 2 
-j 0 0 0 0 1 1 1 1 1 2 2 2 2 2 2 2 2 
-t 0 1 1 1 1 1 1 1 1 2 3 3 3 3 3 3 3 
-z 0 1 1 1 1 1 2 2 2 2 3 3 3 3 3 3 3 
-x 0 1 1 2 2 2 2 2 2 2 3 3 3 3 3 3 3 
-r 0 1 1 2 2 2 2 2 2 2 3 4 4 4 4 4 4 
-r 0 1 1 2 2 2 2 2 2 2 3 4 4 4 4 4 4 
-m 0 1 1 2 2 2 2 2 2 2 3 4 4 4 4 4 4 
-b 0 1 1 2 2 2 2 2 2 2 3 4 4 4 4 4 4 
-j 0 1 1 2 3 3 3 3 3 3 3 4 4 4 4 4 4 
-q 0 1 1 2 3 3 3 4 4 4 4 4 4 4 4 4 4 
-p 0 1 1 2 3 3 3 4 5 5 5 5 5 5 5 5 5 
-z 0 1 1 2 3 3 4 4 5 5 5 5 5 5 5 5 5 
-w 0 1 1 2 3 3 4 4 5 5 5 5 5 5 5 5 5 
-e 0 1 1 2 3 4 4 4 5 5 5 5 5 5 5 5 5 
-j 0 1 1 2 3 4 4 4 5 5 5 5 5 5 5 5 5 
-c 0 1 1 2 3 4 4 4 5 5 5 5 5 5 5 5 5 
-p 0 1 1 2 3 4 4 4 5 5 5 5 5 5 5 5 5 
-
-txjep
-Case 1: 5
+missing = 5
+value = 1
+times = 3
+missing = 4
+value = 1
+times = 2
+missing = 3
+value = 1
+times = 1
+missing = 2
+value = 1
+times = 0
+missing = 0
+value = 2
+times = 0
+missing = 1
+value = 2
+times = 1
+missing = 0
+value = 1
+times = 1
+missing = 2
+value = 2
+times = 2
+missing = 1
+value = 1
+times = 2
+missing = 0
+value = 1
+times = 1
+missing = 0
+value = 2
+times = 1
+missing = 3
+value = 2
+times = 3
+missing = 2
+value = 1
+times = 3
+missing = 0
+value = 2
+times = 3
+missing = 1
+value = 2
+times = 2
+missing = 0
+value = 1
+times = 2
+missing = 0
+value = 5
+times = 3
+missing = 5
+value = 2
+times = 2
+missing = 3
+value = 2
+times = 1
+missing = 2
+value = 1
+times = 1
+missing = 1
+value = 1
+times = 0
+missing = 0
+value = 2
+times = 1
+missing = 1
+value = 2
+times = 0
+missing = 0
+value = 1
+times = 0
+missing = 0
+value = 5
+times = 2
+missing = 5
+value = 5
+times = 1
+missing = 4
+value = 1
+times = 1
+missing = 3
+value = 1
+times = 0
+missing = 2
+value = 2
+times = 1
+missing = 1
+value = 1
+times = 1
+missing = 0
+value = 1
+times = 0
+missing = 0
+value = 2
+times = 0
+missing = 0
+value = 5
+times = 0
+Case 1: 21
