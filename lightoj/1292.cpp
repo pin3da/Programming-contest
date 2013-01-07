@@ -24,15 +24,15 @@ using namespace std;
 const double eps=1e-9;
 
 struct point{
-	int x,y;
-	point() {}
-	point(int X, int Y) : x(X), y(Y) {}
+  int x,y;
+  point() {}
+  point(int X, int Y) : x(X), y(Y) {}
 };
 
 
 int main(){
-	int numcas;cin>>numcas;
-	for(int cid=1;cid<=numcas;++cid){
+  int numcas;cin>>numcas;
+  for(int cid=1;cid<=numcas;++cid){
     int n;cin>>n;
     point p[n+1];
     for(int i=0;i<n;++i)
@@ -49,7 +49,7 @@ int main(){
       ans = max(ans,tmp);
     }
     ans++;    
-		cout<<"Case "<<cid<<": "<<((n==1)?1:ans)<<endl;
-	}
-	return 0;
+    cout<<"Case "<<cid<<": "<<((n==1)?1:ans)<<endl;
+  }
+  return 0;
 }

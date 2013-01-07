@@ -24,17 +24,17 @@ using namespace std;
 const double pi=acos(-1);
 
 struct point{
-	int x,y;
-	point() {}
-	point(int X, int Y) : x(X), y(Y) {}
+  int x,y;
+  point() {}
+  point(int X, int Y) : x(X), y(Y) {}
 };
 
 
 int main(){
-	int numcas;cin>>numcas;
-	for(int cid=1;cid<=numcas;++cid){
+  int numcas;cin>>numcas;
+  for(int cid=1;cid<=numcas;++cid){
 
-		cout<<"Case "<<cid<<": "<<endl;
-	}
-	return 0;
+    cout<<"Case "<<cid<<": "<<endl;
+  }
+  return 0;
 }
