@@ -379,7 +379,6 @@ struct cfg {
     }
     
     void cnf_nonterminals(int index=0){
-        set<production> n_pro(productions.begin(),productions.end());
         foreach(pro,productions){
             if(pro->second.size()>2){
                 index++;
