@@ -19,16 +19,35 @@ using namespace std;
 #define rall(x) x.rbegin(),x.rend()
 #define D(x) cout<< #x " = "<<(x)<<endl
 #define Dbg if(1)
-#define MP 10000001
 
-int prime[MP];
+typedef long long int lint;
 
-int main(){
-  
+lint x,y,xx,yy;
+
+lint gcd(lint a,lint b){
+  lint tmp;
+  while(b){
+    tmp = b;
+    b = a%b;
+    a = tmp;
+  }
+  return a;
+}
+
+lint solve(){
+  if(x==xx) return fabs(y-yy) + 1;
+  if(y==yy) return fabs(x-xx) + 1;
+  lint dx = fabs(x-xx);
+  lint dy = fabs(y-yy);
+  return gcd(dx,dy) + 1;
+}
+
+
+int main(){  
   int numcas;cin>>numcas;
   for(int cid=1;cid<=numcas;++cid){
-
-    cout<<"Case "<<cid<<": "<<endl;
+    cin>>x>>y>>xx>>yy;
+    cout<<"Case "<<cid<<": "<<solve()<<endl;
   }
   return 0;
 }
