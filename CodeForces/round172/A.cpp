@@ -7,6 +7,7 @@ using namespace std;
 #include<queue>
 #include<stack>
 #include<map>
+#include<set>
 
 #include<climits>
 #include<cstring>
@@ -19,22 +20,24 @@ using namespace std;
 #define rall(x) x.rbegin(),x.rend()
 #define D(x) cout<< #x " = "<<(x)<<endl
 #define Dbg if(1)
-#define MP 101
+#define MAXNODES 1000
 
-int g[MP][MP];
+template <class T> string toStr(const T &x)
+{ stringstream s; s << x; return s.str(); }
+template <class T> int toInt(const T &x)
+{ stringstream s; s << x; int r; s >> r; return r; }
+
+const double pi=acos(-1);
+typedef long long int lli;
+typedef pair<int , int> pii;
+
 
 int main(){
-  int u,v,w;
-  int numcas;cin>>numcas;
-  for(int cid=1;cid<=numcas;++cid){
-	int n,m;scanf("%d%d",&n,&m);
-	memset(g,0,sizeof(g));
-	for(int i=0;i<m;++i){
-		scanf("%d%d%d",&u,&v,&w);
-		g[u][v] = w;
-		g[v][u] = w;
-	}
-    cout<<"Case "<<cid<<": "<<endl;
-  }
-  return 0;
+	
+	string cad;cin>>cad;
+	cad[0]	= toupper(cad[0]);
+	cout<<cad<<endl;
+		
+	  
+    return 0;
 }
