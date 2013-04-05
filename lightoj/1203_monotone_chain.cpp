@@ -34,14 +34,37 @@ inline int distsqr(const PT &a, const PT &b){
 inline double dist(const PT &a, const PT &b){
   return sqrt(distsqr(a, b));
 }
-
+/*
 inline int dot(const PT &a, const PT &b, const PT &c){
 	return (a.x - b.x)*(c.x - b.x) + (a.y - b.y)*(c.y - b.y);
 }
 
 inline double ang(const PT &a, const PT &b, const PT &c){
 	return acos((dot(a,b,c)) / (dist(a,b)*dist(b,c)));
+}*/
+
+inline T cross(const PT &a, const PT &b, const PT &c){
+  return (b.x-a.x)*(c.y-a.y) - (c.x-a.x)*(b.y-a.y);
 }
+
+//AB dot AC
+inline T dot(const PT &a, const PT &b, const PT &c){
+	return (b.x - a.x)*(c.x - a.x) + (b.y - a.y)*(c.y - a.y);
+}
+
+double ang(PT &a, PT &b, PT &c){
+	double da = dist (b,a);
+	double db = dist (c,a);
+	T cj = cross(a,b,c);
+	T dj = dot(a,b,c);
+    double dsin = cj/(da*db);
+    double alpha=asin(dsin);  
+  
+    if (dj < 0) 
+            alpha=pi-alpha;  
+    return alpha*180.0/pi;
+}
+
 
 T cross(PT p, PT q) {
   return p.x * q.y - p.y * q.x;
@@ -100,13 +123,14 @@ int main(){
 		double ans = 0.0;
 		if(points > 2){
 			ConvexHull(todos);
-			ans = 1e100;
-			D(todos.size());
-			for(int j = 1;j<todos.size();++j){
-				double t = ang(todos[j-1],todos[j],todos[(j+1)%todos.size()]);
-				t*=180.0;
-				t/=pi;
-				ans = min(ans,t);
+			ans = 180;
+			if(todos.size()>2){
+				ans = 180;
+				size_t len = todos.size();
+				for(int j = 0;j<len;++j){
+					double t = ang(todos[(j+1)%len],todos[(j+2)%len],todos[j]);
+					ans = min(ans,t);
+				}
 			}
 		}
 		printf("Case %d: %.8lf\n",i,ans);

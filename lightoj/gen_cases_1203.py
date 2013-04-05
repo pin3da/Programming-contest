@@ -1,9 +1,11 @@
 import random as rd
 
-print 13
+b = 200
 
-for i in xrange(0,13):
-	a = rd.randint(1,10)
+print b
+
+for i in xrange(0,b):
+	a = rd.randint(1,1000)
 	print a
 	for j in xrange(0,a):
-		print rd.randint(-2000000100,2000000100) , rd.randint(-2000000100,2000000100)
+		print rd.randint(-1000100100,1000100100) , rd.randint(-1000100100,1000100100)

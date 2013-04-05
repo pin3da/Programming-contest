@@ -99,11 +99,11 @@ int main(){
 		for(int j = 0;j< points ; ++j){
 			scanf("%lld%lld",&todos[j].x,&todos[j].y);
 		}
-		double ans = 0.0;
+		double ans = 0;
 		if(points > 2){
 			vector<point> chull = graham(todos);		
 			if(chull.size()>2){
-				ans = 1e100;
+				ans = 180;
 				size_t len = chull.size();
 				for(int j = 0;j<len;++j){
 					double t = ang(chull[(j+1)%len],chull[(j+2)%len],chull[j]);
