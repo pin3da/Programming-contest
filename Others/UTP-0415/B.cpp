@@ -27,9 +27,43 @@ template <class T> string toStr(const T &x)
 template <class T> int toInt(const T &x)
 { stringstream s; s << x; int r; s >> r; return r; }
 
+const double pi=acos(-1);
+const double Pi2=acos(0);
+typedef long long int lli;
+typedef pair<int , int> pii;
+
+int ct(lli b){
+    string a= toStr(b);
+    int ans=0;
+    For(i,a.size())
+        if(a[i]=='4')ans++;
+        else ans--;
+    return ans==0;
+    
+}
+
+set<lli> lucky;
+void gen_lucky(lli a=0){
+    if(a>1000000000L) return;
+    lli x = (a*10) + 4;
+    lli y = (a*10) + 7;
+    if(ct(x))
+        lucky.insert(x);
+    if(ct(y))
+        lucky.insert(y);
+    gen_lucky(x);
+    gen_lucky(y);
+}
+
+
+
 
 int main(){
-    
+    gen_lucky();
+    int k;cin>>k;
+/*    foreach(v,lucky){
+        cout<<(*v)<<endl;
+    }*/
+    cout<<(*lucky.lower_bound(k))<<endl;
 
-    return 0;
 }

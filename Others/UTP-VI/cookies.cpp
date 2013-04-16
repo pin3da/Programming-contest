@@ -27,9 +27,27 @@ template <class T> string toStr(const T &x)
 template <class T> int toInt(const T &x)
 { stringstream s; s << x; int r; s >> r; return r; }
 
+const double pi=acos(-1);
+const double Pi2=acos(0);
+typedef long long int lli;
+typedef pair<int , int> pii;
+
 
 int main(){
+    int a;cin>>a;
+    int pares=0,impares=0;
+    int total=0;
+    int t;
+    For(i,a){
+        cin>>t;
+        //(t&1)?impares:pares += 1;
+        if(t&1)impares++;
+        else pares++;
+        total+=t;
+    }
+    if(total&1)
+        cout<<a-pares<<endl;
+    else
+        cout<<a-impares<<endl;
     
-
-    return 0;
 }

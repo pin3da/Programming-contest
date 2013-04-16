@@ -27,9 +27,23 @@ template <class T> string toStr(const T &x)
 template <class T> int toInt(const T &x)
 { stringstream s; s << x; int r; s >> r; return r; }
 
+const double pi=acos(-1);
+const double Pi2=acos(0);
+typedef long long int lli;
+typedef pair<int , int> pii;
+
 
 int main(){
-    
+    double a,b,c,d,e,f;
+    cin>>a>>b>>c>>d>>e>>f;
+    double x=1;
+    x=(1/a)*b;
+    x= (x/c)*d;
+    x = (x/d)*f;
+    if(x<=1)
+      cout<<"Hermione"<<endl;
+    else
+      cout<<"Ron"<<endl;
+    return 0;   
 
-    return 0;
 }

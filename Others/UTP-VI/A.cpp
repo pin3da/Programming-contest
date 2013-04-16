@@ -27,9 +27,21 @@ template <class T> string toStr(const T &x)
 template <class T> int toInt(const T &x)
 { stringstream s; s << x; int r; s >> r; return r; }
 
+const double pi=acos(-1);
+const double Pi2=acos(0);
+typedef long long int lli;
+typedef pair<int , int> pii;
+
 
 int main(){
-    
-
+    lli a,b;cin>>a>>b;
+    int ans = 0;
+    lli o=a;
+    while(o<b and o>0){
+        o*=a;  
+        ans++;  
+    }
+    if(o==b)cout<<"YES"<<endl<<ans<<endl;
+    else    cout<<"NO"<<endl;
     return 0;
 }

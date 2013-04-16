@@ -13,6 +13,7 @@ using namespace std;
 #include<cstring>
 #include<cstdio>
 #include<cmath>
+#include<cctype>
 
 #define For(i,a) for(int i=0;i<a;++i)
 #define foreach(x,v) for(typeof (v).begin() x = (v).begin(); x!= (v).end(); x++)
@@ -27,9 +28,39 @@ template <class T> string toStr(const T &x)
 template <class T> int toInt(const T &x)
 { stringstream s; s << x; int r; s >> r; return r; }
 
+const double pi=acos(-1);
+const double Pi2=acos(0);
+typedef long long int lli;
+typedef pair<int , int> pii;
+
+
+
 
 int main(){
-    
+    string num;
+    cin>>num;
+    int i=0;
+    char last;
+    while(num[i]!='.' and i<num.size()){
+        last = num[i];
+        ++i;
+    }  
+    if(last=='9')
+        cout<<"GOTO Vasilisa."<<endl;
+    else{
+        int j=i+1;
+        if(num[j]>='5'){
+            For(m,i-1){
+                cout<<num[m];
+            }
+            cout<<((char)(num[i-1]+1))<<endl;
+        }else{
+            For(m,i){
+                cout<<num[m];
+            }
+            cout<<endl;
+        }
+        
+    }
 
-    return 0;
 }
