@@ -1,0 +1,75 @@
+Se tienen 2 Tries, uno contendrá los prefijos (preffix_tree) y el otro conendrá las palabras que deben ser suffijos pero invertidas (suffix_tree).
+
+Inicialmente podemos pensar en contar el número de prefijos en cada Trie y multiplicarlos, algo como esto:
+
+Portugués:
+aab
+aa
+aabc
+
+Español:
+
+k
+lmn
+m
+
+tendríamos: 
+Trie 1:
+    root
+      |
+      a
+      |
+      a
+      |
+      b
+      |
+      c
+
+Trie 2(sufijos invertidos):
+    root
+      |    
+   ┌──┬──┐
+   m  n  k
+      |
+      m
+      |
+      l
+
+En este caso basta con multiplicar la cantidad de nodos del primer trie por la del segundo.
+
+El problema es cuando tenemos palabras iguales que se forman con combinaciones de prefijos/sufijos diferentes. 
+Por ejemplo, tenemos los siguientes diccionarios.
+Español:
+abc
+
+Portugués:
+abc
+
+Las palabras ABc y aBC (las mayúsculas son para diferenciar) pueden ser formadas de manera diferente, pero para el diccionario son la misma.
+Esto ocurre cuando un prefijo termina por una letra determinada y algún sufijo empieza por esta misma letra.
+
+Para solucionar esto, simplemente para todas las letras contamos cuántas veces algún prefijos termina en esa letra , y cuantos veces algún sufijos empieza por esa
+letra. Para esto, realizamos un recorrido ambos tries, en el de los prefijos, cada nodo me representa el final de un posible prefijo, para los sufijos me
+representa cada posible inicio (ya que lo invertimos). Esto lo podemos teniendo un arreglo de 26 posiciones (longitud del alfabeto), y aumentando la cuenta para
+la letra del nodo actual.
+
+Es importante resaltar que la primera letra de los prefijos y la última de los sufijos NO se deben descontar, ya que por obligación estas siempre deben de estar
+presentes.
+
+Al hacer el recorrido con el diccionario anterior tenemos las siguientes ocurrencias de las letras: 
+
+Prefijos:
+a : 0;
+b : 1;
+c : 1;
+
+Sufijos:
+c: 0;
+b: 1;
+a: 1;
+
+Esto significa que 0 prefijos terminan en a, 1 termina en b y 1 termina en b.
+0 sufijos empiezan en c, 1 empieza en b y 1 empieza en a.
+
+Ahora bien, el número total de palabras sería (cantidad de nodos del Trie 1)*(cantidad de nodos del Trie 2), pero como sabemos que hay 1 prefijo que termina por
+la misma letra que empieza un sufijo, este debe ser descontado del total. Quedaría entonces (3*3) - 1.
