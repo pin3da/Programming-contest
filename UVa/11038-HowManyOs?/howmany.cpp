@@ -1,3 +1,6 @@
+/**
+* Manuel Pineda. Accepted
+*/
 using namespace std;
 #include <iostream>
 #include <sstream>
