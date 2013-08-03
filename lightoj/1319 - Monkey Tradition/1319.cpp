@@ -1,4 +1,3 @@
-// NOT SOLVED YET !
 using namespace std;
 #include<bits/stdc++.h>
 #define ___ ios_base::sync_with_stdio(false);cin.tie(NULL);
