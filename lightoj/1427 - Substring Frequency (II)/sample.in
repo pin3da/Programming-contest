@@ -1,0 +1,13 @@
+2
+5
+ababacbabc
+aba
+ba
+ac
+a
+abc
+3
+lightoj
+oj
+light
+lit
