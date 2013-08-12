@@ -11,8 +11,10 @@ think in this recurrence: f(n) = f(n-1) +  2f(n-1)
 
 We need to find a matrix M such that:
 
-M x |  f(n)  | = | f(n+1) |
-    | f(n-1) |   |  f(n)  |
+
+    M x |  f(n)  | = | f(n+1) |
+        | f(n-1) |   |  f(n)  |
+        
     
 therefore, the first row of M must be {1 2}. to ensure that f(n) = f(n-1) + 2f(n-1).
 the second row is {1,0}.... 1*f(n-1) + 0*f(n-2) =  f(n-1).
@@ -70,7 +72,7 @@ the second row is {1,0}.... 1*f(n-1) + 0*f(n-2) =  f(n-1).
               | f(n-1) |   |f(n+k-1)|
               
               
-For clarity see the follow post [a link] http://zobayer.blogspot.com/2010/11/matrix-exponentiation.html , 
-which is explained in detail.
+For clarity see the follow post http://zobayer.blogspot.com/2010/11/matrix-exponentiation.html , 
+where is explained in detail.
 
 
