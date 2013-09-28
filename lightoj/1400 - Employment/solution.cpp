@@ -30,7 +30,7 @@ void stable_marriage(){
             husband[w] = m;
             Q.pop();
         }else{
-            if( inv[w][m] > inv[w][husband[w]] ){
+            if( inv[w][m] < inv[w][husband[w]] ){
                 wife[m] = w;
                 wife[husband[w]] = -1;
                 Q.pop();
