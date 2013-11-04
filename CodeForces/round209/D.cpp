@@ -25,7 +25,7 @@ int main(){ ___
             int len = right - left -2;
             i = right;
             if(len > old_len) c = 0,old_len = len;
-            if(len == old_len) ans[c++] = left +1;
+            if(len == old_len) ans[c++] = left + 2;
         }
 
         cout<<c<<" "<<old_len<<endl;
