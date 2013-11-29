@@ -1,0 +1,63 @@
+PROBLEM STATEMENT
+Fox Ciel received a string as a birthday present. However, the string was too long for her, so she decided to make it shorter by erasing some characters.
+
+
+The erasing process will look as follows:
+
+Find the smallest i such that the i-th character and the (i+1)-th character of the string are same.
+If there is no such i, end the process.
+Remove the i-th and the (i+1)-th character of the string, and repeat from 1.
+
+
+
+For example, if she receives "cieeilll", she will change the string as follows: "cieeilll" -> "ciilll" -> "clll" -> "cl". You are given a string s. Return the string she will get after she erases characters as described above.
+
+DEFINITION
+Class:ErasingCharacters
+Method:simulate
+Parameters:string
+Returns:string
+Method signature:string simulate(string s)
+
+
+CONSTRAINTS
+-s will contain between 1 and 50 characters, inclusive.
+-Each character in s will be a lowercase letter ('a'-'z').
+
+
+EXAMPLES
+
+0)
+"cieeilll"
+
+Returns: "cl"
+
+This is the example from the statement.
+
+1)
+"topcoder"
+
+Returns: "topcoder"
+
+She won't erase any characters at all.
+
+2)
+"abcdefghijklmnopqrstuvwxyyxwvutsrqponmlkjihgfedcba"
+
+Returns: ""
+
+
+
+3)
+"bacaabaccbaaccabbcabbacabcbba"
+
+Returns: "bacbaca"
+
+
+
+4)
+"eel"
+
+Returns: "l"
+
+
