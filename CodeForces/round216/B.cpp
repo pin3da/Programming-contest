@@ -1,7 +1,3 @@
-/**
-    Wrong answer
-*/
-
 using namespace std;
 #include<bits/stdc++.h>
 #define foreach(it, x) for(typeof (x).begin() it = (x).begin(); it != (x).end(); ++it)
@@ -12,56 +8,46 @@ using namespace std;
 
 int n,k,l,r,sa,sk;
 
+void print_a(const vector<int> &ans){
+  
+  for(int i = 0; i< ans.size(); ++i){
+    if(i)cout<<" ";
+    cout<<ans[i];
+  }
+  cout<<endl;
+}
+
 int main(){ ___
 
 
     while(cin>>n>>k>>l>>r>>sa>>sk){
         vector<int> ans(n);
-        for(int i = 0; i< n; ++i){
-            ans[i] = l;
+        
+        int remain = sk % k;
+        for(int i = 0; i < k; ++i){
+          ans[i] = sk / k;
+          ans[i] += (remain > 0)? 1: 0;
+          remain--;
         }
         
-        int cur = l*k;
-        
-        int cant_el = ceil((sk - cur)/(double)k);
-        assert(l+cant_el <= r);
-       
-        int i = 0;
-        while(i < n and cur < sk){
-            int sum = cant_el;
-            int falta = sk - cur;
-            if(sum > falta) sum = falta;
-            cur += sum;
-            ans[i] += sum;
-            ++i;
+        if(n == k){
+          print_a(ans);
+          continue;
         }
+        int j = k;
+        sk = sa - sk;
+        k = n - k;
+        remain = sk % (k);
         
-        if(cur != sk){
-            cout<<"Bad k"<<endl;
-            retrun 0;
+        for(int i = j;  i < n; ++i){
+            ans[i] = sk / k;
+            ans[i] += (remain > 0)? 1: 0;
+            remain--;
         }
+
+        print_a(ans);
         
-        cur += (n-k)*l;
-        
-        //D(cur);
-        i = k;
-        int mio  = ans[i-1];
-        while(i < n and cur < sa){
-            int sum = mio - ans[i];
-            int falta = sa - cur;
-            if(falta < sum) sum = falta;
-            cur += sum;
-            ans[i] += sum;
-            ++i;
-        }
-                
-        assert(cur == sa);
-        
-        for(int i = 0; i< ans.size(); ++i){
-            if(i)cout<<" ";
-            cout<<ans[i];
-        }
-        cout<<endl;
+
     }
     return 0;
 }
