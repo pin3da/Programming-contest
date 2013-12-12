@@ -59,18 +59,17 @@ int main(){ ___
                     leaf = 0;
                 }
             }
-            
             if(leaf and act.p){
                 ans.insert(level);
             }
         }
-        
+
         vector<int> mio;
         foreach(i,ans){
             if(forbbiden.count(*i)==0)
                 mio.push_back(*i);
         }
-        
+
         cout<<mio.size()<<endl;
         for(int i = 0; i< mio.size(); ++i){
             if(i)cout<<" ";
