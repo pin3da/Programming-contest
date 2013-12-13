@@ -17,16 +17,6 @@ int recover[MAXN];
 int n,d;
 
 
-void path(int i, int j){
-  if(next[i][j] == -1)
-      cout<<" ";
-  else{
-    path(i,next[i][j]);
-    cout<<next[i][j];
-    path(next[i][j],j);
-  }
-}
-
 int main(){
 
   while(cin>>n>>d){
@@ -39,24 +29,18 @@ int main(){
 
     for(int i = 0; i< n; ++i)
       for(int j = 0; j <n; ++j)
-        g[i][j] = dist(p[i],p[j])*d;
+        g[i][j] = dist(p[i],p[j])*d - recover[i];
 
-    memset(next,-1,sizeof next);
 
-    for(int k = 1;  k < n - 1; ++k){
-      for(int i = 0; i < n; ++i){
+    for(int k = 0;  k < n; ++k)
+      for(int i = 0; i < n; ++i)
         for(int j = 0; j< n; ++j){
-          long long a = (g[i][k] + g[k][j]) - recover[i];
+          if(k==i or j==i or k==j) continue; // Make sure than transition exists
+          long long a = (g[i][k] + g[k][j]);
           if(a <= g[i][j]){
             g[i][j] = a;
-            next[i][j] = k;
-            cout<<"Mejora "<<i<<" "<<k<<" "<<j<<endl;
           }
         }
-      }
-    }
-
-    //path(0,n-1);
 
     cout<<g[0][n-1]<<endl;
   }
