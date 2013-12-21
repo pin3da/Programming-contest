@@ -6,12 +6,13 @@ using namespace std;
 
 
 vector<int> kmp_preprocess(const string &s){
-  vector<int> pi(s.size()+1);
-  pi[0] = -1;
-  for(int i = 0; i < s.size();++i){
-    pi[i+1] = pi[i]; ++i;
-    while(pi[i] >= 0 and s[i] != s[pi[i]]) pi[i] = pi[pi[i]];
-    pi[i]++;--i;
+  vector<int> pi(s.size());
+  pi[0]=-1;
+  int k=-1;
+  for(int i = 1; i < s.size(); i++){
+    while( k >= 0 and  s[k+1] != s[i]) k = pi[k];
+    if (s[k+1] == s[i]) k++;
+    pi[i] = k;
   }
   return pi;
 }
@@ -19,18 +20,12 @@ vector<int> kmp_preprocess(const string &s){
 void solve(){
   string cad;cin>>cad;
   vector<int> pi = kmp_preprocess(cad);
-  for(int i = 2; i < pi.size(); ++i){
+  for(int i = 1; i < pi.size(); ++i){
     if(pi[i]==-1) continue;
     int j = i - pi[i];
-    if((i % j) == 0)
-      cout<<i<<" "<<(i/j)<<'\n';
+    if(((i+1) % j) == 0)
+      cout<<(i+1)<<" "<<((i+1)/j)<<'\n';
   }
-/*
-  for(int i = 0; i < pi.size(); i++) {
-
-    cout<<i<<" "<<i - pi[i]<<" "<<pi[i]<<'\n';
-  }
-  cout<<'\n';*/
 }
 
 int main(){ ___
