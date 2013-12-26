@@ -5,9 +5,10 @@
 ### Key idea.
 
 We have:
-  C*Q + L = P
 
-So the problem is to find all divisors of C*Q (equals to P - L).
+  $C*Q + L = P$
+
+So the problem is to find all divisors of $C*Q$ (equals to P - L).
 
 There are two approaches to solve this problem. The first just iterate until sqrt(N) and add to the list all "i" such that n%i == 0, also we have to add n/i.Take care with the case i = n/i, you must not add repeated values.
 
