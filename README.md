@@ -1,10 +1,9 @@
 ## Programming contest.
 
 This is my personal repository of the solutions that i wrote through the time.
-I hope this can help you in some way, recently i've been adding a little explanaition of the solutions and useful links.
+Recently i've been adding a little explanaition of the solutions and useful links. I hope this can help you in some way.
 
 Mainly I wrote these codes as preparation for ACM-ICPC, and also for fun.
-
 
 #### Advice for beginners.
 
