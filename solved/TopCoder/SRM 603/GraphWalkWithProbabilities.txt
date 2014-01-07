@@ -1,0 +1,105 @@
+PROBLEM STATEMENT
+Hero is playing a game on a directed graph.
+The graph has N nodes, numbered 0 through N-1.
+Each node of the graph has two associated probabilities: winprob[i] and loseprob[i].
+
+At the beginning of the game, Hero takes a token and places it onto the node start.
+The game then proceeds in turns.
+Each turn consists of the following steps:
+
+Let x be the node currently occupied by the token.
+Hero picks a node y. The node y must either be the current node (i.e., y=x), or there must be an edge from x to y.
+Hero moves the token from x to y.
+One of three outcomes is chosen at random: With probability winprob[y] percent the game ends and Hero wins. With probability loseprob[y] percent the game ends and Hero loses. In all other cases (i.e., with probability 100-winprob[y]-loseprob[y] percent) the game continues.
+
+
+You are given a vector <string> graph that describes the graph.
+More precisely, for each valid i and j, graph[i][j] is '1' if there is an edge from i to j, and it is '0' otherwise.
+Note that for all i, graph[i][i] is '1' to indicate that it is always allowed to stay in a node.
+You are also given the vector <int>s winprob and loseprob, and the int start.
+Assuming that Hero plays the game optimally, return a real number between 0 and 1, inclusive: the probability that he wins the game.
+
+DEFINITION
+Class:GraphWalkWithProbabilities
+Method:findprob
+Parameters:vector <string>, vector <int>, vector <int>, int
+Returns:double
+Method signature:double findprob(vector <string> graph, vector <int> winprob, vector <int> looseprob, int Start)
+
+
+NOTES
+-Your return value must have an absolute or a relative error less than 1e-9.
+-Note that the input probabilities (winprob, loseprob) are given in percents but the return value is not.
+-The constraints guarantee that with probability 1 the game will end.
+
+
+CONSTRAINTS
+-Number of elemets in graph is equal to number of nodes N.
+-N will be between 1 and 50, inclusive.
+-Each element of graph will contain exactly N characters.
+-Each character in graph will be either '0' or '1'.
+-graph[i][i] will be equal to '1' for all i between 0 and N-1, inclusive.
+-winprob and loseprob will contain exactly N elements.
+-Each element of winprob and loseprob will be between 0 and 100, inclusive.
+-For each i, the sum of winprob[i] and loseprob[i] will be at least 1.
+-start will be between 0 and N-1, inclusive.
+
+
+EXAMPLES
+
+0)
+{"1"}
+{1}
+{1}
+0
+
+Returns: 0.5
+
+In each turn, Hero has to stay in the only node. 
+After each turn, he wins the game with probability 1% and loses the game with probability 1%.
+By the symmetry of the situation, his overall probability of winning the game has to be 50%, hence the correct return value is 0.5.
+
+Note that as the number of turns increases, the probability that the game is still going on decreases towards zero.
+Specifically, the probability that the game still runs after k turns is 0.98^k.
+Therefore, the probability of Hero playing the game forever without winning or losing it is 0.
+
+1)
+{"11","11"}
+{60,40}
+{40,60}
+0
+
+Returns: 0.6
+
+At the first turn Hero can choose to stay at node 0 or to move token to node 1.
+After he made choice game will end at the end of turn. First node has better probability of winning, so optimal play is to stay at node 0 and win with probability of 60 percents.
+
+2)
+{"11","11"}
+{2,3}
+{3,4}
+0
+
+Returns: 0.4285714285714286
+
+Here optimal play is to move to node 1 at first turn and stay there until end of game, in this way answer is 3/7.
+
+3)
+{"110","011","001"}
+{2,1,10}
+{20,20,10}
+0
+
+Returns: 0.405
+
+Nodes number 0 and 1 have too weak probability of winning, so Hero moves to node number 1 at first turn, to node 2 at second turn, and waits for end.
+
+4)
+{"111","111","011"}
+{100,1,1}
+{0,50,50}
+2
+
+Returns: 0.5
+
+
