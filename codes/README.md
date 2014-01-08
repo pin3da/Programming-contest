@@ -1,0 +1,3 @@
+These are the codes that I've implemented "from the scratch" for future uses.
+
+Feel free to copy / use / share ....
