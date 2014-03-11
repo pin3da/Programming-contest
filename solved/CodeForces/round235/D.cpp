@@ -8,28 +8,17 @@ using namespace std;
 
 string line;
 int mod;
+int tope;
 int num[MN];
+int p10[MN];
 long long fact[MN];
 
 long long dp[(1<<18)][100];
 
-long long solve(int mask, int m) {
-
-  if (mask == (1<<line.size()) -1 )  {
-    return m == 0;
-  }
-
-  if(dp[mask][m] != -1) return dp[mask][m] ;
-  long long ans = 0;
-
-  for (int i = 0; i < line.size(); ++i) {
-    if (mask & (1<<i)) continue;
-    if (mask == 0 and num[i] == 0) continue;
-    ans += solve(mask | (1<<i), ((num[i] + (m * 10) % mod) % mod));
-  }
-
-  return dp[mask][m] = ans;
-
+int next_popcount(int n){
+    int c = (n & -n);
+    int r = n+c;
+    return (((r ^ n) >> 2) / c) | r;
 }
 
 int main() { ___
@@ -45,12 +34,35 @@ int main() { ___
   }
 
   fact[0] = 1;
+  p10[0] = 1 % mod;
   for (int i = 1; i < MN; ++i) {
     fact[i] = fact[i-1] * i;
+    p10[i] = (p10[i-1] * 10) % mod;
   }
 
-  memset(dp, -1, sizeof dp);
-  long long ans = solve(0,0);
+  tope = (1<<line.size()) - 1;
+
+
+  for (int i = 0; i < mod; ++i) dp[tope][i] = 0;
+  dp[tope][0] = 1;
+
+  for (int i = line.size() - 1; i >= 0; --i) {
+    int mask = (1<<i) - 1;
+    while(mask <= tope) {
+      for (int m = 0; m < mod; m++){
+        dp[mask][m] = 0;
+        for (int j = 0; j < line.size(); ++j) {
+          if (mask & (1<<j)) continue;
+          if (mask == 0 and num[j] == 0) continue;
+          dp[mask][m] += dp[mask | (1<<j)][( m + ((num[j] * p10[line.size() - 1 - i]) % mod) ) % mod];
+        }
+      }
+      if (mask == 0) break;
+      mask = next_popcount(mask);
+    }
+  }
+
+  long long ans = dp[0][0];
   for (int i = 0; i < 10; ++i) {
     if (frec[i] == 0)  continue;
     ans /= fact[frec[i]];
