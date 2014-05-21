@@ -24,7 +24,6 @@ struct TreeDecomposition {
   }
 
   void hld(int v, int f, int k) {
-    ft.add(ts, val[v]);
     t[v] = ts++;
     c[k].push_back(v);
     r[v] = k;
