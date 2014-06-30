@@ -12,7 +12,7 @@ struct entry{
   entry(){}
   entry(int x, int y, int z): a(x), b(y), p(z){}
   bool operator < (const entry &o) const {
-    return (a == o.a) ? (b == o.b) ? ( p < o.p) : (b < o.b) : (a < o.a);
+    return (a == o.a) ? (b < o.b) : (a < o.a);
   }
 };
 
@@ -24,7 +24,7 @@ struct SuffixArray{
 
   SuffixArray(const string &s) : N(s.length()) , s(s), P(1, vector<int> (N, 0)), M(N) {
     for (int i = 0; i < N; ++i)
-      P[0][i] = (int) s[i];
+      P[0][i] = s[i];
 
     for (int skip = 1, level = 1; skip < N; skip *= 2, level++) {
       P.push_back(vector<int>(N, 0));
@@ -34,7 +34,7 @@ struct SuffixArray{
       }
       sort(M.begin(), M.end());
       for (int i = 0; i < N; ++i)
-        P[level][M[i].p] =  (i > 0 and M[i].a == M[i - 1].a and M[i].b == M[i - 1].b) ? P[level][M[i - 1].p] : i;
+        P[level][M[i].p] =  (i > 0 and M[i].a == M[i - 1].a and M[i].b == M[i - 1].b) ? P[level - 1][M[i - 1].p] : i;
     }
   }
 
@@ -70,11 +70,9 @@ int main() {
     cin>>p>>q;
     vector<pair<int, int> > rank(arr.size());
     for (int i = 0; i < arr.size(); ++i) {
-      //cout<<arr[i]<<" ";
       rank[i].first = arr[i];
       rank[i].second = i;
     }
-    //cout<<endl;
     sort(rank.begin(), rank.end());
 
     int n = arr.size();
