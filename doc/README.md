@@ -1,7 +1,7 @@
 ### Useful links for reference
 
 Here are some useful links for references. 
-Put your references here as well, every new source that you could share is welcome.
+Put your references here, every new source that you could share is welcome.
 
 #### Link - cut trees
   
