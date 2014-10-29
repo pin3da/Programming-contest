@@ -1,0 +1,28 @@
+using namespace std;
+#include<bits/stdc++.h>
+#define ___ ios_base::sync_with_stdio(false);cin.tie(NULL);
+#define D(x) cout << #x " = " << (x) << endl
+#define endl '\n'
+
+typedef long long lint;
+
+int n, b;
+const lint mod = 1000000007;
+
+lint go(int x, int k) {
+  if (k == 0)
+    return 0;
+
+  lint ans = 0;
+  for (int y = 1; y <= n; ++y) {
+    if (fabs(x - y) < fabs(x - b) and x != y)
+      ans = (ans + go(x, k - 1)) % mod;
+  }
+}
+
+int main() { ___
+  int a, k;
+  cin >> n >> a >> b >> k;
+  cout << go(a, k) << endl;
+  return 0;
+}
