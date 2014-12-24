@@ -28,3 +28,7 @@ Put your references here, every new source that you could share is welcome.
 #### Burnside lemma
 
 - [Petr Mitrichev's blog](http://petr-mitrichev.blogspot.fr/2008/11/burnsides-lemma.html)
+
+#### Monotonic queue - sliding window minimum
+
+- [Monotonic queue](http://people.cs.uct.ac.za/~ksmith/articles/sliding_window_minimum.html)
