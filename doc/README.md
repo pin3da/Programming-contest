@@ -32,3 +32,7 @@ Put your references here, every new source that you could share is welcome.
 #### Monotonic queue - sliding window minimum
 
 - [Monotonic queue](http://people.cs.uct.ac.za/~ksmith/articles/sliding_window_minimum.html)
+
+#### Graphs
+
+- [Stable Marriage](http://mathsite.math.berkeley.edu/smp/smp.html)
