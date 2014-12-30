@@ -14,8 +14,18 @@ With this in mind we can assume that there are no collisions, (i.e when A and B 
 Now let's solve for each ball:
 - Handle each coordinate independently
 - Look how many times the ball bounces in the wall (the end of the table).
-   if this number is odd, the position is ((x + k) % L)
-   if this number is even, the position is (L - (abs(x - k) % L))
+   
+    if this number is odd, the position is 
+
+
+            ((x + k) % L)
+
+   if this number is even, the position is 
+
+            (L - (abs(x - k) % L))
+
+The same for Y.
+
 
 ### Problem source
 
