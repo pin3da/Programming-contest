@@ -6,7 +6,7 @@
 
 Let's to solve the problem for an specific hour, for instance at 8 with symmetry line at 6.
 
-So the answer will be 8 hours + X seconds; To find X we need to think in how many degrees is moved the hour hand in X seconds, this will give us the position for the minute hand which is (20 * 60 - X) (due to symmetry) [20 * 60 represents the position in seconds for number 4 in the clock].
+So the answer will be 8 hours + X seconds; To find X we need to think in how many degrees the hour hand is moved for X seconds, this will give us the position for the minute hand which is (20 * 60 - X) (due to symmetry) [20 * 60 represents the position in seconds for number 4 in the clock].
 
 So, we have:
 
