@@ -17,7 +17,7 @@ At first we can think in a classic dynamic programming problem, something like:
 But there is a problem with the snakes and ladders; For example we can obtain something like:
 
 
-  dp(20) = ( dp(21) + dp(22) + dp(5) + dp(24) + dp(25) + dp(88) + dp(27) ) * 1.0 / 6.0 + 1
+    dp(20) = ( dp(21) + dp(22) + dp(5) + dp(24) + dp(25) + dp(88) + dp(27) ) * 1.0 / 6.0 + 1
 
 
 from the input data. (5 is because there is a snake, and 88 is because there is a ladder).
@@ -28,7 +28,7 @@ Now the problem could be written like this:
 
 
 ```c++
-for (int j = 1; j <=6; ++j) {
+for (int j = 1; j <= 6; ++j) {
    dp[i] += dp[to[i]] / 6.0;
 }
 dp[i] += 1.0;
@@ -50,16 +50,17 @@ Let's arrange the system of equations:
 
     AX = B
 
+----- 
 
     1        -1/6      -1 = 1
     -1/6     1         -1 = 1
-    0         0          1 = 0
+    0         0         1 = 0
 
 A is equal to
 
-    1        -1/6      -1
-    -1/6     1         -1
-    0         0          1
+     1        -1/6      -1
+    -1/6       1        -1
+     0         0         1
 
 
 X is equal to
