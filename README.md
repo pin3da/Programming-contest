@@ -1,7 +1,7 @@
 ## Programming contest.
 
-This is my personal repository of the solutions that i wrote through the time.
-Recently i've been adding a little explanaition of the solutions and useful links. I hope this can help you in some way.
+This is my personal repository of solutions that I wrote through the time.
+Recently I've been adding a little explanation of the solutions and useful links. I hope this can help you in some way.
 
 Mainly I wrote these codes as preparation for ACM-ICPC, and also for fun.
 
