@@ -3,6 +3,8 @@
 Here are some useful links for references. 
 Put your references here, every new source that you could share is welcome.
 
+- [Codeforces - data structures](http://codeforces.com/blog/entry/15729)
+
 #### Link - cut trees
   
 - [MIT - Erik Demaine](http://courses.csail.mit.edu/6.851/spring12/lectures/L19.html)
