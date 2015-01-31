@@ -6,7 +6,7 @@
 
 Very nice problem
 
-Could be solve recursively in linear time as follow
+Could be solved recursively in linear time as follow
 
 ```C++
     int josephus(int n, int k) {
@@ -17,4 +17,4 @@ Could be solve recursively in linear time as follow
 
 ### Problem source.
 
-  [lightOJ](lightoj.com/volume_showproblem.php?problem=1179)
+  [lightOJ](http://lightoj.com/volume_showproblem.php?problem=1179)
