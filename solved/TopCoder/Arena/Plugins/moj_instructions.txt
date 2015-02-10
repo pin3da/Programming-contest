@@ -1,0 +1,92 @@
+moj 4.18
+========
+
+Hello!
+
+moj is a plug-in for the TopCoder arena that helps you compete
+locally. When you open a problem, moj pulls the example test cases
+from the problem statement and adds test code to your source
+file. When you run your solution locally, it will be run on the
+examples. The test code will be stripped when you submit your solution
+in the Arena.
+
+moj supports C++ and Java.
+
+moj extends the functionality of TZTester. It requires CodeProcessor
+(v2.0 recommended) and FileEdit, both of which are bundled with
+moj. Improvements over TZTester are:
+
+1. Output is prettier. Numbers are no longer surrounded by quotes. A
+   small summary is output after the results for individual cases. If
+   this summary does not appear, your program crashed while solving
+   one of the cases.
+
+2a. Doubles and arrays of doubles are compared correctly (with an
+    absolute and relative tolerance of 1e-9).
+
+2b. If the result is a double or array of doubles and your output is
+    not exact, moj will display the relative error of your output.
+    For example:
+
+    Test Case #0... PASSED (relative error 5.44969e-014)
+    Test Case #1... PASSED (relative error 5.68462e-012)
+    Test Case #2... PASSED (relative error 4.05691e-008)
+    Test Case #3... PASSED
+    All 4 tests passed!
+
+    The purpose of this feature is to alert you when your solution may
+    be insufficiently precise. Test case 2 passes because the absolute
+    error is small enough. However, it is a good indicator that your
+    solution is not precise enough for systests. Indeed, modifying the
+    code to use 80-bit floating-point variables changes the report to:
+
+    Test Case #0... PASSED (relative error 2.88899e-015)
+    Test Case #1... PASSED (relative error 3.82932e-015)
+    Test Case #2... PASSED (relative error 4.63219e-012)
+    Test Case #3... PASSED
+    All 4 tests passed!
+
+3. Restructured test harness. Adding custom cases is much easier.
+   Placeholders are in place at the bottom of the test code, just
+   scroll down and uncomment one of them. You may also add additional
+   cases.
+
+4. Java support. Through a hack (language auto-detection from source
+   code, based on heuristics) you may switch between Java and C++
+   after opening a problem.
+
+5. Timing per test case.
+
+6. Visual C++ support.
+
+
+Setup:
+
+1. Unzip the three .jar files in the moj package to a folder of your 
+   liking.
+
+2. Launch the Arena. Open the "Options" menu and select "Editors".
+
+3. Add CodeProcessor, with entry point codeprocessor.EntryPoint. Add
+   codeprocessor.jar, moj.jar and fileedit.jar to the classpath.
+
+4. In the "Editor preferences" window, select CodeProcessor then
+   "Configure". Under "Editor EntryPoint" write fileedit.EntryPoint.
+   Configure FileEdit.
+
+   The most important part is to update the code template(s). Under
+   the "Code Template" tab, select your language and paste in the code
+   template. Included in the moj package are minimal code templates
+   for C++ and Java.
+
+   On the "General" tab I recommend turning off "Backup existing file
+   then overwrite".
+
+5. In the CodeProcessor configuration window, write moj.moj as the
+   processor class and verify. If all is good, you'll get 4 "found"
+   reports. Configure moj to your liking.
+
+
+For bug reports, suggestions and questions, please use the member
+contact feature at the TopCoder website or the forum thread. My handle
+is lovro.
