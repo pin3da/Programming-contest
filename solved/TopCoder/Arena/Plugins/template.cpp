@@ -5,10 +5,10 @@
 using namespace std;
 
 class $CLASSNAME$ {
-public:
-   $RC$ $METHODNAME$( $METHODPARMS$ ) {
+  public:
+    $RC$ $METHODNAME$( $METHODPARMS$ ) {
 
-   }
+    }
 };
 
 $BEGINCUT$
