@@ -1,2 +1,0 @@
-      write(*,*) 'FORTRAN 77'
-      end
