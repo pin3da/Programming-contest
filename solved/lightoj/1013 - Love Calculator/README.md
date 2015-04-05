@@ -1,6 +1,6 @@
 ### Topic
 
-    Dynammic programming
+    Dynamic programming
 
 
 ### Key Idea

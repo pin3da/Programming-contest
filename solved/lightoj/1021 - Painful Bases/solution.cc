@@ -2,13 +2,12 @@ using namespace std;
 #include <bits/stdc++.h>
 #define D(x)  cout << #x " = " << (x) << endl
 
-int base, k;
-int n;
+const int MN = 22;
 
-const int MN = 20;
-long long p[MN][MN];
+int base, k, n;
+int p[MN][MN];
 map<char, long long> dc;
-long long dp[(1 << 16) + 20][MN];
+long long dp[(1 << 17) + 17][MN];
 
 long long go(const string &line, int mask, int mod) {
   if (mask == (1 << n) - 1)
@@ -29,21 +28,22 @@ long long go(const string &line, int mask, int mod) {
 
 void solve() {
   scanf("%d%d", &base, &k);
+  for (int i = 0; i < MN; ++i) {
+    p[i][0] = 1;
+    for (int j = 1; j < MN; ++j)
+      p[i][j] = (p[i][j - 1] * (long long)i) % k;
+  }
   string line;
   cin >> line;
   n = line.size();
   memset(dp, -1, sizeof dp);
+  reverse(line.begin(), line.end());
   printf("%lld\n", go(line, 0, 0));
 }
 
 int main() {
 
-  for (int i = 0; i < MN; ++i) {
-    p[i][0] = 1;
-    for (int j = 1; j < MN; ++j)
-      p[i][j] = p[i][j - 1] * (long long)i;
 
-  }
   string asdf = "0123456789ABCDEF";
   for (int i = 0; i < asdf.size(); ++i)
     dc[asdf[i]] =  i;
