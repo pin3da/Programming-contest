@@ -10,10 +10,9 @@ int main() { ___
   cin >> n;
   string line;
   cin >> line;
-  int m = line.size()  / 5;
   for (int j = 0; j < line.size(); ++j) {
     if (line[j] == '*') {
-      for (int i = 1; i <= m ; ++i) {
+      for (int i = 1; i < line.size(); ++i) {
         int count = 0;
         int cur = j;
         while (true) {
