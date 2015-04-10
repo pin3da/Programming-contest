@@ -6,6 +6,9 @@
 
 ### Key Idea
 
+Let A the area of triangle ABC, and A' the area of triangle ADE, it  must keep that:
+
+    A' / A = AD / AE
 
 
 ### Problem source
