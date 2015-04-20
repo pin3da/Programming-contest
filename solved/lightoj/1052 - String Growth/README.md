@@ -12,7 +12,7 @@ if you are not familiar with this concept, read [this](http://zobayer.blogspot.c
     |0 1| x |a0| = |a1| = |b0     |
     |1 1|   |b0|   |b1|   |a0 + b0|
 
-In this form, the Nth state of the function can be compute as:
+In this form, the Nth state of the function can be computed as:
 
     |0 1| ^ N x |a0|
     |1 1|       |b0|
