@@ -13,10 +13,6 @@ typedef pair<vector<entry>, int> state;
 
 struct hash_table{
   int  _seen[1976791 >> 5];
-  hash_table() {
-    memset(_seen, 0, sizeof _seen);
-  }
-
   int index(const vector<entry> &c) {
     int i = c[0].first * 10 + c[0].second;
     i <<= 7;
@@ -62,6 +58,7 @@ bool finished(const vector<entry> &cur) {
 }
 
 entry cool[3], npos[3];
+hash_table visited;
 
 void solve() {
   int n;
@@ -89,7 +86,7 @@ void solve() {
 
   deque<state> q;
   q.push_back(make_pair(p, 0));
-  hash_table visited;
+  memset(visited._seen, 0, sizeof visited._seen) ;
 
   int ans = 1 << 30;
 
