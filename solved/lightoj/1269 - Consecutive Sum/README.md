@@ -48,7 +48,7 @@ If we look the previous solution, this is the equivalent to insert 'mask' in the
 ```
 
 
-Then we need to think about how to search the minimum (and the maximum) value that we could get if we realize the xor
+Then we need to think about how to search the minimum (and the maximum) value that we could get if we perform the xor
 operation between a mask and all values in the tree. For this, we can make a kind of tree traversal.
 
 The key idea here is : If I'm checking the ith bit of mask and I need the minimum possible value, I will try to advance in the
