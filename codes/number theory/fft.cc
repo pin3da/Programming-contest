@@ -1,115 +1,51 @@
-/*
- * Let M = F·G·(min(deg f, deg g)+1), where F is the greatest coefficient in f and G is the greatest coefficient in g.
- * rou_i = kth root of unity mod p_i.
- * The following must be hold for each prime:
- *   k > 2 * max_degree(f, g)
- *   p1·p2·...·pl > 2M
- * */
+typedef long long int LL;
+typedef pair<LL, LL> PLL;
 
-long long _mod[] = {1711276033LL, 1790967809LL};
-long long _rou[] = {1223522572LL, 1110378081LL};
-const vector<long long> mod(_mod, _mod + 2);
-const vector<long long> rou(_rou, _rou + 2);
-// these are the 2 ^ 18th root of unity mod the above primes.
-const int MN = (1 << 18);
+/* The following vector of pairs contains pairs (prime, generator) where the prime has an Nth
+ * root of unity for N being a power of two. The generator is a number g s.t g^(p-1)=1 (mod p)
+ * but is different from 1 for all smaller powers */
+vector<PLL> nth_roots_unity {{1224736769,330732430},{1711276033,927759239},{167772161,167489322},
+                             {469762049,343261969},{754974721,643797295},{1107296257,883865065}};
 
-typedef long long ll;
-
-long long mod_pow(long long base, long long exp, long long m) {
-  long long ans = 1;
-  while (exp > 0) {
-    if (exp & 1)
-      ans = (ans * base) % m;
-    base = (base * base) % m;
-    exp >>= 1;
-  }
-  return ans % m;
+PLL ext_euclid(LL a, LL b) {
+  if (b == 0)
+    return make_pair(1,0);
+  pair<LL,LL> rc = ext_euclid(b, a % b);
+  return make_pair(rc.second, rc.first - (a / b) * rc.second);
 }
 
-ll inv(ll a, ll m) {
-  return mod_pow(a, m - 2, m);
-}
-
-ll modMul (ll a, ll b , ll m) {
-  ll ans = 0;
-  while (b) {
-    if (b & 1) {
-      ans = (ans + a);
-      if (ans > m)
-        ans -= m ;
-      b--;
-    }
-    else {
-      a = a + a;
-      if (a > m)
-        a -= m;
-      b >>= 1;
-    }
-  }
-  return ans;
-}
-
-vector<ll> crt(vector<ll> &a, vector<ll> &b) {
-  ll n = a.size();
-  vector<ll> A(n);
-  ll M = mod[0] * mod[1];
-  for (int i = 0; i < n; i++)
-    A[i] = (modMul(modMul(a[i], mod[1], M), inv(mod[1], mod[0]), M)%M + modMul(modMul(b[i],mod[0], M), inv(mod[0], mod[1]), M)%M ) % M;
-  return A;
+//returns -1 if there is no unique modular inverse
+LL mod_inv(LL x, LL modulo) {
+  PLL p = ext_euclid(x, modulo);
+  if ( (p.first * x + p.second * modulo) != 1 )
+    return -1;
+  return (p.first+modulo) % modulo;
 }
 
 
-int bit_reverse(int x, int n) {
-  int ans = 0;
-  for (int i = 0; i < n; i++)
-    if ((x >> i) & 1)
-      ans |= ((1 << (n - i - 1)));
-  return ans;
-}
-
-void bit_reverse_copy(vector<ll> &a, vector<ll> &A, int n) {
-  A.resize(a.size());
-  for (int i = 0; i < a.size(); i++)
-    A[bit_reverse(i, n)] = a[i];
-}
-
-vector<ll> powers(25);
-
-vector<ll> fft(vector<ll> &a, int dir, int index) {
-  int ln = ceil(log2(a.size()));
-  vector<ll> A;
-  bit_reverse_copy(a, A, ln);
-  for (int s = 1; s <= ln; s++) {
-    long long m = (1LL << s);
-    ll wm = powers[ln - s];
-    if (dir == -1)
-      wm =  inv(wm, mod[index]);
-
-    for (int k = 0; k < a.size(); k += m) {
-      ll w = 1, mh = m >> 1;
-      for (int j = 0; j < mh; j++) {
-        ll t = (w * A[k + j + mh]) % mod[index];
-        ll u = A[k + j];
-        A[k + j] = (u + t) % mod[index];
-        A[k + j + mh] = (u - t + mod[index]) % mod[index];
-        w = (w * wm) % mod[index];
+//Number theory fft. The size of a must be a power of 2
+void ntfft(vector<LL> &a, int dir, const PLL &root_unity) {
+  int n = a.size();
+  LL prime = root_unity.first;
+  LL basew = mod_pow(root_unity.second, (prime-1) / n, prime);
+  if (dir < 0) basew = mod_inv(basew, prime);
+  for (int m = n; m >= 2; m >>= 1) {
+    int mh = m >> 1;
+    LL w = 1;
+    for (int i = 0; i < mh; i++) {
+      for (int j = i; j < n; j += m) {
+        int k = j + mh;
+        LL x = (a[j] - a[k] + prime) % prime;
+        a[j] = (a[j] + a[k]) % prime;
+        a[k] = (w * x) % prime;
       }
+      w = (w * basew) % prime;
     }
+    basew = (basew * basew) % prime;
   }
-
-  if (dir < 0) {
-    ll in = inv(A.size(), mod[index]);
-    for (int i = 0; i < A.size(); i++)
-      A[i] = (A[i] * in) % mod[index];
+  int i = 0;
+  for (int j = 1; j < n - 1; j++) {
+    for (int k = n >> 1; k > (i ^= k); k >>= 1);
+    if (j < i) swap(a[i], a[j]);
   }
-
-  return A;
-}
-
-int main() {
-  powers[0] = rou[1];
-  for (int i = 1; i < 25; ++i)
-    powers[i] = (powers[i - 1] * powers[i - 1]) % mod[1];
-
-  return 0;
 }
