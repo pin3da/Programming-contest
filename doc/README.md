@@ -16,6 +16,7 @@ Put your references here, every new source that you could share is welcome.
 
 #### Segment Tree
 
+- [Algorithm Gym :: Everything About Segment Trees](http://codeforces.com/blog/entry/15890)
 - [let us kode](http://letuskode.blogspot.com/2013/01/segtrees.html)
 - [On algorithm problems](http://lbv-pc.blogspot.com/search/label/segment%20tree)
 
