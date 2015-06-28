@@ -1,6 +1,24 @@
 using namespace std;
 #include <bits/stdc++.h>
 
+typedef unsigned int u32;
+#define BUF 524288
+struct Reader {
+  char buf[BUF]; char b; int bi, bz;
+  Reader() { bi=bz=0; read(); }
+  void read() {
+    if (bi==bz) { bi=0; bz = fread(buf, 1, BUF, stdin); }
+    b = bz ? buf[bi++] : 0; }
+  void skip() { while (b > 0 && b <= 32) read(); }
+  u32 next_u32() {
+    u32 v = 0; for (skip(); b > 32; read()) v = v*10 + b-48; return v; }
+  int next_int() {
+    int v = 0; bool s = false;
+    skip(); if (b == '-') { s = true; read(); }
+    for (; 48<=b&&b<=57; read()) v = v*10 + b-48; return s ? -v : v; }
+  char next_char() { skip(); char c = b; read(); return c; }
+};
+
 const int N = 100000 + 10;
 const int mod = 1000000007;
 
@@ -47,13 +65,17 @@ struct entry{
 
 FenwickTree tree;
 
+Reader rd;
+
 void solve() {
   int n, t;
-  cin >> n;
+  n = rd.next_u32();
+  // cin >> n;
   tree.init(n);
   vector<entry> a(n);
   for (int i = 0; i < n; ++i) {
-    cin >> t;
+    t = rd.next_int();
+    // cin >> t;
     a[i] = entry(t, i);
   }
   sort(a.begin(), a.end());
@@ -63,10 +85,10 @@ void solve() {
 }
 
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
-  int tc;
-  cin >> tc;
+  // ios_base::sync_with_stdio(false);
+  // cin.tie(NULL);
+  int tc = rd.next_u32();
+  // cin >> tc;
   for (int i = 0; i < tc; ++i) {
     printf("Case %d: ", i + 1);
     solve();
