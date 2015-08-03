@@ -17,7 +17,6 @@ string solve(vector<vector<char>> &cad, vector<int> &cant, int idx, int k) {
       return cad[idx][i] + other;
     }
   }
-  assert(0);
 }
 
 
@@ -57,10 +56,6 @@ int main() {
       cant[i] = cant[i + 1] * tot[i + 1].size();
 
 
-    // for (int i = 0; i < cant[0] * tot[0].size(); ++i) {
-    //  cout << solve(tot, cant, 0, i) << endl;
-    // }
-    //
     if (k > cant[0] * tot[0].size()) {
       cout << "NO" << endl;
       continue;
@@ -68,14 +63,7 @@ int main() {
     k--;
 
     cout << solve(tot, cant, 0, k) << endl;
-    // if (ans == "-1")
-    //  cout << "NO" << endl;
-    // else
-    //  cout << ans << endl;
-
   }
 
   return 0;
 }
-
-
