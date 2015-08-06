@@ -1,0 +1,18 @@
+3
+4 2
+BillyTheKid 0 0
+Andy 10 0
+John 19 0
+Larry 20 0
+Andy heard BillyTheKid firing before John
+Larry heard John firing before BillyTheKid
+2 2
+Andy 0 0
+Beate 0 1
+Andy heard Beate firing before Andy
+Beate heard Andy firing before Beate
+3 1
+Andy 0 0
+Beate 0 1
+Charles 1 3
+Beate heard Andy firing before Charles
