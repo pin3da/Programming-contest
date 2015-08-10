@@ -1,11 +1,13 @@
 typedef long long int LL;
 typedef pair<LL, LL> PLL;
 
-/* The following vector of pairs contains pairs (prime, generator) where the prime has an Nth
- * root of unity for N being a power of two. The generator is a number g s.t g^(p-1)=1 (mod p)
+/* The following vector of pairs contains pairs (prime, generator)
+ * where the prime has an Nth root of unity for N being a power of two.
+ * The generator is a number g s.t g^(p-1)=1 (mod p)
  * but is different from 1 for all smaller powers */
-vector<PLL> nth_roots_unity {{1224736769,330732430},{1711276033,927759239},{167772161,167489322},
-                             {469762049,343261969},{754974721,643797295},{1107296257,883865065}};
+vector<PLL> nth_roots_unity {
+  {1224736769,330732430},{1711276033,927759239},{167772161,167489322},
+   {469762049,343261969},{754974721,643797295},{1107296257,883865065}};
 
 PLL ext_euclid(LL a, LL b) {
   if (b == 0)

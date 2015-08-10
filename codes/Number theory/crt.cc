@@ -1,8 +1,6 @@
 /**
  * Chinese remainder theorem.
  * Find z such that  z % x[i] = a[i] for all i.
- * if x[i] is not prime, use inv_mod instead of mod_pow to compute
- * the modular inverse.
  * */
 long long crt(vector<long long> &a, vector<long long> &x) {
   long long z = 0;
