@@ -13,3 +13,5 @@ programming, I strongly recommend you to read [this](http://lbv-pc.blogspot.com/
 ### Team notebook.
 
 If you want to generate a team notebook, you can use [this tool](https://github.com/pin3da/notebook-generator) in the folder "codes".
+
+This will generate a pdf like [this one](https://github.com/pin3da/notebook-generator/blob/master/example-notebook.pdf)
