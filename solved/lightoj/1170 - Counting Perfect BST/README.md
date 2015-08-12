@@ -35,7 +35,7 @@
 
   for(int i = 3; i < MAX_ELE; ++i ){
     F[i] = 0;
-    for(int j = 0); j < i; ++j)
+    for(int j = 0; j < i; ++j)
       F[i] += F[j]*F[i-j-1];
   }
   ```
