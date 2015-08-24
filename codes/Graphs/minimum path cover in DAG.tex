@@ -1,0 +1,18 @@
+Given a directed acyclic graph $G = (V, E)$, we are to find the minimum number
+of vertex-disjoint paths to cover each vertex in V.
+
+We can construct a bipartite graph $G' = (Vout \cup Vin, E' )$ from $G$, where : \\
+
+$$ Vout = \{ v \in V : v~has~positive~out-degree \} $$
+$$ Vin = \{ v \in V : v~has~positive~in-degree \} $$
+$$ E' = \{ (u,v) \in Vout \times Vin : (u,v) \in E \} $$
+
+Then it can be shown, via König's theorem, that G' has a matching of size m if
+and only if there exists $n-m$ vertex-disjoint paths that cover each vertex in G,
+where $n$ is the number of vertices in G and $m$ is the maximum cardinality
+bipartite mathching in G'. \\
+
+Therefore, the problem can be solved by finding the maximum cardinality matching in G' instead.
+
+\textbf{NOTE:} If the paths are note necesarily disjoints, find the transitive closure
+and solve the problem for disjoint paths.
