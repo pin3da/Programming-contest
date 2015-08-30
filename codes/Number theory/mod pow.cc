@@ -1,10 +1,10 @@
 // Computes ( a ^ exp ) % mod.
 long long mod_pow(long long a, long long exp, long long mod) {
-  long long ans = 1, base = a;
+  long long ans = 1;
   while (exp > 0) {
     if (exp & 1)
-      ans = (ans * base) % mod;
-    base = (base * base) % mod;
+      ans = mod_mul(ans, a, mod);
+    a = mod_mul(a, a, mod);
     exp >>= 1;
   }
   return ans;
