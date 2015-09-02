@@ -8,3 +8,4 @@ List of problems
 |    |  | | [1363 - Binary Matrix (II)](http://lightoj.com/volume_showproblem.php?problem=1363)|
 |    |[Problem D] (http://gcpc.nwerc.eu/problemset_2015.pdf) | | |
 | 1  |[374C - Inna and Dima](http://codeforces.com/contest/374/problem/C) | | |
+|    |[430C - Xor-tree](http://codeforces.com/contest/430/problem/C) | | |
