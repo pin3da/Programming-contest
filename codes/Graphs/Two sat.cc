@@ -56,9 +56,7 @@ void kosaraju(){
 }
 
 /*
-After having the SCC, we must  traverse each scc, if in one SCC are
--b y b, there is not a solution, otherwise we  build a solution, making the first "node" 
-that we find truth  its complement false.
+After having the SCC, we must  traverse each scc, if in one SCC are -b y b, there is not a solution. Otherwise we  build a solution, making the first "node" that we find truth and its complement false.
 */
 
 
