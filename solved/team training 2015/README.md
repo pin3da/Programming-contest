@@ -15,5 +15,6 @@ List of problems
 |2 |[1029 - Civil and Evil Engineer] (http://www.lightoj.com/volume_showproblem.php?problem=1029)|[10006 - Carmichael Numbers](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=947)| [1108 - Instant View of Big Bang](http://lightoj.com/volume_showproblem.php?problem=1108)|
 | |[1040 - Donation] (http://www.lightoj.com/volume_showproblem.php?problem=1040) | | |
 | |[294B - Shaass and Bookshelf] (http://codeforces.com/contest/294/problem/B) | | |
+| |[262B - Roma and Changing Signs](http://codeforces.com/problemset/problem/262/B) | | |
 
 
