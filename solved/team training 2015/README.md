@@ -12,6 +12,6 @@ List of problems
 |    |[55B - Smallest number](http://codeforces.com/contest/55/problem/B)|[10990 - Another New Function](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1931)| |
 |    |[96B - Lucky Numbers (easy)](http://codeforces.com/problemset/problem/96/B)| | |
 |--- | ------------- | ------------ | -----  |
-|2 | |[10006 - Carmichael Numbers](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=947)| |
+|2 | |[10006 - Carmichael Numbers](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=947)| [1108 - Instant View of Big Bang](http://lightoj.com/volume_showproblem.php?problem=1108)|
 
 
