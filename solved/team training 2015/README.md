@@ -18,5 +18,9 @@ List of problems
 | |[262B - Roma and Changing Signs](http://codeforces.com/problemset/problem/262/B) | | |
 |--|--|--|--|
 |3 |[Monk in the Grass Fields](https://www.hackerearth.com/code-monk-sorting/algorithm/monk-in-the-grass-fields/description/)| |[1200 - Thief](http://lightoj.com/volume_showproblem.php?problem=1200) |
+|--|--|--|--|
+|4 | | | |
+|--|--|--|--|
+|5 |[57B - Martian Architecture] (http://codeforces.com/problemset/problem/57/B)| | |
 
 
