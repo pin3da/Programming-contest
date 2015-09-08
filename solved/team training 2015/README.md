@@ -22,5 +22,6 @@ List of problems
 |4 | | | |
 |--|--|--|--|
 |5 |[57B - Martian Architecture] (http://codeforces.com/problemset/problem/57/B)| | [1237 - Cyber Cafe](http://lightoj.com/volume_showproblem.php?problem=1237)|
+| |[219B - Special Offer! Super Price 999 Bourles!] (http://codeforces.com/problemset/problem/219/B)| | |
 
 
