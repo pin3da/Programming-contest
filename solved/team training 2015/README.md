@@ -23,5 +23,7 @@ List of problems
 |--|--|--|--|
 |5 |[57B - Martian Architecture] (http://codeforces.com/problemset/problem/57/B)| | [1237 - Cyber Cafe](http://lightoj.com/volume_showproblem.php?problem=1237)|
 | |[219B - Special Offer! Super Price 999 Bourles!] (http://codeforces.com/problemset/problem/219/B)| | |
+|--|--|--|--|
+|6| |[10178 - Count the Faces.](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=785&page=show_problem&problem=1119)| |
 
 
