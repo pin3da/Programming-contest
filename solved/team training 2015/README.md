@@ -25,5 +25,7 @@ List of problems
 | |[219B - Special Offer! Super Price 999 Bourles!] (http://codeforces.com/problemset/problem/219/B)| | |
 |--|--|--|--|
 |6| |[10178 - Count the Faces.](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=785&page=show_problem&problem=1119)| |
+|--|--|--|--|
+|7|[12947 - Texting with Grandma](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=24&problem=4826&mosmsg=Submission+received+with+ID+16068651)|||
 
 
