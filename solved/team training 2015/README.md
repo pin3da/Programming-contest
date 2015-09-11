@@ -29,6 +29,8 @@ List of problems
 |7|[12947 - Texting with Grandma](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=24&problem=4826&mosmsg=Submission+received+with+ID+16068651)|||
 |--|--|--|--|
 |8|[12949 - Voting Duels] (https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=24&problem=4828&mosmsg=Submission+received+with+ID+16073682)||[Designing an Electronic Device](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=862&page=show_problem&problem=4822)|
+|--|--|--|--|
+|9|||[12948 - Interstellar Travel](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=862&problem=4827&mosmsg=Submission+received+with+ID+16080867)|
 
 
 
