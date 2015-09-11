@@ -31,6 +31,9 @@ List of problems
 |8|[12949 - Voting Duels] (https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=24&problem=4828&mosmsg=Submission+received+with+ID+16073682)||[Designing an Electronic Device](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=862&page=show_problem&problem=4822)|
 |--|--|--|--|
 |9|||[12948 - Interstellar Travel](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=862&problem=4827&mosmsg=Submission+received+with+ID+16080867)|
+|--|--|--|--|
+|10|||[1097 - Lucky Number](http://lightoj.com/volume_showproblem.php?problem=1097)|
+||||[10909 - Lucky Number](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1850)|
 
 
 
