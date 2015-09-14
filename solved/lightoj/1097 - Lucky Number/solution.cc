@@ -1,3 +1,7 @@
+// This solution causes runtime error.
+// Same code was used in UVa and got AC.
+// See sol_seg_tree.cc
+
 using namespace std;
 #include <bits/stdc++.h>
 #define D(x) cout << #x " = " << (x) << endl
