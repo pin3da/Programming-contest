@@ -34,6 +34,8 @@ List of problems
 |--|--|--|--|
 |10|||[1097 - Lucky Number](http://lightoj.com/volume_showproblem.php?problem=1097)|
 ||||[10909 - Lucky Number](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1850)|
-
-
+|--|--|--|--|
+|11|RPC  09| RPC 09| RPC 09|
+|--|--|--|--|
+|12||| [1097 - Lucky Number using Seg Tree](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1097%20-%20Lucky%20Number)|
 
