@@ -38,4 +38,8 @@ List of problems
 |11|RPC  09| RPC 09| RPC 09|
 |--|--|--|--|
 |12||| [1097 - Lucky Number using Seg Tree](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1097%20-%20Lucky%20Number)|
+|--|--|--|--|
+|13|[10004 - Bicoloring](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=945)||||
+| |[10099 - The Tourist Guide](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=&problem=1040&mosmsg=Submission+received+with+ID+16101038)|||
+| |[10067 - Playing with Wheels](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1008) | | |
 
