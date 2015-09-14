@@ -2,8 +2,8 @@ using namespace std;
 #include <bits/stdc++.h>
 #define D(x) cout << #x " = " << (x) << endl
 
-const int MN = 100000;
-const int ML = 15 * MN;
+const int MN = 100001;
+const int ML = 1429432;
 
 #define null NULL
 
@@ -99,13 +99,14 @@ node *find_kth(node *cur, int k) {
   return cur;
 }
 
-vector<int> flatten(node * t) {
-    if (t == null) return vector<int>();
-    vector<int> ans = flatten(t->l);
-    ans.push_back(t->x);
-    vector<int> right = flatten(t->r);
-    ans.insert(ans.end(), right.begin(), right.end());
-    return ans;
+
+int ans[MN], pos;
+void flatten(node *t) {
+    if (t == null) return;
+    flatten(t->l);
+    if (pos >= MN) return;
+    ans[pos++] = (t->x);
+    flatten(t->r);
 }
 
 int main() {
@@ -113,13 +114,14 @@ int main() {
   srand(time(0));
 
   node *root = null;
-  for (int i = 1; i < ML; ++i)
+  for (int i = 1; i < ML; i += 2) {
     root = insert(root, new node(i));
+  }
 
 
-  int i = 0;
+  int i = 1;
   while (true) {
-    node *a = find_kth(root, max(i, 1));
+    node *a = find_kth(root, i);
     if (a == null) break;
     int step = a->x;
     for (int j = step; j <= root->size; j += step) {
@@ -130,7 +132,8 @@ int main() {
     ++i;
   }
 
-  vector<int> ans = flatten(root);
+  pos = 0;
+  flatten(root);
 
   int tc; cin >> tc;
   for (int t = 0; t < tc; ++t) {
