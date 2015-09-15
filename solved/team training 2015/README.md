@@ -39,7 +39,7 @@ List of problems
 |--|--|--|--|
 |12||| [1097 - Lucky Number using Seg Tree](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1097%20-%20Lucky%20Number)|
 |--|--|--|--|
-|13|[10004 - Bicoloring](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=945)|[11902 - Dominator](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3053)||
+|13|[10004 - Bicoloring](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=945)|[11902 - Dominator](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3053)|[1095 - Arrange the Numbers ](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1095%20-%20Arrange%20the%20Numbers)|
 | |[10099 - The Tourist Guide](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=&problem=1040&mosmsg=Submission+received+with+ID+16101038)|[10090 - Marbles](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1031)||
 | |[10067 - Playing with Wheels](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1008) | | |
 
