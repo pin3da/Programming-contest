@@ -42,4 +42,8 @@ List of problems
 |13|[10004 - Bicoloring](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=945)|[11902 - Dominator](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3053)|[1095 - Arrange the Numbers ](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1095%20-%20Arrange%20the%20Numbers)|
 | |[10099 - The Tourist Guide](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=&problem=1040&mosmsg=Submission+received+with+ID+16101038)|[10090 - Marbles](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1031)||
 | |[10067 - Playing with Wheels](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1008) | | |
+|--|--|--|--|
+|15|[118 - Mutant Flatworld Explorers](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=54) | | |
+| |[280 - Vertex] (http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=216) | | |
+| |[11902 - Dominator] (http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3053) | | |
 
