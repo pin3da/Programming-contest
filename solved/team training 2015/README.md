@@ -47,7 +47,7 @@ List of problems
 | |[280 - Vertex] (http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=216) | | |
 | |[11902 - Dominator] (http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=3053) | | [12956 - Curious Guardians](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4835)|
 |--|--|--|--|
-|16|[1148 - Mad Counting](http://www.lightoj.com/volume_showproblem.php?problem=1148)|||
+|16|[1148 - Mad Counting](http://www.lightoj.com/volume_showproblem.php?problem=1148)|[12032 - The Monkey and the Oiled Bamboo](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3183)||
 ||[1389 - Scarecrow](http://www.lightoj.com/volume_showproblem.php?problem=1389)|||
 ||[1417 - Forwarding Emails](http://www.lightoj.com/volume_showproblem.php?problem=1417)|||
 
