@@ -50,4 +50,7 @@ List of problems
 |16|[1148 - Mad Counting](http://www.lightoj.com/volume_showproblem.php?problem=1148)|[12032 - The Monkey and the Oiled Bamboo](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3183)|[1404 - Sending Secret Messages](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1404%20-%20Sending%20Secret%20Messages)|
 ||[1389 - Scarecrow](http://www.lightoj.com/volume_showproblem.php?problem=1389)|[11634 - Generate random numbers](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2681)|[1409 - Rent a Car](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1409%20-%20Rent%20a%20Car)|
 ||[1417 - Forwarding Emails](http://www.lightoj.com/volume_showproblem.php?problem=1417)|||
+|--|--|--|--|
+|17| |[12954 - Spiral](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4833)| |
+
 
