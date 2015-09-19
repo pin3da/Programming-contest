@@ -55,4 +55,4 @@ List of problems
 | |[486C - Palindrome Transformation] (http://codeforces.com/problemset/problem/486/C)| | |
 | |[12324 - Phillip J Fry Problem](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3746) | | |
 |--|--|--|--|
-|18| |[12532 - Interval Product](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3977)| |
+|18| |[12532 - Interval Product](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3977)| [1138 - Trailing Zeroes (III)](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1138%20-%20Trailing%20Zeroes%20%28III%29)|
