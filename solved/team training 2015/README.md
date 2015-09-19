@@ -54,5 +54,5 @@ List of problems
 |17|[486D - Valid Sets](http://codeforces.com/problemset/problem/486/D) |[12954 - Spiral](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4833)| [12961 - Lottery](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=4840)|
 | |[486C - Palindrome Transformation] (http://codeforces.com/problemset/problem/486/C)| | |
 | |[12324 - Phillip J Fry Problem](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3746) | | |
-
-
+|--|--|--|--|
+|18| |[12532 - Interval Product](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3977)| |
