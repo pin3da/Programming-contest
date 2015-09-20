@@ -59,5 +59,5 @@ List of problems
 |--|--|--|--|
 |19|LA 2009| LA 2009| LA 2009|
 |--|--|--|--|
-|20: 2015-09-20||||
+|20: 2015-09-20|||[1176 - Getting a T-shirt](http://lightoj.com/volume_showproblem.php?problem=1176)|
 
