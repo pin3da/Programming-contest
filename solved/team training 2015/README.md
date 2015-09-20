@@ -59,5 +59,6 @@ List of problems
 |--|--|--|--|
 |19|LA 2009| LA 2009| LA 2009|
 |--|--|--|--|
-|20: 2015-09-20|||[1176 - Getting a T-shirt](http://lightoj.com/volume_showproblem.php?problem=1176)|
+|20: 2015-09-20|||[1176 - Getting a T-shirt](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1176%20-%20Getting%20a%20T-shirt)|
+||||[1154 - Penguins](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1154%20-%20Penguins)|
 
