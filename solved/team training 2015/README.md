@@ -62,4 +62,9 @@ List of problems
 |20: 2015-09-20|||[1176 - Getting a T-shirt](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1176%20-%20Getting%20a%20T-shirt)|
 ||||[1154 - Penguins](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1154%20-%20Penguins)|
 ||||[1156 - Jumping Frogs](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1156%20-%20Jumping%20Frogs)|
+|--|--|--|--|
+|21|[429 - Word Transformation](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=370)|||
+|||[383 - Shipping Routes](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=319)|||
+|||[10653 - Bombs! NO they are Mines!!](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1594)|||
+|||[627 - The Net](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=568)|||
 
