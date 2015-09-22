@@ -67,4 +67,5 @@ List of problems
 ||[383 - Shipping Routes](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=319)|||
 ||[10653 - Bombs! NO they are Mines!!](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1594)|||
 ||[627 - The Net](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=568)|||
+| |[1085 - All Possible Increasing Subsequences](http://www.lightoj.com/volume_showproblem.php?problem=1085)|||
 
