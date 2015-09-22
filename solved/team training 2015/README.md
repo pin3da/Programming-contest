@@ -63,10 +63,10 @@ List of problems
 ||||[1154 - Penguins](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1154%20-%20Penguins)|
 ||||[1156 - Jumping Frogs](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1156%20-%20Jumping%20Frogs)|
 |--|--|--|--|
-|21|[429 - Word Transformation](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=370)|||
+|21|[429 - Word Transformation](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=370)||[1177 - Angry Programmer](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1177%20-%20Angry%20Programmer)|
 ||[383 - Shipping Routes](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=319)|||
 ||[10653 - Bombs! NO they are Mines!!](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=1594)|||
 ||[627 - The Net](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=24&page=show_problem&problem=568)|||
-| |[1085 - All Possible Increasing Subsequences](http://www.lightoj.com/volume_showproblem.php?problem=1085)||[1177 - Angry Programmer](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1177%20-%20Angry%20Programmer)|
+| |[1085 - All Possible Increasing Subsequences](http://www.lightoj.com/volume_showproblem.php?problem=1085)|||
 |--|--|--|--|
 |22| |[10937 - Blackbeard the Pirate](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1878)| |
