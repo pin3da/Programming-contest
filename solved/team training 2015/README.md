@@ -70,3 +70,5 @@ List of problems
 | |[1085 - All Possible Increasing Subsequences](http://www.lightoj.com/volume_showproblem.php?problem=1085)|||
 |--|--|--|--|
 |22|CF |[10937 - Blackbeard the Pirate](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1878)| [1162 - Min Max Roads](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1162%20-%20Min%20Max%20Roads)|
+|--|--|--|--|
+|23|[1082 - Array Queries](http://www.lightoj.com/volume_showproblem.php?problem=1082)|||
