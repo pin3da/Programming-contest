@@ -77,3 +77,4 @@ List of problems
 |24|[LCA - Lowest Common Ancestor](http://www.spoj.com/problems/LCA/) |[11889 - Benefit](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2989)| |
 ||[12238 - Ants Colony](https://uva.onlinejudge.org/index.php?option=onlinejudge&Itemid=8&page=show_problem&category=&problem=3390)|||
 ||[10938 - Flea circus](https://uva.onlinejudge.org/index.php?option=onlinejudge&Itemid=99999999&page=show_problem&category=&problem=1879)|||
+||[1049 - One Way Roads](http://www.lightoj.com/volume_showproblem.php?problem=1049)|||
