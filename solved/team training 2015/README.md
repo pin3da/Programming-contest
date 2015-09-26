@@ -81,3 +81,4 @@ List of problems
 |--|--|--|--|
 |25| |[11646 - Athletics Track](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2693)| |
 | | |[11516 - WiFi](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=&problem=2511&mosmsg=Submission+received+with+ID+16165081)| |
+| | |[10891 - Game of Sum](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1832)| |
