@@ -89,3 +89,4 @@ List of problems
 ||[1303 - Ferris Wheel](http://www.lightoj.com/volume_showproblem.php?problem=1303)|||
 ||[1210 - Efficient Traffic System](http://www.lightoj.com/volume_showproblem.php?problem=1210)|||
 ||[1037 - Agent 47](http://www.lightoj.com/volume_showproblem.php?problem=1037)|||
+||[1011 - Marriage Ceremonies](http://www.lightoj.com/volume_showproblem.php?problem=1011)|||
