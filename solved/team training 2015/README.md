@@ -86,6 +86,6 @@ List of problems
 |26||||
 |--|--|--|--|
 |27|[1117 - Helping Cicada](http://www.lightoj.com/volume_showproblem.php?problem=1117)|||
-|[1303 - Ferris Wheel](http://www.lightoj.com/volume_showproblem.php?problem=1303)||||
-|[1210 - Efficient Traffic System](http://www.lightoj.com/volume_showproblem.php?problem=1210)||||
-|[1037 - Agent 47](http://www.lightoj.com/volume_showproblem.php?problem=1037)||||
+||[1303 - Ferris Wheel](http://www.lightoj.com/volume_showproblem.php?problem=1303)|||
+||[1210 - Efficient Traffic System](http://www.lightoj.com/volume_showproblem.php?problem=1210)|||
+||[1037 - Agent 47](http://www.lightoj.com/volume_showproblem.php?problem=1037)|||
