@@ -38,7 +38,15 @@ struct SuffixArray{
   }
 
   vector<int> getSuffixArray(){
-    return P.back();
+    vector<int> &rank = P.back();
+    vector<pair<int, int> > inv(rank.size());
+    for (int i = 0; i < rank.size(); ++i)
+      inv[i] = make_pair(rank[i], i);
+    sort(inv.begin(), inv.end());
+    vector<int> sa(rank.size());
+    for (int i = 0; i < rank.size(); ++i)
+      sa[i] = inv[i].second;
+    return sa;
   }
 
   // returns the length of the longest common prefix of s[i...L-1] and s[j...L-1]
