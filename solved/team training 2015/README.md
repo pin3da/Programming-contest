@@ -83,10 +83,10 @@ List of problems
 | | |[11516 - WiFi](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=&problem=2511&mosmsg=Submission+received+with+ID+16165081)| |
 | | |[10891 - Game of Sum](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1832)| |
 |--|--|--|--|
-|26||||
+|26|RPC10|RPC10|RPC10|
 |--|--|--|--|
 |27|[1117 - Helping Cicada](http://www.lightoj.com/volume_showproblem.php?problem=1117)|||
 ||[1303 - Ferris Wheel](http://www.lightoj.com/volume_showproblem.php?problem=1303)|||
 ||[1210 - Efficient Traffic System](http://www.lightoj.com/volume_showproblem.php?problem=1210)|||
 ||[1037 - Agent 47](http://www.lightoj.com/volume_showproblem.php?problem=1037)|||
-||[1011 - Marriage Ceremonies](http://www.lightoj.com/volume_showproblem.php?problem=1011)|||
+||[1011 - Marriage Ceremonies](http://www.lightoj.com/volume_showproblem.php?problem=1011)||[1428 - Melody Comparison](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1428%20-%20Melody%20Comparison)|
