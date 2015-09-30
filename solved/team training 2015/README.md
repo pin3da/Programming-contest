@@ -94,4 +94,6 @@ List of problems
 |28|[1009 - Back to Underworld](http://www.lightoj.com/volume_showproblem.php?problem=1009)||[1347 - Aladdin and the Magical Lamp](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1347%20-%20Aladdin%20and%20the%20Magical%20Lamp)|
 |--|--|--|--|
 |29|||[1379 - Toll Management](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1379%20-%20Toll%20Management)|
+|--|--|--|--|
+|30|[1093 - Ghajini](http://www.lightoj.com/volume_showproblem.php?problem=1093)|||
 
