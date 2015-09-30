@@ -98,4 +98,6 @@ List of problems
 |30|[1093 - Ghajini](http://www.lightoj.com/volume_showproblem.php?problem=1093)|||
 ||[1057 - Collecting Gold](http://www.lightoj.com/volume_showproblem.php?problem=1057)|||
 ||[1033 - Generating Palindromes](http://www.lightoj.com/volume_showproblem.php?problem=1033)|||
+||[1064 - Throwing Dice ](http://www.lightoj.com/volume_showproblem.php?problem=1064)|||
+||[1017 - Brush (III) ](http://www.lightoj.com/volume_showproblem.php?problem=1017)|||
 
