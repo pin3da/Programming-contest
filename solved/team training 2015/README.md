@@ -96,4 +96,5 @@ List of problems
 |29|||[1379 - Toll Management](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1379%20-%20Toll%20Management)|
 |--|--|--|--|
 |30|[1093 - Ghajini](http://www.lightoj.com/volume_showproblem.php?problem=1093)|||
+||[1057 - Collecting Gold](http://www.lightoj.com/volume_showproblem.php?problem=1057)|||
 
