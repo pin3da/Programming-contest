@@ -90,3 +90,5 @@ List of problems
 ||[1210 - Efficient Traffic System](http://www.lightoj.com/volume_showproblem.php?problem=1210)|||
 ||[1037 - Agent 47](http://www.lightoj.com/volume_showproblem.php?problem=1037)|||
 ||[1011 - Marriage Ceremonies](http://www.lightoj.com/volume_showproblem.php?problem=1011)||[1428 - Melody Comparison](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1428%20-%20Melody%20Comparison)|
+|--|--|--|--|
+|28|||[1347 - Aladdin and the Magical Lamp](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1347%20-%20Aladdin%20and%20the%20Magical%20Lamp)|
