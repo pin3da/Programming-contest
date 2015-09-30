@@ -97,4 +97,5 @@ List of problems
 |--|--|--|--|
 |30|[1093 - Ghajini](http://www.lightoj.com/volume_showproblem.php?problem=1093)|||
 ||[1057 - Collecting Gold](http://www.lightoj.com/volume_showproblem.php?problem=1057)|||
+||[1033 - Generating Palindromes](http://www.lightoj.com/volume_showproblem.php?problem=1033)|||
 
