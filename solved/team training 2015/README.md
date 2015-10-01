@@ -100,4 +100,5 @@ List of problems
 ||[1033 - Generating Palindromes](http://www.lightoj.com/volume_showproblem.php?problem=1033)|||
 ||[1064 - Throwing Dice ](http://www.lightoj.com/volume_showproblem.php?problem=1064)|||
 ||[1017 - Brush (III) ](http://www.lightoj.com/volume_showproblem.php?problem=1017)|||
-
+|--|--|--|--|
+|31|||[1123 - Trail Maintenance](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1123%20-%20Trail%20Maintenance)|
