@@ -91,7 +91,14 @@ List of problems
 ||[1037 - Agent 47](http://www.lightoj.com/volume_showproblem.php?problem=1037)|||
 ||[1011 - Marriage Ceremonies](http://www.lightoj.com/volume_showproblem.php?problem=1011)||[1428 - Melody Comparison](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1428%20-%20Melody%20Comparison)|
 |--|--|--|--|
-|28|||[1347 - Aladdin and the Magical Lamp](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1347%20-%20Aladdin%20and%20the%20Magical%20Lamp)|
+|28|[1009 - Back to Underworld](http://www.lightoj.com/volume_showproblem.php?problem=1009)||[1347 - Aladdin and the Magical Lamp](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1347%20-%20Aladdin%20and%20the%20Magical%20Lamp)|
 |--|--|--|--|
 |29|||[1379 - Toll Management](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1379%20-%20Toll%20Management)|
-
+|--|--|--|--|
+|30|[1093 - Ghajini](http://www.lightoj.com/volume_showproblem.php?problem=1093)|||
+||[1057 - Collecting Gold](http://www.lightoj.com/volume_showproblem.php?problem=1057)|||
+||[1033 - Generating Palindromes](http://www.lightoj.com/volume_showproblem.php?problem=1033)|||
+||[1064 - Throwing Dice ](http://www.lightoj.com/volume_showproblem.php?problem=1064)|||
+||[1017 - Brush (III) ](http://www.lightoj.com/volume_showproblem.php?problem=1017)|||
+|--|--|--|--|
+|31|[1231 - Coin Change (I)](http://www.lightoj.com/volume_showproblem.php?problem=1231) [[code]] (https://github.com/carlos4rias/Programming-Contest/blob/master/LightOJ/1231%20-%20Coin%20Change%20(I).cpp)||[1123 - Trail Maintenance](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1123%20-%20Trail%20Maintenance)|
