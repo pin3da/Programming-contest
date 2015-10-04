@@ -106,3 +106,4 @@ List of problems
 |32|||CF round 323|
 |--|--|--|--|
 |33|||[1127 - Funny Knapsack](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1127%20-%20Funny%20Knapsack)|
+||||[1240 - Point Segment Distance (3D)](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1240%20-%20Point%20Segment%20Distance%20%283D%29)|
