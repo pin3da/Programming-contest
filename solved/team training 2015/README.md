@@ -102,3 +102,7 @@ List of problems
 ||[1017 - Brush (III) ](http://www.lightoj.com/volume_showproblem.php?problem=1017)|||
 |--|--|--|--|
 |31|[1231 - Coin Change (I)](http://www.lightoj.com/volume_showproblem.php?problem=1231) [[code]] (https://github.com/carlos4rias/Programming-Contest/blob/master/LightOJ/1231%20-%20Coin%20Change%20(I).cpp)||[1123 - Trail Maintenance](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1123%20-%20Trail%20Maintenance)|
+|--|--|--|--|
+|32|||CF round 323|
+|--|--|--|--|
+|33|||[1127 - Funny Knapsack](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1127%20-%20Funny%20Knapsack)|
