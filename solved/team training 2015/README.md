@@ -109,5 +109,5 @@ List of problems
 ||||[1240 - Point Segment Distance (3D)](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1240%20-%20Point%20Segment%20Distance%20%283D%29)|
 ||||[1235 - Coin Change (IV)](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1235%20-%20Coin%20Change%20%28IV%29)|
 |--|--|--|--|
-|34||[1062 - Crossed Ladders](https://lightoj.com/volume_showproblem.php?problem=1062)|[1098 - A New Function](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1098%20-%20A%20New%20Function)|
+|34||[1062 - Crossed Ladders](http://www.lightoj.com/volume_showproblem.php?problem=1346)|[1098 - A New Function](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1098%20-%20A%20New%20Function)|
 || || [1141 - Number Transformation ](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1141%20-%20Number%20Transformation)|
