@@ -110,5 +110,4 @@ List of problems
 ||||[1235 - Coin Change (IV)](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1235%20-%20Coin%20Change%20%28IV%29)|
 |--|--|--|--|
 |34|||[1098 - A New Function](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1098%20-%20A%20New%20Function)|
-|--|--|--|--|
-|35| |[1062 - Crossed Ladders](lightoj.com/volume_showproblem.php?problem=1062)| |
+|| |[1062 - Crossed Ladders](lightoj.com/volume_showproblem.php?problem=1062)| [1141 - Number Transformation ](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1141%20-%20Number%20Transformation)|
