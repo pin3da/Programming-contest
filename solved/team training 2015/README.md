@@ -113,3 +113,4 @@ List of problems
 || || [1141 - Number Transformation ](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1141%20-%20Number%20Transformation)|
 |--|--|--|--|
 |35|||[1191 - Bar Codes](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1191%20-%20Bar%20Codes)|
+||||[1125 - Divisible Group Sums](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1125%20-%20Divisible%20Group%20Sums)|
