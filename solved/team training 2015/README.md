@@ -111,3 +111,5 @@ List of problems
 |--|--|--|--|
 |34||[1062 - Crossed Ladders](http://www.lightoj.com/volume_showproblem.php?problem=1346)|[1098 - A New Function](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1098%20-%20A%20New%20Function)|
 || || [1141 - Number Transformation ](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1141%20-%20Number%20Transformation)|
+|--|--|--|--|
+|35|||[1191 - Bar Codes](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1191%20-%20Bar%20Codes)|
