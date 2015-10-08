@@ -115,4 +115,4 @@ List of problems
 |35|||[1191 - Bar Codes](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1191%20-%20Bar%20Codes)|
 ||||[1125 - Divisible Group Sums](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1125%20-%20Divisible%20Group%20Sums)|
 |--|--|--|--|
-|36|||[1163 - Bank Robbery](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1163%20-%20Bank%20Robbery)|
+|36||[1007 - Mathematically Hard ](http://www.lightoj.com/volume_showproblem.php?problem=1007)|[1163 - Bank Robbery](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1163%20-%20Bank%20Robbery)|
