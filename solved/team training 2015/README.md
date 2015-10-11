@@ -116,3 +116,9 @@ List of problems
 ||||[1125 - Divisible Group Sums](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1125%20-%20Divisible%20Group%20Sums)|
 |--|--|--|--|
 |36||[1007 - Mathematically Hard ](http://www.lightoj.com/volume_showproblem.php?problem=1007)|[1163 - Bank Robbery](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1163%20-%20Bank%20Robbery)|
+|--|--|--|--|
+|37||||
+|--|--|--|--|
+|38|RPC 11| RPC 11| RPC 11|
+|--|--|--|--|
+|39|||[1126 - Building Twin Towers](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1126%20-%20Building%20Twin%20Towers)|
