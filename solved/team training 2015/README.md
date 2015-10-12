@@ -122,3 +122,5 @@ List of problems
 |38|RPC 11| RPC 11| RPC 11|
 |--|--|--|--|
 |39|||[1126 - Building Twin Towers](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1126%20-%20Building%20Twin%20Towers)|
+|--|--|--|--|
+|40|[1159 - Batman ](http://lightoj.com/volume_showproblem.php?problem=1159)|||
