@@ -125,3 +125,4 @@ List of problems
 |--|--|--|--|
 |40|[1159 - Batman ](http://lightoj.com/volume_showproblem.php?problem=1159)|||
 ||[1044 - Palindrome Partitioning ](http://lightoj.com/volume_showproblem.php?problem=1044)|||
+||[1125 - Divisible Group Sums ](http://lightoj.com/volume_showproblem.php?problem=1125)|||
