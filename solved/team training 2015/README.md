@@ -128,3 +128,4 @@ List of problems
 ||[1125 - Divisible Group Sums ](http://lightoj.com/volume_showproblem.php?problem=1125)|||
 |--|--|--|--|
 |41| |[1027 - A Dangerous Maze ](http://lightoj.com/volume_showproblem.php?problem=1027)| |
+|||[1030 - Discovering Gold](http://lightoj.com/volume_showproblem.php?problem=1030)||
