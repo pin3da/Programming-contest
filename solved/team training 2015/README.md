@@ -130,3 +130,13 @@ List of problems
 |41| |[1027 - A Dangerous Maze ](http://lightoj.com/volume_showproblem.php?problem=1027)| |
 |||[1030 - Discovering Gold](http://lightoj.com/volume_showproblem.php?problem=1030)||
 |||[1038 - Race to 1 Again](http://lightoj.com/volume_showproblem.php?problem=1038)||
+|--|--|--|--|
+|42| | | |
+|--|--|--|--|
+|43| | | |
+|--|--|--|--|
+|44| | | |
+|--|--|--|--|
+|45| | | |
+|--|--|--|--|
+|46| |[1289 - LCM from 1 to n](http://lightoj.com/volume_showproblem.php?problem=1289)| |
