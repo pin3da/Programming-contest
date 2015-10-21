@@ -22,6 +22,8 @@ When we add the edge number 'j + 1' we have two options.
 - 'to' is not reachable from i.
   In this case we *need* to add that edge to the final answer.
 
+To update the list of reachables nodes, you can do an 'or' operation between the actual reachable nodes, and r[to]
+
 
 ### Problem source
 
