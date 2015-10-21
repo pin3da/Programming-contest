@@ -143,3 +143,5 @@ List of problems
 |--|--|--|--|
 |47| ||[1257 - Farthest Nodes in a Tree (II)](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1257%20-%20Farthest%20Nodes%20in%20a%20Tree%20%28II%29)|
 |48| ||[1268 - Unlucky Strings](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1268%20-%20Unlucky%20Strings)|
+|| ||[1390 - Weight Comparison](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1390%20-%20Weight%20Comparison)|
+
