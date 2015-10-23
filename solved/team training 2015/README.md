@@ -142,6 +142,9 @@ List of problems
 |46| |[1289 - LCM from 1 to n](http://lightoj.com/volume_showproblem.php?problem=1289)| |
 |--|--|--|--|
 |47| ||[1257 - Farthest Nodes in a Tree (II)](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1257%20-%20Farthest%20Nodes%20in%20a%20Tree%20%28II%29)|
+|--|--|--|--|
 |48| ||[1268 - Unlucky Strings](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1268%20-%20Unlucky%20Strings)|
 || ||[1390 - Weight Comparison](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1390%20-%20Weight%20Comparison)|
+|--|--|--|--|
+|49|||[1175 - Jane and the Frost Giants](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1175%20-%20Jane%20and%20the%20Frost%20Giants)|
 
