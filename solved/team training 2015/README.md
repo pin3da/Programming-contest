@@ -157,3 +157,5 @@ List of problems
 |53| | | |
 |--|--|--|--|
 |54| |[1052 - String Growth](http://lightoj.com/volume_showproblem.php?problem=1052)| |
+|--|--|--|--|
+|55| |[1325 - Distributing Chocolates](http://lightoj.com/volume_showproblem.php?problem=1325)| |
