@@ -159,4 +159,4 @@ List of problems
 |54| |[1052 - String Growth](http://lightoj.com/volume_showproblem.php?problem=1052)| |
 |--|--|--|--|
 |55| |[1325 - Distributing Chocolates](http://lightoj.com/volume_showproblem.php?problem=1325)| |
-| | |[1138 - Trailing Zeroes (III)]((http://lightoj.com/volume_showproblem.php?problem=1138)| |
+| | |[1138 - Trailing Zeroes III]((http://lightoj.com/volume_showproblem.php?problem=1138)| |
