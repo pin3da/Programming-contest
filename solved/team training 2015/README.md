@@ -165,3 +165,4 @@ List of problems
 |56| | | |
 |--|--|--|--|
 |57| |[1009 - Back to Underworld](http://lightoj.com/volume_showproblem.php?problem=1009)| |
+| | |[1174 - Commandos](http://lightoj.com/volume_showproblem.php?problem=1174)| |
