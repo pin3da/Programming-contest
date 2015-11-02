@@ -174,3 +174,5 @@ List of problems
 |60|||[1129 - Consistency Checker](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1129%20-%20Consistency%20Checker)|
 ||||[1224 - DNA Prefix](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1224%20-%20DNA%20Prefix)|
 ||||[5913 - Dictionary Size](https://github.com/pin3da/Programming-contest/tree/master/solved/ICPCLivearchive/5913%20-%20Dictionary%20Size)|
+|--|--|--|--|
+|61|||[1238 - Power Puff Girs](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1238%20-%20Power%20Puff%20Girls)|
