@@ -147,4 +147,22 @@ List of problems
 || ||[1390 - Weight Comparison](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1390%20-%20Weight%20Comparison)|
 |--|--|--|--|
 |49|||[1175 - Jane and the Frost Giants](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1175%20-%20Jane%20and%20the%20Frost%20Giants)|
-
+|--|--|--|--|
+|50| | | |
+|--|--|--|--|
+|51|RPC 12|RPC 12|RPC 12|
+|--|--|--|--|
+|52| | | |
+|--|--|--|--|
+|53| | | |
+|--|--|--|--|
+|54| |[1052 - String Growth](http://lightoj.com/volume_showproblem.php?problem=1052)| |
+|--|--|--|--|
+|55| |[1325 - Distributing Chocolates](http://lightoj.com/volume_showproblem.php?problem=1325)| |
+| | |[1138 - Trailing Zeroes (III)](http://lightoj.com/volume_showproblem.php?problem=1138)| |
+| | |[1070 - Algebraic Problem ](http://lightoj.com/volume_showproblem.php?problem=1070)| |
+|--|--|--|--|
+|56| | | |
+|--|--|--|--|
+|57| |[1009 - Back to Underworld](http://lightoj.com/volume_showproblem.php?problem=1009)| |
+| | |[1174 - Commandos](http://lightoj.com/volume_showproblem.php?problem=1174)| |
