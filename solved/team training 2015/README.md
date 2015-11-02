@@ -166,3 +166,11 @@ List of problems
 |--|--|--|--|
 |57| |[1009 - Back to Underworld](http://lightoj.com/volume_showproblem.php?problem=1009)| |
 | | |[1174 - Commandos](http://lightoj.com/volume_showproblem.php?problem=1174)| |
+|--|--|--|--|
+|58||||
+|--|--|--|--|
+|59|CCPL12|CCPL12|CCPL12|
+|--|--|--|--|
+|60|||[1129 - Consistency Checker](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1129%20-%20Consistency%20Checker)|
+||||[1224 - DNA Prefix](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1224%20-%20DNA%20Prefix)|
+||||[5913 - Dictionary Size](https://github.com/pin3da/Programming-contest/tree/master/solved/ICPCLivearchive/5913%20-%20Dictionary%20Size)|
