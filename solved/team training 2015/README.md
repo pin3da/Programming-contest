@@ -178,3 +178,4 @@ List of problems
 |61|||[1238 - Power Puff Girs](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1238%20-%20Power%20Puff%20Girls)|
 |--|--|--|--|
 |62|||[ 1112 - Curious Robin Hood](https://github.com/pin3da/Programming-contest/tree/master/solved/lightoj/1112%20-%20Curious%20Robin%20Hood)|
+||||[[Regional]North America - Rocky Mountain 2014](https://github.com/pin3da/Programming-contest/tree/master/solved/ICPCLivearchive/regionals2014/North%20America%20-%20Rocky%20Mountain)|
