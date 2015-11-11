@@ -1,7 +1,3 @@
-/**
-  NOT FINISHED
-*/
-
 using namespace std;
 #include <bits/stdc++.h>
 
@@ -36,7 +32,7 @@ struct trie {
       if (tree[node].c)
         tmp = max(tmp, dp[node] + 1);
 
-      gitdp[node] = max(dp[node], tmp);
+      dp[node] = max(dp[node], tmp);
 
       ans = max(ans, dp[node]);
       tree[node].c = true;
@@ -48,7 +44,7 @@ struct trie {
 
     }
 
-    int to = s[depth - 1] - 'A';
+    int to = s[depth] - 'A';
 
     if(tree[node].e[to] == -1){
       tree[node].e[to] = nodes;
