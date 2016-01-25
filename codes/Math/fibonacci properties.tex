@@ -1,0 +1,26 @@
+
+Let A, B and n be integer numbers.
+
+
+\begin{equation}
+  k = A - B
+\end{equation}
+
+
+\begin{equation}
+  F_{A} F_{B} = F_{k + 1} F_{A} ^ 2 + F_{k} F_{A} F_{A - 1}
+\end{equation}
+
+\begin{equation}
+  \sum_{i = 0}^{n} F_{i} ^ 2 = F_{n + 1} F_{n}
+\end{equation}
+
+$ev(n)$ = returns 1 if $n$ is even.
+
+\begin{equation}
+  \sum_{i = 0}^{n} F_{i} F_{i + 1} = F_{n + 1} ^ {2} - ev(n)
+\end{equation}
+
+\begin{equation}
+  \sum_{i = 0}^{n} F_{i} F_{i - 1} = \sum_{i = 0}^{n - 1} F_{i} F_{i + 1}
+\end{equation}
