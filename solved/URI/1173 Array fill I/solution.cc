@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+#define D(x) cout << #x " = " << (x) << endl
+#define endl '\n'
+
+using namespace std;
+
+int main() {
+  ios_base::sync_with_stdio(false);cin.tie(NULL);
+  long long n;
+  cin >> n;
+  for (int i = 0; i < 10; ++i) {
+    printf("N[%d] = %lld\n", i,  n);
+    n <<= 1;
+  }
+  return 0;
+}
