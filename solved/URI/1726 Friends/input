@@ -1,0 +1,6 @@
+{ABC}
+{ABC}+{DEFG}+{Z}+{}
+{ABE}*{ABCD}
+{ABCD}-{CZ}
+{ABC}+{CDE}*{CEZ}
+({ABC}+{CDE})*{CEZ}
