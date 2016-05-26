@@ -1,5 +1,5 @@
-// Wrong Answer ):
 #include <bits/stdc++.h>
+#define debug(x) cout << #x << " = " << (x) << endl
 
 using namespace std;
 
@@ -22,10 +22,11 @@ struct edge{
 };
 
 struct graph {
-  vector<vector<edge> > g;
+  vector<vector<edge>> g;
   vector<int> vi, low, d, pi, is_b;
+  map<pair<int, int>, vector<int>> frec;
 
-  int ticks, edges;
+  int ticks;
 
   graph(int n, int m) {
     g.assign(n, vector<edge>());
@@ -34,13 +35,12 @@ struct graph {
     low.resize(n);
     d.resize(n);
     pi.resize(n);
-    edges = 0;
   }
 
   void add_edge(int u, int v, int id) {
     g[u].push_back(edge(v, id));
     g[v].push_back(edge(u, id));
-    edges++;
+    frec[make_pair(min(u, v), max(u, v))].emplace_back(id);
   }
 
   void dfs(int u) {
@@ -66,10 +66,18 @@ struct graph {
     fill(pi.begin(), pi.end(), -1);
     fill(vi.begin(), vi.end(), 0);
     fill(low.begin(), low.end(), 0);
+    fill(is_b.begin(), is_b.end(), 0);
     fill(d.begin(), d.end(), 0);
     ticks = 0;
     for (int i = 0; i < g.size(); ++i)
       if (!vi[i]) dfs(i);
+
+    for (auto &i : frec) {
+      if (i.second.size() > 1) {
+        for (auto &j: i.second)
+          is_b[j] = 0;
+      }
+    }
   }
 };
 
@@ -77,7 +85,6 @@ int main() {
   int n, m;
   while (cin >> n >> m) {
     vector<vector<int>> belongs(n);
-    vector<vector<int>> c(m);
     vector<int> degree(m);
     graph g(m, n);
     for (int i = 0; i < m; ++i) {
@@ -86,10 +93,9 @@ int main() {
       while (k--) {
         cin >> t;
         belongs[t].emplace_back(i);
-        c[i].emplace_back(t);
       }
     }
-    for (int i = 0; i < m; ++i) p[i] = i;
+    for (int i = 0; i < m + 10; ++i) p[i] = i;
     for (int i = 0; i < n; ++i) {
       vector<int> &t = belongs[i];
       assert(t.size() > 0);
@@ -102,7 +108,7 @@ int main() {
         for (int k = j + 1; k < t.size(); ++k) {
           degree[t[k]]++;
           degree[t[j]]++;
-          g.add_edge(t[k], t[j], i);
+          g.add_edge(t[j], t[k], i);
           js(t[k], t[j]);
         }
       }
@@ -143,7 +149,13 @@ int main() {
         best = min(best, cur_best);
       }
     } else {
-      best = 0;
+      g.comp_bridges();
+      for (int i = 0; i < n; ++i) {
+        if (!g.is_b[i]) {
+          best = i;
+          break;
+        }
+      }
     }
     cout << best << endl;
   }

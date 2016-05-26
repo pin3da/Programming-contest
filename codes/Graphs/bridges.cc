@@ -45,6 +45,10 @@ struct graph {
     }
   }
 
+  // Multiple edges from a to b are not allowed.
+  // (they could be detected as a bridge).
+  // If you need to handle this, just count
+  // how many edges there are from a to b.
   void comp_bridges() {
     fill(pi.begin(), pi.end(), -1);
     fill(vi.begin(), vi.end(), 0);
