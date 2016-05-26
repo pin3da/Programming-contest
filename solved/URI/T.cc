@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define D(x) cout << #x " = " << (x) << endl
+#define debug(x) cout << #x " = " << (x) << endl
 #define endl '\n'
 
 using namespace std;
