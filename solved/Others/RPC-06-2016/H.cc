@@ -1,4 +1,3 @@
-// W.A
 #include <bits/stdc++.h>
 #define endl '\n'
 #define debug(x) cout << #x  " = " << (x) << endl
@@ -7,39 +6,17 @@ using namespace std;
 
 pair<int, int> left(vector<int> &a, int s) {
   if (a.size() == 0) return make_pair(0, s);
-  if (a.size() <= 5) {
-    return make_pair(s - a[0], a[0]);
-  }
-  int have = 4;
-  int total = s - a[0];
-  for (int i = 1; i < a.size(); ++i) {
-    if (have == 0) {
-      total += 2 * (s - a[i]);
-      have = 5;
-    } else {
-      total += a[i] - a[i - 1];
-    }
-  }
-  return make_pair(total, a.back());
+  int total = 0;
+  for (int i = 0; i < a.size(); i += 5)
+    total += 2 * (s - a[i]);
+  return make_pair(total, a[0]);
 }
 
 pair<int, int> right(vector<int> &a, int s) {
   if (a.size() == 0) return make_pair(0, s);
-  if (a.size() <= 5) {
-    return make_pair(a.back() - s, a.back());
-  }
-
-  int have = 4;
-  int n = a.size() - 1;
-  int total = a[n] - s;
-  for (int i = n - 1; i >= 0; --i) {
-    if (have == 0) {
-      total += 2 * (a[i] - s);
-      have = 5;
-    } else {
-      total += a[i + 1] - a[i];
-    }
-  }
+  int total = 0;
+  for (int i = 0; i < a.size(); i += 5)
+    total += 2 * (a[i] - s);
   return make_pair(total, a[0]);
 }
 
@@ -58,12 +35,13 @@ int main() {
       else if (i > start)
         r.emplace_back(i);
 
+    sort(r.rbegin(), r.rend());
     pair<int, int> ll = left(l, start);
     pair<int, int> rr = right(r, start);
     int ans = n + ll.first + rr.first;
     int best = start - ll.second;
-    best = min(best, rr.second - start);
-    cout << ans + best << endl;
+    best = max(best, rr.second - start);
+    cout << ans - best << endl;
   }
   return 0;
 }
