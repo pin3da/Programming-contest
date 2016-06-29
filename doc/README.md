@@ -14,6 +14,7 @@ Put your references here, every new source that you could share is welcome.
 - [Z Algorithm](http://codeforces.com/blog/entry/3107)
 - [KMP](http://www.inf.fh-flensburg.de/lang/algorithmen/pattern/kmpen.htm)
 - [Suffix Array](http://web.stanford.edu/class/cs97si/suffix-array.pdf)
+- [Suffix automata](http://codeforces.com/blog/entry/20861)
 
 #### Segment Tree
 
