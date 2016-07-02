@@ -12,7 +12,7 @@
 struct state {
   int len, link;
   long long num_paths;
-  unordered_map<int, int> next;
+  map<int, int> next;
 };
 
 const int MN = 200011;
