@@ -1,0 +1,4 @@
+B.cc: In function ‘void move_pattern(vc&, int, int, char)’:
+B.cc:26:12: error: expected primary-expression before ‘[’ token
+       if(vc[i][j] == p) {
+            ^

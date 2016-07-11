@@ -1,0 +1,57 @@
+2 2 'X'
+X^
+--
+
+.X
+--
+
+3 12 'A'
+ABABABABABAC
+BABABABABABB
+ABABABABABAB
+
+BABABABABABA
+BBABABABABAB
+BABABABABABA
+
+4 4 '.'
+oo..
+oooo
+o..o
+oooo
+
+oooo
+o..o
+oooo
+..oo
+
+5 4 'x'
+
+xooo
+oooo
+ooox
+ooxo
+oooo
+
+oooo
+oooo
+ooxo
+oxoo
+oooo
+
+6 26 '>'
+../||\........OO......\|/.
+>//||\\.....OOOOOO....-O-.
+/>>>|\\\....OOOOOO..../|\.
+..>||........OOOO.........
+...||.........||..........
+||||||||||||||||||||||||||
+
+../||\.....>..OO......\|/.
+.//||\\.....>>>OOO....-O-.
+///||\\\....O>OOOO..../|\.
+...||........OOOO.........
+...||.........||..........
+||||||||||||||||||||||||||
+
+0 0 ' '
