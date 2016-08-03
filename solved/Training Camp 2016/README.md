@@ -107,7 +107,7 @@
 | problem       | solution      |  notes |
 | ------------- |:-------------:| -----:|
 | [2076 - Fields and Farmers](http://coj.uci.cu/24h/problem.xhtml?pid=2076) |  |  |
-| [1210 - Hooligan](http://coj.uci.cu/24h/problem.xhtml?pid=1210) |  |  |
+| [1210 - Hooligan](http://coj.uci.cu/24h/problem.xhtml?pid=1210) | [sol](https://github.com/carlos4rias/Programming-Contest/blob/master/URI/Graph/1394%20-%20Hooligan.cc) |  |
 | [2764 - KRUZNICE](http://coj.uci.cu/24h/problem.xhtml?pid=2764) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/2764%20-%20KRUZNICE) |  |
 | [1226 - Factoring Large Numbers](http://coj.uci.cu/24h/problem.xhtml?pid=1226) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/1226%20-%20Factoring%20Large%20Numbers) |  |
 | [2104 - Hanoi Tower III](http://coj.uci.cu/24h/problem.xhtml?pid=2104) |  |  |
