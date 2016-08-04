@@ -4,7 +4,7 @@
 | problem       | solution      |  notes |
 | ------------- |:-------------:| -----:|
 | [1069 - Soda Surpler](http://coj.uci.cu/24h/problem.xhtml?pid=1069) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/1069%20-%20Soda%20Surpler) |  |
-| [2248 - Dumbbells](http://coj.uci.cu/24h/problem.xhtml?pid=2248) |  |  |
+| [2248 - Dumbbells](http://coj.uci.cu/24h/problem.xhtml?pid=2248) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/2248%20-%20Dumbbells) |  |
 | [1789 - 1789 - Another Binary Search!!!](http://coj.uci.cu/24h/problem.xhtml?pid=1789) |  [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/1123%20-%20Ugly%20Numbers%20II) |  |
 | [1123 - Ugly Numbers II](http://coj.uci.cu/24h/problem.xhtml?pid=1123) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/1123%20-%20Ugly%20Numbers%20II) |  |
 | [3566 - Helping Indiana](http://coj.uci.cu/24h/problem.xhtml?pid=3566) |  |  |
@@ -14,7 +14,7 @@
 | [1003 - General Election](http://coj.uci.cu/24h/problem.xhtml?pid=1003) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/1003%20-%20General%20Election) |  |
 | [2674 - Subtract](http://coj.uci.cu/24h/problem.xhtml?pid=2674) |  |  |
 | [2392 - Sails](http://coj.uci.cu/24h/problem.xhtml?pid=2392) |  |  |
-| [2753 - Another Counting Problem](http://coj.uci.cu/24h/problem.xhtml?pid=2753) |  |  |
+| [2753 - Another Counting Problem](http://coj.uci.cu/24h/problem.xhtml?pid=2753) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/2753%20-%20Another%20Counting%20Problem) |  |
 
 
 #day 2
@@ -26,11 +26,11 @@
 | [1588 - Hedge Mazes](http://coj.uci.cu/24h/problem.xhtml?pid=1588) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/1588%20-%20Hedge%20Mazes) |  |
 | [2514 - Elo Calculator](http://coj.uci.cu/24h/problem.xhtml?pid=2514) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/2514%20-%20Elo%20Calculator) |  |
 | [3554 - Deciphering the Mayan writing](http://coj.uci.cu/24h/problem.xhtml?pid=3554) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/3554%20-%20Deciphering%20the%20Mayan%20writing) |  |
-| [3131 - Lazy Cat IV](http://coj.uci.cu/24h/problem.xhtml?pid=3131) |  |  |
+| [3131 - Lazy Cat IV](http://coj.uci.cu/24h/problem.xhtml?pid=3131) |[sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/3131%20-%20Lazy%20Cat%20IV)  |  |
 | [1400 - Nukit](http://coj.uci.cu/24h/problem.xhtml?pid=1400) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/1400%20-%20Nukit) |  |
 | [2240 - Automorphisms](http://coj.uci.cu/24h/problem.xhtml?pid=2240) |  |  |
 | [2829 - Rocks and Trees](http://coj.uci.cu/24h/problem.xhtml?pid=2829) |  |  |
-| [2141 - So you want to be a 2n-aire?](http://coj.uci.cu/24h/problem.xhtml?pid=2141) |  |  |
+| [2141 - So you want to be a 2n-aire?](http://coj.uci.cu/24h/problem.xhtml?pid=2141) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/2141%20-%20So%20you%20want%20to%20be%20a%202n-aire%3F) |  |
 | [3556 - Trading Pumpkins](http://coj.uci.cu/24h/problem.xhtml?pid=3556) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/3556%20-%20Trading%20Pumpkins) |  |
 | [3555 - The Valley of Mexico](http://coj.uci.cu/24h/problem.xhtml?pid=3555) |  |  |
 
@@ -39,11 +39,11 @@
 | problem       | solution      |  notes |
 | ------------- |:-------------:| -----:|
 | [3054 - Sum of Permutations](http://coj.uci.cu/24h/problem.xhtml?pid=3054) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/3054%20-%20Sum%20of%20Permutations) |  |
-| [2245 - Mist of Pandarians Casters](http://coj.uci.cu/24h/problem.xhtml?pid=2254) |  |  |
+| [2245 - Mist of Pandarians Casters](http://coj.uci.cu/24h/problem.xhtml?pid=2254) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/2245%20-%20Mist%20of%20Pandarians%20Casters) |  |
 | [3021 - Perimeter](http://coj.uci.cu/24h/problem.xhtml?pid=3021) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/3021%20-%20Perimeter) |  |
 | [3563 - Where should I build the greenhouse?](http://coj.uci.cu/24h/problem.xhtml?pid=3563) |  |  |
 | [3151 - Peculiar Primes](http://coj.uci.cu/24h/problem.xhtml?pid=3151) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/3151%20-%20Peculiar%20Primes) |  |
-| [1971 - Islands](http://coj.uci.cu/24h/problem.xhtml?pid=1971) |  |  |
+| [1971 - Islands](http://coj.uci.cu/24h/problem.xhtml?pid=1971) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/1971%20-%20Islands) |  |
 | [1622 - Apples](http://coj.uci.cu/24h/problem.xhtml?pid=1622) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/1622%20-%20Apples) |  |
 | [1814 - Unique Encryption Keys](http://coj.uci.cu/24h/problem.xhtml?pid=1814) |  |  |
 | [2074 - Defense Lines](http://coj.uci.cu/24h/problem.xhtml?pid=2074) |  |  |
@@ -72,13 +72,13 @@
 #day 5
 | problem       | solution      |  notes |
 | ------------- |:-------------:| -----:|
-| [1693 - The Wedding Juicer](http://coj.uci.cu/24h/problem.xhtml?pid=1693) |  |  |
+| [1693 - The Wedding Juicer](http://coj.uci.cu/24h/problem.xhtml?pid=1693) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/1693%20-%20The%20Wedding%20Juicer) |  |
 | [2305 - Expanding Triangle](http://coj.uci.cu/24h/problem.xhtml?pid=2305) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/2305%20-%20Expanding%20Triangle) |  |
 | [1742 - Proving Equivalences](http://coj.uci.cu/24h/problem.xhtml?pid=1742) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/1742%20-%20Proving%20Equivalences) |  |
 | [2922 - Euclid](http://coj.uci.cu/24h/problem.xhtml?pid=2922) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/2922%20-%20Euclid) |  |
 | [2321 - Funny Games](http://coj.uci.cu/24h/problem.xhtml?pid=2321) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/2321%20-%20Funny%20Games) |  |
 | [1682 - Curious Game](http://coj.uci.cu/24h/problem.xhtml?pid=1682) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/1682%20-%20Curious%20Game) |  |
-| [2613 - Hide and Seek](http://coj.uci.cu/24h/problem.xhtml?pid=2613) |  |  |
+| [2613 - Hide and Seek](http://coj.uci.cu/24h/problem.xhtml?pid=2613) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/2613%20-%20Hide%20and%20Seek) |  |
 | [2407 - Pyramid Guards](http://coj.uci.cu/24h/problem.xhtml?pid=2407) |  |  |
 | [2167 - Taxi Travel](http://coj.uci.cu/24h/problem.xhtml?pid=2167) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/2167%20-%20Taxi%20Travel) |  |
 | [3355 - Knight Selection](http://coj.uci.cu/24h/problem.xhtml?pid=3355) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/3355%20-%20Knight%20Selection) |  |
