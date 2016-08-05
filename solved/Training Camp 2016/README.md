@@ -7,7 +7,7 @@
 | [2248 - Dumbbells](http://coj.uci.cu/24h/problem.xhtml?pid=2248) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/2248%20-%20Dumbbells) |  |
 | [1789 - 1789 - Another Binary Search!!!](http://coj.uci.cu/24h/problem.xhtml?pid=1789) |  [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/1123%20-%20Ugly%20Numbers%20II) |  |
 | [1123 - Ugly Numbers II](http://coj.uci.cu/24h/problem.xhtml?pid=1123) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/1123%20-%20Ugly%20Numbers%20II) |  |
-| [3566 - Helping Indiana](http://coj.uci.cu/24h/problem.xhtml?pid=3566) |  |  |
+| [3566 - Helping Indiana](http://coj.uci.cu/24h/problem.xhtml?pid=3566) | [sol](https://github.com/Yefri97/Competitive-Programming/blob/master/a.cpp)  |  |
 | [2878 - Seven Kingdoms](http://coj.uci.cu/24h/problem.xhtml?pid=2878) |  | two sat |
 | [2745 - Flow of Energy in Wireless Devices](http://coj.uci.cu/24h/problem.xhtml?pid=2745) |  |  |
 | [3237 - Bob and Multi-Function Prime-Lock](http://coj.uci.cu/24h/problem.xhtml?pid=3237) | [sol](https://github.com/pin3da/Programming-contest/tree/master/solved/COJ/3237%20-%20Bob%20and%20Multi-Function%20Prime-Lock) |  |
