@@ -1,4 +1,3 @@
-// TLE
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -7,17 +6,17 @@ using namespace std;
 
 const long long mod = 1e9 + 7;
 const int MN = 5 * 100000 + 100;
-const int SN = 717;
+const int SN = 708;
 
 int a[MN];
 long long p[MN];
 long long pinv[MN];
 
-long long mod_pow(long long b, long long e, long long m) {
+long long mod_pow(long long b, int e) {
   long long ans = 1;
   while (e > 0) {
-    if (e & 1) ans = (ans * b) % m;
-    b = (b * b) % m;
+    if (e & 1) ans = (ans * b) % mod;
+    b = (b * b) % mod;
     e >>= 1;
   }
   return ans;
@@ -40,35 +39,42 @@ long long add(long long ant, int id) {
 
 long long rem(long long ant, int id) {
   long long y = ant - p[id];
-  long long den = pinv[id];
-  return (y * den) % mod;
+  return (y * pinv[id]) % mod;
 }
+
+vector<query> s[SN];
+int ans[MN];
 
 int main() {
   ios_base::sync_with_stdio(false);cin.tie(NULL);
   int n, P;
-  vector<query> s[SN];
+  int first = true;
   while (cin >> n >> P) {
     for (int i = 0; i < n; ++i) {
       cin >> a[i];
-      p[i] = mod_pow(P, a[i], mod);
-      pinv[i] = mod_pow(p[i] + 1, mod - 2, mod);
+      p[i] = mod_pow(P, a[i]);
+      pinv[i] = mod_pow(p[i] + 1, mod - 2);
     }
-    for (int i = 0; i < SN; ++i) s[i].clear();
 
-    int q; cin >> q;
-    int a, b;
+    if (!first) for (int i = 0; i < SN; ++i)
+      if (s[i].size()) s[i].clear();
+
+    first = false;
+
+    int q;
+    cin >> q;
+    int start, b;
     for (int i = 0; i < q; ++i) {
-      cin >> a >> b;
-      a--;b--;
-      s[a / SN].push_back(query(a, b, i));
+      cin >> start >> b;
+      start--;b--;
+      s[start / SN].push_back(query(start, b, i));
     }
 
     for (int i = 0; i < SN; ++i) {
-      sort(s[i].begin(), s[i].end());
+      if (s[i].size())
+        sort(s[i].begin(), s[i].end());
     }
 
-    vector<long long> ans(q);
     for (int b = 0; b < SN; ++b) {
       if (s[b].size() == 0) continue;
       int i = s[b][0].a;
@@ -102,7 +108,7 @@ int main() {
     }
 
     for (int i = 0; i < q; ++i) {
-      cout << ans[i] << endl;
+      cout << (ans[i] + mod) % mod << endl;
     }
 
   }
