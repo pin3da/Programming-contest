@@ -1,0 +1,33 @@
+  the sigma function is defined as:
+
+  $$
+    \sigma_x(n)=\sum_{d\mid n} d^x
+  $$
+
+  when $x = 0$ is called the divisor function, that counts the number
+  of positive divisors of n.
+
+
+  Now, we are interested in find
+
+  $$
+    \sum_{d\mid n} \sigma_0(d)
+  $$
+
+  if $n$ is written as prime factorization:
+
+  $$
+    n = \prod_{i = 1}^{k} P_{i}^{e_k}
+  $$
+
+  we can demonstrate that:
+
+  $$
+    \sum_{d\mid n} \sigma_0(d) = \prod_{i = 1}^{k} g(e_k + 1)
+  $$
+
+  where $g(x)$ is the sum of the first x positive numbers:
+
+  $$
+    g(x) = (x * (x + 1)) / 2
+  $$
