@@ -6,15 +6,15 @@ using namespace std;
 
 const int MN = 200002;
 
-pair<long long, int> a[MN];
-long long b[MN];
+pair<int, int> a[MN];
+int b[MN];
 
 struct st {
-  long long cap, cost;
+  int cap, cost;
   int id;
 
   st () {}
-  st (long long a, long long b, int c) : cap(a), cost(b), id(c) {}
+  st (int a, int b, int c) : cap(a), cost(b), id(c) {}
   bool operator < (const st &o) const {
     if (cap == o.cap) {
       if (cost == o.cost)
@@ -70,8 +70,11 @@ int main() {
         i++;
       } else { // cap > a[i]
         s.erase(s.begin());
-        if (t.cap > 1)
-          s.insert(st((t.cap + 1) / 2, t.cost + 1, t.id));
+        while (t.cap > a[i].first) {
+          t.cap = (t.cap + 1) / 2;
+          t.cost++;
+        }
+        s.insert(t);
       }
     }
     cout << c << ' ' << u << endl;
