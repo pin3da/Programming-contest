@@ -1,4 +1,5 @@
 *.out
+*.tmp
 *.class
 *~
 solved/Intellij IDEA
