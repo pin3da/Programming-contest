@@ -16,6 +16,7 @@ int main() {
   while (cin >> line) {
     int ok = true;
     vector<int> frec(30);
+    frec[line[0] - 'A']++;
     for (int i = 1; i < (int)line.size(); ++i) {
       if (line[i] == line[i - 1])
         ok = false;
@@ -28,7 +29,9 @@ int main() {
 
     char A = 'A';
     for (int i = 0; i < (int)frec.size(); ++i) {
-      if (frec[i] == 2) A = i + 'A';
+      if (frec[i] == 2) {
+        A = i + 'A';
+      }
     }
     int x = -1, y = - 1;
     for (int i = 0; i < (int)line.size(); ++i) {
