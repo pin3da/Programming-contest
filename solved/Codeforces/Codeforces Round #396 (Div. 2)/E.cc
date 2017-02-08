@@ -28,19 +28,33 @@ long long go2(vector<vector<int>> &g, vector<int> &val,
 
   int cur = (val[node] >> k) & 1;
   long long ways = 0;
-  for (int i = 0; i < (int)g[node].size(); ++i) {
-    for (int j = i + 1; j < (int)g[node].size(); ++j) {
-      int a = g[node][i], b = g[node][j];
-      if (!cur) {
-        ways += go(g, val, a, 1, k) * go(g, val, b, 0, k);
-        ways += go(g, val, a, 0, k) * go(g, val, b, 1, k);
-      } else {
-        ways += go(g, val, a, 1, k) * go(g, val, b, 1, k);
-        ways += go(g, val, a, 0, k) * go(g, val, b, 0, k);
-      }
+  vector<long long> total(2);
+  for (int to : g[node])
+    for (int j = 0; j < 2; ++j)
+      total[j] += go(g, val, to, j, k);
+
+  for (int to : g[node]) {
+    if (!cur) {
+      ways += go(g, val, to, 1, k) * (total[0] - go(g, val, to, 0, k));
+      ways += go(g, val, to, 0, k) * (total[1] - go(g, val, to, 1, k));
+    } else {
+      ways += go(g, val, to, 1, k) * (total[1] - go(g, val, to, 1, k));
+      ways += go(g, val, to, 0, k) * (total[0] - go(g, val, to, 0, k));
+    }
+
+  }
+  return ways / 2;
+}
+
+void direct(vector<vector<int>> &gu, int node, int pi,
+    vector<vector<int>> &g) {
+
+  for (int to : gu[node]) {
+    if (to != pi) {
+      g[node].push_back(to);
+      direct(gu, to, node, g);
     }
   }
-  return ways;
 }
 
 int main() {
@@ -50,7 +64,7 @@ int main() {
 #endif
 
   int n; cin >> n;
-  vector<vector<int>> g(n);
+  vector<vector<int>> gu(n);
   vector<int> val(n);
 
   for (int &i : val) cin >> i;
@@ -58,17 +72,19 @@ int main() {
     int u, v;
     cin >> u >> v;
     u--;v--;
-    if (u > v) swap(u, v);
-    g[u].emplace_back(v);
+    gu[u].emplace_back(v);
+    gu[v].emplace_back(u);
   }
+
+  vector<vector<int>> g(n);
+  direct(gu, 0, -1, g);
 
   long long ans = 0;
   for (int k = 0; k < 31; ++k) {
     memset(dp, -1, sizeof dp);
     for (int i = n - 1; i >= 0; --i) {
       ans += (1LL << k) * go(g, val, i, 1, k);
-      if (g[i].size() >= 2)
-        ans += (1LL << k) * go2(g, val, i, k);
+      ans += (1LL << k) * go2(g, val, i, k);
     }
   }
   cout << ans << endl;
