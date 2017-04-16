@@ -32,8 +32,8 @@ int main() {
     zero.push_back(line(i.first, i.second));
   }
 
-  long double lo = 0, hi = 1e20;
-  int max_iter = 500;
+  long double lo = 0, hi = 1e19;
+  int max_iter = 128;
   while ((max_iter--) && (cmp(lo, hi) == -1)) {
     long double mid = (lo + hi) * 0.5;
     long double need = 0;
@@ -47,7 +47,7 @@ int main() {
       break;
     }
   }
-  if (lo < 1e19) {
+  if (lo < 1e18) {
     cout << fixed << setprecision(10);
     cout << lo << endl;
   } else {
