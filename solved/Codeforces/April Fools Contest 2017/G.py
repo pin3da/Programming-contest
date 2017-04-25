@@ -1,3 +1,5 @@
+# http://codeforces.com/contest/784/problem/G
+
 a = input()
 b = eval(a)
 print('>')
