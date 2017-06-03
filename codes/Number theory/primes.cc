@@ -37,5 +37,25 @@ namespace primes {
         ans.push_back(a + i);
     return ans;
   }
+
+  vector<pair<int, int>> factor(int n) {
+    vector<pair<int, int>> ans;
+    if (n == 0) return ans;
+    for (int i = 0; primes[i] * primes[i] <= n; ++i) {
+      if ((n % primes[i]) == 0) {
+        int expo = 0;
+        while ((n % primes[i]) == 0) {
+          expo++;
+          n /= primes[i];
+        }
+        ans.emplace_back(primes[i], expo);
+      }
+    }
+
+    if (n > 1) {
+      ans.emplace_back(n, 1);
+    }
+    return ans;
+  }
 }
 
