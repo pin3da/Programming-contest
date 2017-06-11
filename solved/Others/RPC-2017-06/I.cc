@@ -4,7 +4,7 @@ using namespace std;
 
 #define debug(x) cout << #x " = " << (x) << endl
 
-typedef long double ld;
+typedef double ld;
 
 struct point {
   ld x, y;
@@ -16,7 +16,7 @@ struct point {
   }
 };
 
-const ld EPS = 1e-12;
+const ld EPS = 1e-9;
 
 int cmp(ld x, ld y = 0, ld tol = EPS){
   return( x <= y + tol) ? (x + tol < y) ? -1 : 0 : 1;
@@ -143,33 +143,40 @@ void solve() {
   sort(all.begin(), all.end());
 
   vector<pair<polygon, point>> state;
-  point start = all[0];
-  state.emplace_back(box, start);
+  do {
+    state.clear();
+    point start = all[0];
+    state.emplace_back(box, start);
 
-  for (int i = 1; i < 2 * n; ++i) {
-    point cur = all[i];
-    vector<pair<polygon, point>> next;
-    for (auto &poly: state) {
-      if (!point_in_poly(cur, poly.first))
-        next.push_back(poly);
-    }
-    for (auto &poly: state) {
-      if (point_in_poly(cur, poly.first)) {
-        vector<point> inter = find_line(cur, poly.second);
-        vector<polygon> cut = split(poly.first, inter[0].x, inter[0].y, inter[1].x, inter[1].y);
-        if (point_in_poly(cur, cut[0])) {
-          next.emplace_back(cut[0], cur);
-          next.emplace_back(cut[1], poly.second);
-        } else {
-          next.emplace_back(cut[1], cur);
-          next.emplace_back(cut[0], poly.second);
-        }
-        break;
+    for (int i = 1; i < 2 * n; ++i) {
+      point cur = all[i];
+      vector<pair<polygon, point>> next;
+      for (auto &poly: state) {
+        if (!point_in_poly(cur, poly.first))
+          next.push_back(poly);
       }
+      for (auto &poly: state) {
+        if (point_in_poly(cur, poly.first)) {
+          vector<point> inter = find_line(cur, poly.second);
+          vector<polygon> cut = split(poly.first, inter[0].x, inter[0].y, inter[1].x, inter[1].y);
+          if (point_in_poly(cur, cut[0])) {
+            next.emplace_back(cut[0], cur);
+            next.emplace_back(cut[1], poly.second);
+          } else {
+            next.emplace_back(cut[1], cur);
+            next.emplace_back(cut[0], poly.second);
+          }
+          break;
+        }
+      }
+
+      state = next;
     }
 
-    state = next;
-  }
+    if (state.size() == n * 2)
+      break;
+    random_shuffle(all.begin(), all.end());
+  } while (true);
 
   int ans[2] = {0, 0};
   for (auto it : state) {
