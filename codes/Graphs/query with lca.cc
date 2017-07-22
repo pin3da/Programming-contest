@@ -19,6 +19,7 @@ struct lowest_ca {
   }
 
   void init(vector<vector<edge> > &g, int root) {
+    // g is undirected
     dfs(g, root);
     int N = g.size(), i, j;
 
