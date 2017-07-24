@@ -7,7 +7,7 @@ using namespace std;
 int main() {
 #ifndef LOCAL
 #define endl '\n'
-  ios_base::sync_with_stdio(false);cin.tie(NULL);
+  ios_base::sync_with_stdio(false); cin.tie(NULL);
 #endif
 
   return 0;
