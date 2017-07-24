@@ -83,27 +83,7 @@ lowest_ca tree;
 
 
 int test(int a, int b, int c) {
-  if (tree.lca(b, a) == b) {
-    if (tree.lca(b, c) == b) {
-      return tree.dist(tree.lca(c, a), c);
-    }
-    return tree.dist(tree.lca(a, b), c);
-  } else if (tree.lca(b, a) == a) {
-    if (tree.lca(a, c) == a)
-      return tree.dist(tree.lca(c, b), c);
-    return tree.dist(a, c);
-  }
-  vector<int> op = {
-    tree.dist(c, tree.lca(c, b)),
-    tree.dist(c, tree.lca(c, a)),
-  };
-  if (tree.L[tree.lca(c, b)] > tree.L[tree.lca(a, c)]) {
-    return max(*min_element(op.begin(), op.end()), tree.dist(tree.lca(c, b), a));
-  }
-  if (tree.L[tree.lca(c, a)] > tree.L[tree.lca(b, c)]) {
-    return max(*min_element(op.begin(), op.end()), tree.dist(tree.lca(c, a), b));
-  }
-  return *min_element(op.begin(), op.end());
+  return (tree.dist(a, c) + tree.dist(b, c) - tree.dist(a, b)) / 2;
 }
 
 
