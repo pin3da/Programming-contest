@@ -21,22 +21,21 @@ struct query {
 
 vector<query> s[SN];
 long long ans[MN];
-long long frec[MN];
+long long frec[1000000 + 100];
 
 struct DS {
   long long ans = 0;
   void clear() {
     memset(frec, 0, sizeof frec);
+    ans = 0;
   }
   void insert(long long x) {
     long long fx = frec[x]++;
-    ans -= fx * fx * x;
-    ans += (fx + 1) * (fx + 1) * x;
+    ans += (fx * 2 + 1) * x;
   }
   void erase(long long x) {
-    long long fx = frec[x]--;
-    ans -= fx * fx * x;
-    ans += (fx - 1) * (fx - 1) * x;
+    long long fx = --frec[x];
+    ans -= (fx * 2 + 1) * x;
   }
   long long query() {
     return ans;
