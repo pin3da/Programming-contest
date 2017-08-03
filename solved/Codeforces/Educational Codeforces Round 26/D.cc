@@ -12,9 +12,14 @@ struct factor {
 
 
 const int MN = 201;
-const int MF = 100;
-const int MT = 100;
-int dp[2][MN][MF][MT];
+factor dp[2][MN];
+
+factor choose(factor &a, factor &b) {
+  if (a.m > b.m) return a;
+  if (a.m < b.m) return b;
+  if (max(a.five, a.two) > max(b.five, b.two)) return a;
+  return b;
+}
 
 int main() {
 #ifndef LOCAL
@@ -42,25 +47,13 @@ int main() {
   int cur = 0;
   for (int i = n - 1; i >= 0; i--) {
     for (int k = 1; k < MN; k++) {
-      for (int f = 0; f < MF; f++) {
-        for (int t = 0; t < MT; t++) {
-          if (k == 1) {
-            dp[cur][k][f][t] = max(
-                dp[cur ^ 1][k][f][t],
-                min(f + all[i].five, t + all[i].two)
-            );
-          } else {
-            dp[cur][k][f][t] = max(
-                dp[cur ^ 1][k][f][t],
-                dp[cur ^ 1][k - 1][f + all[i].five][t + all[i].two]
-            );
-          }
-        }
-      }
+      factor next(dp[cur ^ 1][k - 1].five + all[i].five,
+                  dp[cur ^ 1][k - 1].two + all[i].two);
+      dp[cur][k] = choose(dp[cur ^ 1][k], next);
     }
     cur ^= 1;
   }
 
-  cout << dp[cur ^ 1][K][0][0] << endl;
+  cout << dp[cur ^ 1][K].m << endl;
   return 0;
 }
