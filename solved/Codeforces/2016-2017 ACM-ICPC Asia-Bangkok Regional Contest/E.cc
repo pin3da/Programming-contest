@@ -1,16 +1,52 @@
 #include<bits/stdc++.h>
-// #define endl '\n'
-
 using namespace std;
+
+#define debug(x) cout << #x " = " << (x) << endl
 
 const int MN = 5 * 100000 + 100;
 const int SN = 708;
 
-struct edge {
-  int to, w;
-  edge(int x, int y) : to(x), w(y) {}
+struct bit {
+  int n;
+  int t[2 * MN];
+
+  bit() {
+    n = MN;
+  }
+
+  void clear() {
+    memset(t, 0, sizeof t);
+  }
+
+  void add(int where, long long what){
+    for (where++; where <= n; where += where & -where){
+      t[where] += what;
+    }
+  }
+
+  long long query(int where){
+    long long sum = t[0];
+    for (where++; where > 0; where -= where & -where){
+      sum += t[where];
+    }
+    return sum;
+  }
+
+  int get(int k) {
+    int lo = 0, hi = n - 1;
+    while (lo < hi) {
+      int mid = (lo + hi) >> 1;
+      if (query(mid) < k) {
+        lo = mid + 1;
+      } else {
+        hi = mid;
+      }
+    }
+    return lo;
+  }
 };
 
+// Begin MOs algorithm
 struct query {
   int a, b, id; //[a, b]
   int u, v, lca;
@@ -25,51 +61,97 @@ struct query {
 
 vector<query> s[SN];
 int ans[MN];
-
-
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
-
-
-struct my_int {
-  int val, id;
-  my_int(int a, int b) : val(a), id(b) {}
-  bool operator<(const my_int &a) const {
-    if (val == a.val) return id < a.id;
-    return val < a.id;
-  }
-};
-
-typedef tree<my_int,null_type,less<my_int>,//key,mapped type, comparator
-rb_tree_tag,tree_order_statistics_node_update> set_t;
-
 struct DS {
-
-  set_t data;
-
+  int used[MN];
+  int total;
+  bit tree;
   void clear() {
-    data.clear();
+    memset(used, 0, sizeof used);
+    total = 0;
+    tree.clear();
   }
-  void insert(int x, int i) {
-    data.insert(my_int(x, i));
-  }
-  void erase(int x, int i) {
-    data.erase(my_int(x, i));
+  void update(vector<int> &cost, int id) {
+    if (id == 0) return; // root
+    if (used[id]) { // erase
+      tree.add(cost[id], -1);
+      total--;
+    } else { // add
+      tree.add(cost[id], 1);
+      total++;
+    }
+    used[id] ^= 1;
   }
   long long query() {
-    int len = data.size();
-    if (len & 1) {
-      int k = (len) >> 1;
-      return data.find_by_order(k)-> val * 2;
-    }
-    int k = (len) >> 1;
-    return data.find_by_order(k)-> val + data.find_by_order(k - 1)-> val;
+    int id = (total >> 1) + 1;
+    int id2 = ((total - 1) >> 1) + 1;
+    return tree.get(id) + tree.get(id2);
   }
 };
 
 DS data;
 
+void solve_mo(vector<query> &queries, vector<int> &a, vector<int> &le,
+    vector<int> &cost) {
+  for (int i = 0; i < SN; ++i)
+    s[i].clear();
+
+  for (int i = 0; i < (int)queries.size(); ++i) {
+    int b = queries[i].a;
+    s[b / SN].push_back(queries[i]);
+  }
+
+
+  for (int i = 0; i < SN; ++i) {
+    if (s[i].size())
+      sort(s[i].begin(), s[i].end());
+  }
+  for (int b = 0; b < SN; ++b) {
+    if (s[b].size() == 0) continue;
+    int i = s[b][0].a;
+    int j = s[b][0].a - 1;
+
+    data.clear();
+    for (int k = 0; k < (int)s[b].size(); ++k) {
+      int L = s[b][k].a;
+      int R = s[b][k].b;
+
+      while (j < R) {
+        j++;
+        data.update(cost, a[j]);
+      }
+
+      while (j > R) {
+        data.update(cost, a[j]);
+        j--;
+      }
+
+      while (i < L) {
+        data.update(cost, a[i]);
+        i++;
+      }
+
+      while (i > L) {
+        i--;
+        data.update(cost, a[i]);
+      }
+
+      ans[s[b][k].id] = data.query();
+    }
+  }
+
+  for (int i = 0; i < (int)queries.size(); ++i) {
+    printf("%d.%d\n", ans[i] / 2, (ans[i] & 1) * 5);
+  }
+}
+
+
+// end MO's algorithm
+
+
+struct edge {
+  int to, w;
+  edge(int x, int y) : to(x), w(y) {}
+};
 const int ML = 20;
 
 struct lowest_ca {
@@ -158,81 +240,26 @@ struct lowest_ca {
   }
 };
 
-lowest_ca lca_tree;
-
-void solve_mo(vector<query> &queries, vector<int> &a, vector<int> &le) {
-  for (int i = 0; i < SN; ++i)
-    s[i].clear();
-
-  for (int i = 0; i < (int)queries.size(); ++i) {
-    int b = queries[i].a;
-    s[b / SN].push_back(queries[i]);
-  }
-
-
-  for (int i = 0; i < SN; ++i) {
-    if (s[i].size())
-      sort(s[i].begin(), s[i].end());
-  }
-
-  for (int b = 0; b < SN; ++b) {
-    if (s[b].size() == 0) continue;
-    int i = s[b][0].a;
-    int j = s[b][0].a - 1;
-
-    data.clear();
-    for (int k = 0; k < (int)s[b].size(); ++k) {
-      int L = s[b][k].a;
-      int R = s[b][k].b;
-
-      while (j < R) {
-        j++;
-        data.insert(a[j], j);
-      }
-
-      while (j > R) {
-        data.erase(a[j], j);
-        j--;
-      }
-
-      while (i < L) {
-        data.erase(a[i], i);
-        i++;
-      }
-
-      while (i > L) {
-        i--;
-        data.insert(a[i], i);
-      }
-
-      if (s[b][k].lca == s[b][k].a) {
-        int id = le[s[b][k].a];
-        data.insert(a[id], id);
-      }
-      ans[s[b][k].id] = data.query();
-    }
-  }
-
-  for (int i = 0; i < (int)queries.size(); ++i) {
-    cout << ans[i] << endl;
-  }
-}
 
 
 void flat(vector<vector<edge>> &g, vector<int> &a,
-      vector<int> &le, vector<int> &ri, int node, int pi, int &ts) {
+    vector<int> &le, vector<int> &ri, vector<int> &cost,
+    int node, int pi, int &ts, int w) {
 
+  cost[node] = w;
   le[node] = ts;
   a[ts] = node;
   ts++;
   for (auto e : g[node]) {
     if (e.to == pi) continue;
-    flat(g, a, le, ri, e.to, node, ts);
+    flat(g, a, le, ri, cost, e.to, node, ts, e.w);
   }
   ri[node] = ts;
   a[ts] = node;
   ts++;
 }
+
+lowest_ca lca_tree;
 
 void solve() {
   int n;
@@ -248,36 +275,40 @@ void solve() {
 
   lca_tree.init(g, 0);
 
-  vector<int> a(2 * n), le(n), ri(n);
+  vector<int> a(2 * n), le(n), ri(n), cost(n);
   int ts = 0;
-  flat(g, a, le, ri, 0, -1, ts);
+  flat(g, a, le, ri, cost, 0, -1, ts, 0);
+
   int q; cin >> q;
   vector<query> queries(q);
   for (int i = 0; i < q; i++) {
-    int a, b;
-    cin >> a >> b;
-    a--;
-    b--;
-    int c = lca_tree.query(a, b);
-    if (le[a] > le[b])
-      swap(a, b);
-    queries[i].lca = c;
-    queries[i].u = a;
-    queries[i].v = b;
-    if (c == a) {
-      queries[i].a = le[a];
-      queries[i].b = le[b];
+    int u, v;
+    cin >> u >> v;
+    u--; v--;
+    int lca = lca_tree.query(u, v);
+    if (le[u] > le[v])
+      swap(u, v);
+    queries[i].id = i;
+    queries[i].lca = lca;
+    queries[i].u = u;
+    queries[i].v = v;
+    if (lca == u) {
+      queries[i].a = le[u] + 1;
+      queries[i].b = le[v];
     } else {
-      queries[i].a = ri[a];
-      queries[i].b = le[b];
+      queries[i].a = ri[u];
+      queries[i].b = le[v];
     }
   }
-
-  solve_mo(queries, a, le);
+  solve_mo(queries, a, le, cost);
 }
 
 int main() {
-  // ios_base::sync_with_stdio(false); cin.tie(NULL);
+#ifndef LOCAL
+#define endl '\n'
+  ios_base::sync_with_stdio(false); cin.tie(NULL);
+#endif
+
   int tc; cin >> tc;
   while (tc--) {
     solve();
