@@ -2,7 +2,7 @@
 
 using namespace std;
 
-#define debug(x) cout << #x " = " << (x) << endl
+#define debug(x) cerr << #x " = " << (x) << endl
 
 int main() {
 #ifndef LOCAL
