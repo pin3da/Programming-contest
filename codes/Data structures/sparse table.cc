@@ -7,10 +7,12 @@ struct st {
   int M[MN][ML];
   int n;
 
-  void read(int _n) {
-    n = _n;
+  void init(const vector<int> &d) {
+    n = d.size();
     for (int i = 0; i < n; ++i)
-      cin >> data[i];
+      data[i] = d[i];
+
+    build();
   }
 
   void build() {
