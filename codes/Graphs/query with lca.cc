@@ -72,5 +72,39 @@ struct lowest_ca {
     // return T[p];
     return min(mmin, min(MI[p][0], MI[q][0]));
   }
+
+  int get_child(int p, int q) { // p is ancestor of q
+    if (p == q) return -1;
+
+    int i, log;
+    for (log = 1; 1 << log <= L[q]; log++) {}
+    log--;
+
+    for (i = log; i >= 0; i--)
+      if (L[q] - (1 << i) > L[p]) {
+        q = P[q][i];
+      }
+
+    assert(P[q][0] == p);
+    return q;
+  }
+
+  int is_ancestor(int p, int q) {
+    if (L[p] >= L[q])
+      return false;
+
+    int dist = L[q] - L[p];
+
+    int cur = q;
+    int step = 0;
+    while (dist) {
+      if (dist & 1)
+        cur = P[cur][step];
+      step++;
+      dist >>= 1;
+    }
+
+    return cur == p;
+  }
 };
 
