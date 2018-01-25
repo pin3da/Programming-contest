@@ -1,0 +1,42 @@
+41
+remove kshx
+set gtdg 16
+query mdmo
+remove kshx
+set kshx 2
+set kshx 5
+set gtdg 8
+remove kshx
+set gtdg 14
+set gtdg 8
+set kshx 20
+set mdmo 18
+query gtdg
+set gtdg 1
+set kshx 3
+set kshx 16
+remove kshx
+query kshx
+set gtdg 4
+set mdmo 16
+set kshx 3
+set mdmo 6
+remove kshx
+remove mdmo
+remove gtdg
+set gtdg 12
+undo 11
+query mdmo
+set gtdg 20
+set mdmo 1
+set kshx 19
+remove mdmo
+undo 11
+query kshx
+remove kshx
+query mdmo
+set kshx 18
+set gtdg 13
+undo 4
+set kshx 3
+set kshx 9

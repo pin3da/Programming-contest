@@ -1,0 +1,6 @@
+5
+query economicsessay
+remove economicsessay
+query economicsessay
+undo 2
+query economicsessay

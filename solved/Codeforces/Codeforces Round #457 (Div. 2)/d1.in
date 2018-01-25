@@ -1,0 +1,9 @@
+8
+set chemlabreport 1
+set physicsexercise 2
+set chinesemockexam 3
+query physicsexercise
+query chinesemockexam
+remove physicsexercise
+query physicsexercise
+query chinesemockexam

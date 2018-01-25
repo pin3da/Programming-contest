@@ -1,0 +1,6 @@
+5
+set economicsessay 1
+remove economicsessay
+undo 1
+undo 1
+query economicsessay

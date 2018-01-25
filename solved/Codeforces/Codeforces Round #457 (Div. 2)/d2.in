@@ -1,0 +1,9 @@
+8
+set physicsexercise 2
+set chinesemockexam 3
+set physicsexercise 1
+query physicsexercise
+query chinesemockexam
+undo 4
+query physicsexercise
+query chinesemockexam
