@@ -1,9 +1,5 @@
-/**
- * Persistent version of trie:
- *  could be used as a persistent BST of integers.
- *  add: O(log2(n))
- *  query: O(log2(n)), works equal than the non-persistent version.
- * */
+// both tries can be tested with the problem: http://codeforces.com/problemset/problem/916/D
+
 
 
 // Persistent binary trie (BST for integers)
