@@ -1,0 +1,5 @@
+redirect 138.197.64.57; #server
+block 8.8.8.8; #google
+cf 212.193.33.27; #codeforces
+unblock 8.8.8.8; #google
+check 138.197.64.57; #server
