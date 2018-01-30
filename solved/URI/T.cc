@@ -2,7 +2,19 @@
 
 using namespace std;
 
-#define debug(x) cerr << #x " = " << (x) << endl
+void debug_out() { cerr << endl; }
+
+template <typename H, typename... T>
+void debug_out(H h, T... t) {
+  cerr << " " << to_string(h);
+  debug_out(t...);
+}
+#ifdef LOCAL
+#define debug(...) cerr << "[" << #__VA_ARGS__ << "]:", debug_out(__VA_ARGS__)
+#else
+#define debug(...) //
+#endif
+
 
 int main() {
 #ifndef LOCAL
