@@ -16,14 +16,30 @@ template <typename H, typename... T> void read(H &h, T&... t) { cin >> h; read(t
 
 
 void solve() {
+  int n; cin >> n;
+
+  if (n > 2 * 18) {
+    cout << -1 << endl;
+    return;
+  }
+
+  while (n >= 2) {
+    cout << 8;
+    n -= 2;
+  }
+
+  if (n)
+    cout << 9;
+
+  cout << endl;
 }
 
 int main() {
 #ifndef LOCAL
   ios_base::sync_with_stdio(false); cin.tie(NULL);
 #endif
-  //int tc; cin >> tc;
-  //while (tc--)
+//   int tc; cin >> tc;
+//  while (tc--)
     solve();
   return 0;
 }

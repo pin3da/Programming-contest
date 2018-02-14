@@ -22,8 +22,8 @@ int main() {
 #ifndef LOCAL
   ios_base::sync_with_stdio(false); cin.tie(NULL);
 #endif
-  //int tc; cin >> tc;
-  //while (tc--)
+//   int tc; cin >> tc;
+//  while (tc--)
     solve();
   return 0;
 }
