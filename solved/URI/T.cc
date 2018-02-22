@@ -6,6 +6,7 @@ void debug_out() { cerr << endl; }
 template <typename H, typename... T> void debug_out(H h, T... t) {  cerr << " " << (h);  debug_out(t...); }
 void read() {}
 template <typename H, typename... T> void read(H &h, T&... t) { cin >> h; read(t...) ;}
+template <typename H, typename... T> void read(vector<H> &h, T&... t) { for (auto &i : h) read(i); read(t...) ;}
 
 #ifndef LOCAL
 #define endl '\n'
