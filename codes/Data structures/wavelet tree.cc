@@ -1,4 +1,14 @@
 // this can be tested in the problem: http://www.spoj.com/problems/ILKQUERY/
+
+struct wavelet {
+  vector<int> values, ori;
+  vector<int> map_left, map_right;
+  int l, r, m;
+  wavelet *left, *right;
+  wavelet() : left(NULL), right(NULL) {}
+  wavelet(int a, int b, int c) : l(a), r(b), m(c), left(NULL), right(NULL) {}
+};
+
 wavelet *init(vector<int> &data, vector<int> &ind, int lo, int hi) {
   if (lo > hi || (data.size() == 0)) return NULL;
   int mid = ((long long)(lo) + hi) / 2;
