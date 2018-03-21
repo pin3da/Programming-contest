@@ -20,125 +20,111 @@ const int MN = 5 * 1e5 + 10;
 const long long inf = 1e12;
 const int M = (1 << 30) - 1;
 
+#define neg(x) (~x)
+#define twice(_i) for (int _i = 0; _i < 2; _i++)
+
 struct node {
-  long long min;
-  int zeros, ones;
-  node() : min(0), zeros(0), ones(0) {}
-  node(long long a) : min(a), zeros(0), ones(0) {}
+  long long min, val[2], tag[2]; //0 and, 1 or
+  node(long long a = inf) : min(a) {
+    tag[0] = neg(0), tag[1] = 0,
+      val[0] = a, val[1] = a;
+  }
 };
 
 struct segtree {
   node T[MN * 4 + 10];
 
-  void update(int cur, int b, int e) {
-    if (b < e) {
-      T[cur].min = min(T[cur << 1].min, T[cur << 1 | 1].min);
-    }
-  }
-
-  void push_down(int cur, int b, int e) {
-    if (b < e) {
-      T[cur << 1].zeros |= T[cur].zeros;
-      T[cur << 1].ones |= T[cur].ones;
-
-      T[cur << 1 | 1].zeros |= T[cur].zeros;
-      T[cur << 1 | 1].ones |= T[cur].ones;
-
-      if ((T[cur].zeros | T[cur].ones) == M) {
-        T[cur << 1].min = T[cur].min;
-        T[cur << 1 | 1].min = T[cur].min;
-      }
-
-    }
+  void merge_ch(int node, int b, int e) {
+    T[node].val[0] = T[node << 1].val[0] & T[node << 1 | 1].val[0];
+    T[node].val[1] = T[node << 1].val[1] | T[node << 1 | 1].val[1];
+    T[node].min = min(T[node << 1].min, T[node << 1 | 1].min);
   }
 
   void build(vector<int> &a, int cur, int b, int e) {
+    T[cur].tag[0] = neg(0);
+    T[cur].tag[1] = 0;
     if (b == e) {
       T[cur] = node(a[b]);
-      T[cur].zeros = M;
-      T[cur].ones = M;
-    } else {
-      int mid = (b + e) >> 1;
-      build(a, cur << 1, b, mid);
-      build(a, cur << 1 | 1, mid + 1, e);
-      update(cur, b, e);
-    }
-  }
-
-  void set_zero(int cur, int b, int e, int l, int r, int mask) {
-    push_down(cur, b, e);
-
-    if (b > r || e < l)
       return;
+    }
+    int mid = (b + e) >> 1;
+    build(a, cur << 1, b, mid);
+    build(a, cur << 1 | 1, mid + 1, e);
+    merge_ch(cur, b, e);
+  }
 
-    if (b >= l && e <= r) {
-      if (b == e) {
-        T[cur].min &= (M ^ mask); // leaf
-        debug("set leaf 0", b, T[cur].min, mask);
-        return;
-      } else {
-        T[cur].ones &= (M  ^ mask);
-        T[cur].zeros |= mask;
-      }
-      if (((T[cur].zeros | T[cur].ones)) == M) { // all bits known
-        T[cur].min &= (M ^ mask); // set bits on mask to 0;
-        return;
+  void apply_tag(long long &v, int and_mask, int or_mask) {
+    v = (v & and_mask) | or_mask;
+  }
+
+  void push_down(int node, int b, int e) {
+    if (b >= e) return;
+    if (!neg(T[node].tag[0]) && !neg(T[node].tag[1])) return;
+
+    apply_tag(T[node << 1].min,
+        T[node].tag[0], T[node].tag[1]);
+    apply_tag(T[node << 1 | 1].min,
+        T[node].tag[0], T[node].tag[1]);
+
+    if (b < e) {
+      twice(i) {
+        apply_tag(T[node << 1].tag[i],
+            T[node].tag[0], T[node].tag[1]);
+        apply_tag(T[node << 1 | 1].tag[i],
+            T[node].tag[0], T[node].tag[1]);
+
+        apply_tag(T[node << 1].val[i],
+            T[node].tag[0], T[node].tag[1]);
+        apply_tag(T[node << 1 | 1].val[i],
+            T[node].tag[0], T[node].tag[1]);
       }
     }
 
-
-    debug("befor split", b, e, T[cur].min);
-
-    int mid = (b + e) >> 1;
-    set_zero(cur << 1, b, mid, l, r, mask);
-    set_zero(cur << 1 | 1, mid + 1, e, l, r, mask);
-
-    update(cur, b, e);
-
-    debug("after split" , b, e, T[cur].min);
+    T[node].tag[0] = neg(0);
+    T[node].tag[1] = 0;
   }
 
-  void set_ones(int cur, int b, int e, int l, int r, int mask) {
-    push_down(cur, b, e);
-
-    if (b > r || e < l)
+  void update_or(int node, int b, int e, int l, int r, long long val) {
+    push_down(node, b, e);
+    if (b > r || e < l) return;
+    if (!(neg(T[node].val[0]) & val)) return;
+    if (l <= b && e <= r && (neg(T[node].val[0]) & val) == (neg(T[node].val[1]) & val)) {
+      T[node].min |= val;
+      twice(i) T[node].val[i] |= val;
+      T[node].tag[1] |= val;
       return;
-
-    if (b >= l && e <= r) {
-      if (b == e) {
-        T[cur].min |= mask; // leaf
-        return;
-      } else {
-        T[cur].ones |= mask;
-        T[cur].zeros &= (M ^ mask);
-      }
-      if (((T[cur].zeros | T[cur].ones)) == M) { // all bits known
-        T[cur].min |= mask; // set bits on mask to 1;
-        return;
-      }
     }
-
     int mid = (b + e) >> 1;
-    set_ones(cur << 1, b, mid, l, r, mask);
-    set_ones(cur << 1 | 1, mid + 1, e, l, r, mask);
-
-    update(cur, b, e);
+    update_or(node << 1, b, mid, l, r, val);
+    update_or(node << 1 | 1, mid + 1, e, l, r, val);
+    merge_ch(node, b, e);
   }
 
-  long long query(int cur, int b, int e, int l, int r) {
-    push_down(cur, b, e);
-
-    if (b > r || e < l)  return inf;
-
-    long long ans = inf;
-    if (b >= l && e <= r) {
-      debug("quer", b, e, T[cur].min);
-      ans = T[cur].min;
-    } else {
-      int mid = (b + e) >> 1;
-      ans = min(ans, query(cur << 1, b, mid, l, r));
-      ans = min(ans, query(cur << 1 | 1, mid + 1, e, l, r));
+  void update_and(int node, int b, int e, int l, int r, long long val) {
+    push_down(node, b, e);
+    if (b > r || e < l) return;
+    if (!(T[node].val[1] & neg(val))) return;
+    if (l <= b && e <= r && (T[node].val[1] & neg(val)) == (T[node].val[0] & neg(val))) {
+      T[node].min &= val;
+      twice(i) T[node].val[i] &= val;
+      twice(i) T[node].tag[i] &= val;
+      return;
     }
+    int mid = (b + e) >> 1;
+    update_and(node << 1, b, mid, l, r, val);
+    update_and(node << 1 | 1, mid + 1, e, l, r, val);
+    merge_ch(node, b, e);
+  }
+
+  long long query(int node, int b, int e, int l, int r) {
+    push_down(node, b, e);
+    if (b > r || e < l) return inf;
+    if (l <= b && e <= r) return T[node].min;
+    int mid = (b + e) >> 1;
+    long long ans = min(
+        query(node << 1, b, mid, l, r),
+        query(node << 1 | 1, mid + 1, e, l, r)
+        );
     return ans;
   }
 };
@@ -164,12 +150,11 @@ int main() {
     l--, r--;
     if (t == '&') {
       cin >> x;
-      tree.set_zero(1, 0, n - 1, l, r, M ^ x);
-      debug("=================");
+      tree.update_and(1, 0, n - 1, l, r, x);
     }
     if (t == '|') {
       cin >> x;
-      tree.set_ones(1, 0, n - 1, l, r, x);
+      tree.update_or(1, 0, n - 1, l, r, x);
     }
     if (t == '?') {
       cout << tree.query(1, 0, n - 1, l, r) << endl;

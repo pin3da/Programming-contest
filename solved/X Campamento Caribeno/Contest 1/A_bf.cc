@@ -31,18 +31,22 @@ void solve() {
       for (int j = l; j <= r; j++)
         a[j] &= x;
 
+      /*
       for (int j = 0; j < n; j++)
         cerr << a[j] << ' ';
       cerr << endl;
+      */
     }
     if (t == '|') {
       int x; cin >> x;
       for (int j = l; j <= r; j++)
         a[j] |= x;
 
+      /*
       for (int j = 0; j < n; j++)
         cerr << a[j] << ' ';
       cerr << endl;
+      */
     }
     if (t == '?') {
       cout << *(min_element(a.begin() + l, a.begin() + r + 1)) << endl;
