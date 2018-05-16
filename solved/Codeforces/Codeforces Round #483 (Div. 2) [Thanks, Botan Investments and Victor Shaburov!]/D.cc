@@ -17,41 +17,10 @@ template <typename H, typename... T> void read(vector<H> &h, T&... t) { for (aut
 
 
 const int MN = 5001;
-const int ML = 13; // ceil(log2(MN));
-
 
 int S[MN][MN];
 int A[MN][MN];
 int dt[MN];
-
-struct st {
-  int dt[MN];
-  int M[MN][ML];
-  int n;
-
-  void init(int col, int len) {
-    n = len;
-    for (int i = 0; i < n; ++i)
-      dt[i] = A[i][col];
-    build();
-  }
-
-  void build() {
-    for (int i = 0; i < n; ++i)
-      M[i][0] = dt[i];
-    for (int j = 1, p = 2, q = 1; p <= n; ++j, p <<= 1, q <<= 1)
-      for (int i = 0; i + p - 1 < n; ++i)
-        M[i][j] = max(M[i][j - 1], M[i + q][j - 1]);
-  }
-  int query(int b, int e) {
-    int k = log2(e - b + 1);
-    return max(M[b][k], M[e + 1 - (1<<k)][k]);
-  }
-};
-
-
-
-st rmq[MN];
 
 void solve() {
   int n; cin >> n;
@@ -88,17 +57,10 @@ void solve() {
     }
   }
 
-  /*
-  for (int i = 0; i < n; i++) {
-    for (int j = 0; j < n; j++) {
-      cerr << A[i][j] << "\t";
+  for (int j = 0; j < n; j++) {
+    for (int i = 1; i < n - j; i++) {
+      A[i][j] = max(A[i][j], A[i - 1][j]);
     }
-    cerr << endl;
-  }
-  */
-
-  for (int i = 0; i < n; i++) {
-    rmq[i].init(i, n);
   }
 
   for (int i = 0; i < n; i++) {
@@ -106,7 +68,7 @@ void solve() {
       int best = 0;
       int len = it.first - i + 1;
       for (int j = 0; j < len; j++) {
-        best = max(best, rmq[i + j].query(0, it.first - j - i));
+        best = max(best, A[it.first - j - i][i + j]);
       }
       ans[it.second] = best;
     }
