@@ -3,7 +3,6 @@
 using namespace std;
 
 class Solution {
-
   vector<int> dp;
   int go(string &s, int id) {
     if (id == (int)s.size())
