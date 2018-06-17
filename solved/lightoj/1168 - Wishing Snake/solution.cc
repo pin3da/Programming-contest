@@ -83,14 +83,14 @@ void solve() {
   for (set<int>::iterator it = all_nodes.begin(); it != all_nodes.end(); it++)
     all_components.insert(scc.component[*it]);
 
-  vector<set<int> > comp(MN);
+  vector<vector<int> > comp(MN);
   for (int i = 0; i < MN; i++) {
     for (int j = 0; j < int(g[i].size()); j++) {
       int to = g[i][j];
       int u = scc.component[i], v = scc.component[to];
       // debug(i, to, u, v);
       if (u != v) {
-        comp[u].insert(v);
+        comp[u].push_back(v);
       }
     }
   }
@@ -102,7 +102,7 @@ void solve() {
     if (comp[start].size() != 1)
       ok = false;
     else {
-      start = *comp[start].begin();
+      start = comp[start][0];
       seen.insert(start);
     }
   }
