@@ -1,20 +1,18 @@
-struct dsu {
-  int p[MN];
+struct Dsu {
+  vector<int> p;
 
-  void init(int n) {
+  Dsu(int n) {
+    p.resize(n);
     for (int i = 0; i < n; i++) {
       p[i] = i;
     }
   }
 
-  int find(int x) {
-    return x == p[x] ? x : p[x] = find(p[x]);
-  }
+  int Find(int x) { return x == p[x] ? x : p[x] = Find(p[x]); }
 
-  int join(int x, int y) {
-    int px = find(x), py = find(y);
-    if (px == py)
-      return 0;
+  int Join(int x, int y) {
+    int px = Find(x), py = Find(y);
+    if (px == py) return 0;
     p[px] = py;
     return 1;
   }
