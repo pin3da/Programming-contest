@@ -1,91 +1,66 @@
-const int MN = 5 * 100000 + 100;
+const int MN = 5 * 100000 + 1;
 const int SN = 708;
 
-struct query {
+struct Query {
   int a, b, id;
-  query() {}
-  query(int x, int y, int i) : a(x), b(y), id(i) {}
+  Query() {}
+  Query(int x, int y, int i) : a(x), b(y), id(i) {}
 
-  bool operator < (const query &o) const {
-    return b < o.b;
+  bool operator<(const Query &o) const {
+    if (a / SN != o.a / SN) return a < o.a;
+    return a / SN & 1 ? b < o.b : b > o.b;
   }
 };
 
-
-vector<query> s[SN];
-int ans[MN];
-
 struct DS {
+  DS() : {}
 
-  void clear() {}
-  void insert(int x) {}
-  void erase(int x) {}
-  long long query() {}
+  void Insert(int x) {}
+
+  void Erase(int x) {}
+
+  long long Query() {}
 };
 
-DS data;
+Query s[MN];
+int ans[MN];
+DS active;
 
 int main() {
-  int n, q;
-  while (cin >> n >> q) {
-    for (int i = 0; i < SN; ++i)
-      s[i].clear();
+  int n;
+  cin >> n;
+  vector<int> a(n);
+  for (auto &i : a) cin >> i;
 
-    vector<int> a(n);
-    for (auto &i : a) cin >> i;
+  int q;
+  cin >> q;
+  for (int i = 0; i < q; ++i) {
+    int b, e;
+    cin >> b >> e;
+    b--;
+    e--;
+    s[i] = Query(b, e, i);
+  }
 
-    for (int i = 0; i < q; ++i) {
-      int b, e;
-      cin >> b >> e;
-      b--; e--;
-      s[b / SN].emplace_back(b, e, i);
-    }
+  sort(s, s + q);
 
+  int i = 0;
+  int j = -1;
+  for (int k = 0; k < (int)q; ++k) {
+    int L = s[k].a;
+    int R = s[k].b;
 
-    for (int i = 0; i < SN; ++i) {
-      if (s[i].size())
-        sort(s[i].begin(), s[i].end());
-    }
+    while (j < R) active.Insert(a[++j]);
+    while (j > R) active.Erase(a[j--]);
+    while (i < L) active.Erase(a[i++]);
+    while (i > L) active.Insert(a[--i]);
 
-    for (int b = 0; b < SN; ++b) {
-      if (s[b].size() == 0) continue;
-      int i = s[b][0].a;
-      int j = s[b][0].a - 1;
+    ans[s[k].id] = active.Query();
+  }
 
-      data.clear();
-      for (int k = 0; k < (int)s[b].size(); ++k) {
-        int L = s[b][k].a;
-        int R = s[b][k].b;
-
-        while (j < R) {
-          j++;
-          data.insert(a[j]);
-        }
-
-        while (j > R) {
-          data.erase(a[j]);
-          j--;
-        }
-
-        while (i < L) {
-          data.erase(a[i]);
-          i++;
-        }
-
-        while (i > L) {
-          i--;
-          data.insert(a[i]);
-        }
-        ans[s[b][k].id] = data.query();
-      }
-    }
-
-    for (int i = 0; i < q; ++i) {
-      cout << ans[i] << endl;
-    }
+  for (int i = 0; i < q; ++i) {
+    cout << ans[i] << endl;
   }
 
   return 0;
 };
-
-

@@ -19,8 +19,7 @@ struct Query {
   Query(int x, int y, int i) : a(x), b(y), id(i) {}
 
   bool operator<(const Query &o) const {
-    if (a / SN != o.a / SN)
-      return a < o.a;
+    if (a / SN != o.a / SN) return a < o.a;
     return a / SN & 1 ? b < o.b : b > o.b;
   }
 };
