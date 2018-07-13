@@ -1,3 +1,5 @@
+*.in
+*.ans
 *.out
 *.tmp
 *.class
