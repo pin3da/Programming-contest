@@ -13,8 +13,7 @@ struct Point {
 	return x == other.x && y == other.y;
   }
   bool operator<(const Point& other) const {
-	return x < other.x - EPS ||
-	       (std::abs(x - other.x) < EPS && y < other.y - EPS);
+	return (x == other.x && y < other.y) || x < other.x;  // check EPS for float
   }
   // for vectors
   ll norm() const { return x * x + y * y; }  // x^2 + y^2
