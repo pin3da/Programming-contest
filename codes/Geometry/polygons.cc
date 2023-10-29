@@ -2,6 +2,12 @@ ll doubleTriangleArea(Point a, Point b, Point c) {
   return abs(cross(b - a, c - b));
 }
 
+bool pointInTriangle(Point a, Point b, Point c, Point pt) {
+  ll sum = doubleTriangleArea(pt, a, b) + doubleTriangleArea(pt, a, c) +
+           doubleTriangleArea(pt, b, c);
+  return doubleTriangleArea(a, b, c) == sum;
+}
+
 ll doublePolygonArea(Point* a, int n) {
   ll ans = 0;
   for (int i = 0; i < n; ++i)
