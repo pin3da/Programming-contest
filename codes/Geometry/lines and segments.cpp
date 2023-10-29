@@ -27,7 +27,7 @@ ld det(ld a, ld b, ld c, ld d) {
   return a * d - b * c;
 }
 
-bool intersect(Line m, Line n, Point& res) {
+bool lineIntersect(Line m, Line n, Point& res) {
   double zn = det(m.a, m.b, n.a, n.b);
   if (abs(zn) < EPS) return false;
   res.x = -det(m.c, m.b, n.c, n.b) / zn;
@@ -43,6 +43,12 @@ bool equivalent(Line m, Line n) {
   return abs(det(m.a, m.b, n.a, n.b)) < EPS &&
          abs(det(m.a, m.c, n.a, n.c)) < EPS &&
          abs(det(m.b, m.c, n.b, n.c)) < EPS;
+}
+
+// given 3 colinear points, check if b lies on segment ac
+bool pointOnSegment(const Point& a, const Point& b, const Point& c) {
+  return min(a.x, c.x) <= b.x && b.x <= max(a.x, c.x) && min(a.y, c.y) <= b.y &&
+         b.y <= max(a.y, c.y);
 }
 
 bool segmentIntersect(const Point& a, const Point& b, const Point& c,

@@ -2,6 +2,13 @@
 	"files.associations": {
 		"thread": "cpp",
 		"vector": "cpp",
-		"source_location": "cpp"
+		"source_location": "cpp",
+		"barrier": "cpp",
+		"chrono": "cpp",
+		"random": "cpp",
+		"latch": "cpp",
+		"limits": "cpp",
+		"semaphore": "cpp",
+		"valarray": "cpp"
 	}
 }
