@@ -24,25 +24,19 @@ class SegTree {
   vi cover;
 
   void update(int L, int R, int val, int p, int b, int e) {
-	if (e < L || R < b || L > R)
-	  return;
+	if (e < L || R < b || L > R) return;
 	if (L <= b && e <= R) {
 	  cover[p] += val;
-	  if (cover[p] > 0)
-		sum[p] = e - b + 1;
-	  else if (b < e)
-		sum[p] = sum[p << 1] + sum[(p << 1) | 1];
-	  else
-		sum[p] = 0;
+	  if (cover[p] > 0) sum[p] = e - b + 1;
+	  else if (b < e) sum[p] = sum[p << 1] + sum[(p << 1) | 1];
+	  else sum[p] = 0;
 	} else {
 	  int mid = (b + e) >> 1;
 	  update(L, R, val, p << 1, b, mid);
 	  update(L, R, val, (p << 1) | 1, mid + 1, e);
 
-	  if (cover[p] > 0)
-		sum[p] = e - b + 1;
-	  else
-		sum[p] = sum[p << 1] + sum[(p << 1) | 1];
+	  if (cover[p] > 0) sum[p] = e - b + 1;
+	  else sum[p] = sum[p << 1] + sum[(p << 1) | 1];
 	}
   }
 

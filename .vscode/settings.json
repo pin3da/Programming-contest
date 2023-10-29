@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"thread": "cpp",
+		"vector": "cpp",
+		"source_location": "cpp"
+	}
+}
