@@ -1,58 +1,33 @@
-namespace primes {
-const int MP = 100001;
-bool sieve[MP];
-long long primes[MP];
-int num_p;
-void fill_sieve() {
-  num_p = 0;
-  sieve[0] = sieve[1] = true;
-  for (long long i = 2; i < MP; ++i) {
-	if (!sieve[i]) {
-	  primes[num_p++] = i;
-	  for (long long j = i * i; j < MP; j += i)
-		sieve[j] = true;
+namespace sievePrime {
+vi primes;
+const int MAX = 5e8 + 5;  // run in 2s
+bitset<MAX> isPr;
+
+void oddSieve() {  // Source: RR
+  isPr.flip();
+  isPr[0] = isPr[1] = 0;
+  for (int i = 3; i * i < MAX; i += 2) {
+	if (isPr[i]) {
+	  int i2 = i + i;
+	  for (int j = i * i; j < MAX; j += i2)
+		isPr[j] = 0;
 	}
   }
+  primes.push_back(2);
+  for (int i = 3; i < MAX; i += 2)
+	if (isPr[i]) primes.push_back(i);
 }
 
-// Finds prime numbers between a and b, using basic primes up to sqrt(b)
-// a must be greater than 1.
-vector<long long> seg_sieve(long long a, long long b) {
-  long long ant = a;
-  a = max(a, 3LL);
-  vector<bool> pmap(b - a + 1);
-  long long sqrt_b = sqrt(b);
-  for (int i = 0; i < num_p; ++i) {
-	long long p = primes[i];
-	if (p > sqrt_b)
-	  break;
-	long long j = (a + p - 1) / p;
-	for (long long v = (j == 1) ? p + p : j * p; v <= b; v += p) {
-	  pmap[v - a] = true;
-	}
-  }
-  vector<long long> ans;
-  if (ant == 2)
-	ans.push_back(2);
-  int start = a % 2 ? 0 : 1;
-  for (int i = start, I = b - a + 1; i < I; i += 2)
-	if (pmap[i] == false)
-	  ans.push_back(a + i);
-  return ans;
-}
-
-vector<pair<int, int>> factor(int n) {
+vector<pair<int, int>> sqrtFactor(int n) {  // < O(sqrt(N))
   vector<pair<int, int>> ans;
-  if (n == 0)
-	return ans;
+  if (n == 0) return ans;
   for (int i = 0; primes[i] * primes[i] <= n; ++i) {
 	if ((n % primes[i]) == 0) {
-	  int expo = 0;
+	  ans.push_back(make_pair(primes[i], 0));
 	  while ((n % primes[i]) == 0) {
-		expo++;
+		ans.back().second++;
 		n /= primes[i];
 	  }
-	  ans.emplace_back(primes[i], expo);
 	}
   }
 
@@ -61,4 +36,57 @@ vector<pair<int, int>> factor(int n) {
   }
   return ans;
 }
-}  // namespace primes
+}  // namespace sievePrime
+
+namespace leastPrimeFactorSieve {
+vector<int> primes;
+const int MAX = 1e8 + 5;
+int lp[MAX];  // least prime factor
+
+void linearSieve() {  // O(MAX)
+  for (int i = 2; i < MAX; ++i) {
+	if (lp[i] == 0) {
+	  lp[i] = i;
+	  primes.push_back(i);
+	}
+	for (int j = 0; i < MAX / primes[j]; ++j) {
+	  lp[i * primes[j]] = primes[j];
+	  if (primes[j] == lp[i]) break;
+	}
+  }
+}
+
+vector<pair<int, int>> logFactor(int n) {  // < O(log(N)), N <= MAX required
+  vector<pair<int, int>> ans;
+  if (n == 0) return ans;
+  while (n > 1) {
+	int pr = lp[n];
+	ans.push_back(make_pair(pr, 0));
+	while (n % pr == 0) {
+	  ans.back().second++;
+	  n /= pr;
+	}
+  }
+  return ans;
+}
+}  // namespace leastPrimeFactorSieve
+
+vector<bool> segmentedSieve(ll L, ll R) {
+  // generate all primes up to sqrt(R)
+  ll lim = sqrt(R);
+  vector<bool> mark(lim + 1, false);
+  vector<ll> primes;
+  for (long long i = 2; i <= lim; ++i) {
+	if (!mark[i]) {
+	  primes.emplace_back(i);
+	  for (long long j = i * i; j <= lim; j += i)
+		mark[j] = true;
+	}
+  }
+  vector<bool> isPrime(R - L + 1, true);
+  for (ll i : primes)
+	for (ll j = max(i * i, (L + i - 1) / i * i); j <= R; j += i)
+	  isPrime[j - L] = false;
+  if (L == 1) isPrime[0] = false;
+  return isPrime;
+}
