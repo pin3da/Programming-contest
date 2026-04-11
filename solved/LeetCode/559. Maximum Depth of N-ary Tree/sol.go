@@ -1,0 +1,18 @@
+/**
+ * Definition for a Node.
+ * type Node struct {
+ *     Val int
+ *     Children []*Node
+ * }
+ */
+
+func maxDepth(root *Node) int {
+	if root == nil {
+		return 0
+	}
+	ans := 1
+	for _, child := range root.Children {
+		ans = max(maxDepth(child)+1, ans)
+	}
+	return ans
+}
