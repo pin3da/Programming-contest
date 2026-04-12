@@ -1,0 +1,37 @@
+goos: linux
+goarch: amd64
+pkg: sliding_window_median
+cpu: 13th Gen Intel(R) Core(TM) i5-1340P
+                                              │   old.txt   │               new.txt               │
+                                              │   sec/op    │   sec/op     vs base                │
+MedianSlidingWindow/n=100000_k=100_odd-16       73.87m ± 2%
+MedianSlidingWindow/n=100000_k=100_even-16      79.60m ± 1%
+MedianSlidingWindow/n=100000_k=1000-16          81.67m ± 5%
+MedianSlidingWindowOpt/n=100000_k=100_odd-16    40.20m ± 3%   39.58m ± 7%       ~ (p=0.132 n=6)
+MedianSlidingWindowOpt/n=100000_k=100_even-16   47.49m ± 1%   46.31m ± 1%  -2.50% (p=0.002 n=6)
+MedianSlidingWindowOpt/n=100000_k=1000-16       46.10m ± 0%   45.01m ± 1%  -2.36% (p=0.002 n=6)
+geomean                                         59.02m        43.53m       -2.14%               ¹
+¹ benchmark set differs from baseline; geomeans may not be comparable
+
+                                              │   old.txt    │               new.txt                │
+                                              │     B/op     │     B/op      vs base                │
+MedianSlidingWindow/n=100000_k=100_odd-16       38.53Mi ± 0%
+MedianSlidingWindow/n=100000_k=100_even-16      38.53Mi ± 0%
+MedianSlidingWindow/n=100000_k=1000-16          38.54Mi ± 0%
+MedianSlidingWindowOpt/n=100000_k=100_odd-16    37.39Mi ± 0%   37.39Mi ± 0%       ~ (p=0.314 n=6)
+MedianSlidingWindowOpt/n=100000_k=100_even-16   37.39Mi ± 0%   37.39Mi ± 0%       ~ (p=0.455 n=6)
+MedianSlidingWindowOpt/n=100000_k=1000-16       37.38Mi ± 0%   37.38Mi ± 0%       ~ (p=0.727 n=6)
+geomean                                         37.96Mi        37.39Mi       -0.00%               ¹
+¹ benchmark set differs from baseline; geomeans may not be comparable
+
+                                              │   old.txt   │              new.txt               │
+                                              │  allocs/op  │ allocs/op   vs base                │
+MedianSlidingWindow/n=100000_k=100_odd-16       1.650M ± 0%
+MedianSlidingWindow/n=100000_k=100_even-16      1.650M ± 0%
+MedianSlidingWindow/n=100000_k=1000-16          1.651M ± 0%
+MedianSlidingWindowOpt/n=100000_k=100_odd-16     2.000 ± 0%   2.000 ± 0%       ~ (p=1.000 n=6) ¹
+MedianSlidingWindowOpt/n=100000_k=100_even-16    2.000 ± 0%   2.000 ± 0%       ~ (p=1.000 n=6) ¹
+MedianSlidingWindowOpt/n=100000_k=1000-16        2.000 ± 0%   2.000 ± 0%       ~ (p=1.000 n=6) ¹
+geomean                                         1.817k        2.000       +0.00%               ²
+¹ all samples are equal
+² benchmark set differs from baseline; geomeans may not be comparable

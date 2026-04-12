@@ -1,0 +1,24 @@
+goos: linux
+goarch: amd64
+pkg: sliding_window_median
+cpu: 13th Gen Intel(R) Core(TM) i5-1340P
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_odd-16         	      26	  38940287 ns/op	39207130 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_odd-16         	      30	  40119750 ns/op	39206912 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_odd-16         	      30	  38695892 ns/op	39206915 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_odd-16         	      30	  39877904 ns/op	39206912 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_odd-16         	      26	  42439078 ns/op	39206912 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_odd-16         	      30	  39282857 ns/op	39206915 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_even-16        	      25	  46014732 ns/op	39206912 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_even-16        	      25	  46331973 ns/op	39206912 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_even-16        	      25	  46471150 ns/op	39206920 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_even-16        	      25	  46281227 ns/op	39207129 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_even-16        	      26	  46241107 ns/op	39206912 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_even-16        	      25	  46664841 ns/op	39206912 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=1000-16            	      26	  45157423 ns/op	39198720 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=1000-16            	      25	  45008692 ns/op	39198937 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=1000-16            	      26	  45325779 ns/op	39198724 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=1000-16            	      26	  44868604 ns/op	39198720 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=1000-16            	      26	  44886877 ns/op	39198720 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=1000-16            	      26	  45012362 ns/op	39198720 B/op	       2 allocs/op
+PASS
+ok  	sliding_window_median	22.537s

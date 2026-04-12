@@ -1,0 +1,42 @@
+goos: linux
+goarch: amd64
+pkg: sliding_window_median
+cpu: 13th Gen Intel(R) Core(TM) i5-1340P
+BenchmarkMedianSlidingWindow/n=100000_k=100_odd-16         	      14	  73200193 ns/op	40399403 B/op	 1649858 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=100_odd-16         	      15	  73227577 ns/op	40399391 B/op	 1649858 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=100_odd-16         	      15	  74606104 ns/op	40399392 B/op	 1649858 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=100_odd-16         	      15	  72902738 ns/op	40399406 B/op	 1649858 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=100_odd-16         	      16	  75220386 ns/op	40399412 B/op	 1649858 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=100_odd-16         	      15	  74515704 ns/op	40399398 B/op	 1649858 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=100_even-16        	      13	  78582001 ns/op	40406304 B/op	 1650146 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=100_even-16        	      13	  80140999 ns/op	40406296 B/op	 1650146 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=100_even-16        	      14	  79683935 ns/op	40406336 B/op	 1650146 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=100_even-16        	      14	  80115069 ns/op	40406320 B/op	 1650146 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=100_even-16        	      13	  79514217 ns/op	40406321 B/op	 1650146 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=100_even-16        	      14	  78784772 ns/op	40406304 B/op	 1650146 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=1000-16            	      14	  81707911 ns/op	40407256 B/op	 1650527 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=1000-16            	      14	  82741418 ns/op	40407256 B/op	 1650527 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=1000-16            	      13	  81439694 ns/op	40407256 B/op	 1650527 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=1000-16            	      14	  81631537 ns/op	40407264 B/op	 1650527 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=1000-16            	      14	  79455324 ns/op	40407264 B/op	 1650527 allocs/op
+BenchmarkMedianSlidingWindow/n=100000_k=1000-16            	      14	  85390208 ns/op	40407256 B/op	 1650527 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_odd-16      	      26	  40019053 ns/op	39206924 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_odd-16      	      30	  40037378 ns/op	39206919 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_odd-16      	      28	  40128400 ns/op	39206916 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_odd-16      	      30	  40279236 ns/op	39206915 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_odd-16      	      30	  40337486 ns/op	39206915 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_odd-16      	      28	  41515485 ns/op	39206912 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_even-16     	      24	  47271136 ns/op	39206912 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_even-16     	      25	  47521214 ns/op	39206912 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_even-16     	      25	  47871277 ns/op	39206912 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_even-16     	      25	  47465035 ns/op	39206912 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_even-16     	      24	  47919901 ns/op	39206912 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=100_even-16     	      24	  47388363 ns/op	39206912 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=1000-16         	      25	  46199563 ns/op	39198724 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=1000-16         	      26	  46002459 ns/op	39198720 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=1000-16         	      25	  46194590 ns/op	39198720 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=1000-16         	      25	  45956305 ns/op	39198720 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=1000-16         	      25	  45994917 ns/op	39198720 B/op	       2 allocs/op
+BenchmarkMedianSlidingWindowOpt/n=100000_k=1000-16         	      25	  46229654 ns/op	39198720 B/op	       2 allocs/op
+PASS
+ok  	sliding_window_median	52.129s
